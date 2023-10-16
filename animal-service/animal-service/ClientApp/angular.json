@@ -132,5 +132,8 @@
       }
     }
   },
-  "defaultProject": "animal_service"
+  "defaultProject": "animal_service",
+  "cli": {
+    "analytics": false
+  }
 }
