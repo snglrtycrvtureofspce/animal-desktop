@@ -2,6 +2,9 @@
 
 namespace animal_service.ViewModels;
 
+/// <summary>
+/// ViewModel for the animal
+/// </summary>
 public class AnimalViewModelSummary : BaseEntity
 {
     public string Name { get; set; }

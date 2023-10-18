@@ -2,6 +2,9 @@
 
 namespace animal_service.ViewModels;
 
+/// <summary>
+/// ViewModel for the marker
+/// </summary>
 public class MarkerViewModelSummary : BaseEntity
 {
     public double Latitude { get; set; }

@@ -23,7 +23,7 @@ builder.Logging.ClearProviders().AddSerilog();
 
 builder.Services.AddFluentValidation(conf =>
 {
-    conf.RegisterValidatorsFromAssembly(typeof(Program).Assembly);
+    conf.RegisterValidatorsFromAssemblyContaining<Program>();
     conf.AutomaticValidationEnabled = false;
 });
 

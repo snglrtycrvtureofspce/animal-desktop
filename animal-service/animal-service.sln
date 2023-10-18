@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "animal-service", "animal-service\animal-service.csproj", "{83F96711-EF0F-4D99-BEC8-A07687CD6155}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "animal-service.Web", "animal-service.Web\animal-service.Web.csproj", "{83F96711-EF0F-4D99-BEC8-A07687CD6155}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

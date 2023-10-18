@@ -13,7 +13,7 @@ namespace animal_service.Controllers;
 /// </summary>
 [Route("api/[controller]")]
 [ApiController]
-//[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+// [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
 [Produces("application/json")]
 public class AnimalController : ControllerBase
 {

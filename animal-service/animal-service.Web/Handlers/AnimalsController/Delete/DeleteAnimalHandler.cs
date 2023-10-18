@@ -4,15 +4,23 @@ using Microsoft.EntityFrameworkCore;
 
 namespace animal_service.Handlers.AnimalsController.Delete;
 
+/// <summary>
+/// Handler for the DeleteAnimal method
+/// </summary>
 public class DeleteAnimalHandler : IRequestHandler<DeleteAnimalCommand, Unit>
 {
     private readonly AnimalsDbContext _dbContext;
 
+    /// <summary>
+    /// Constructor with params for DeleteAnimalHandler
+    /// </summary>
+    /// <param name="dbContext"></param>
     public DeleteAnimalHandler(AnimalsDbContext dbContext)
     {
         _dbContext = dbContext;
     }
 
+    /// <inheritdoc />
     public async Task<Unit> Handle(DeleteAnimalCommand request, CancellationToken cancellationToken)
     {
         var animal = await _dbContext.Animals.FirstOrDefaultAsync(a => a.Id == request.Id,
