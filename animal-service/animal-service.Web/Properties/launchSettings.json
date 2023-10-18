@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "animal_service": {
+    "animal_service.Web": {
       "commandName": "Project",
       "launchBrowser": true,
       "applicationUrl": "https://localhost:7255;http://localhost:5276",
@@ -18,7 +18,7 @@
         "ASPNETCORE_HOSTINGSTARTUPASSEMBLIES": "Microsoft.AspNetCore.SpaProxy"
       }
     },
-    "animal_service: Swagger": {
+    "animal_service.Web: Swagger": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
