@@ -1,7 +1,7 @@
 ﻿using animal_service.ViewModels;
 using MediatR;
 
-namespace animal_service.Handlers.UserController.Post.Command;
+namespace animal_service.Handlers.UserController.Post;
 
 /// <inheritdoc />
 public class CreateUserCommand : IRequest<UserViewModelSummary>

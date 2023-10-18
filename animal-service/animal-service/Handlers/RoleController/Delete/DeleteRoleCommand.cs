@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace animal_service.Handlers.UserController.Delete;
+namespace animal_service.Handlers.RoleController.Delete;
 
 /// <inheritdoc />
 public class DeleteRoleCommand : IRequest<bool>

@@ -2,7 +2,7 @@
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace animal_service.Handlers.UserController.Delete;
+namespace animal_service.Handlers.RoleController.Delete;
 
 /// <summary>
 /// Handler for the DeleteRole method

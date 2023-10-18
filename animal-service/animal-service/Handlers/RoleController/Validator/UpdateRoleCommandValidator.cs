@@ -1,7 +1,7 @@
-﻿using animal_service.Handlers.UserController.Put;
+﻿using animal_service.Handlers.RoleController.Put;
 using FluentValidation;
 
-namespace animal_service.Handlers.UserController.Validator;
+namespace animal_service.Handlers.RoleController.Validator;
 
 /// <summary>
 /// Data validator for the role update method

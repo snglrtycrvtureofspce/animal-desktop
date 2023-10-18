@@ -1,11 +1,10 @@
 ﻿using animal_service.Data;
-using animal_service.Handlers.UserController.Post.Command;
 using animal_service.Models;
 using animal_service.ViewModels;
 using FluentValidation;
 using MediatR;
 
-namespace animal_service.Handlers.UserController.Post.Handler;
+namespace animal_service.Handlers.UserController.Post;
 
 /// <summary>
 /// Handler for the CreateUser method

@@ -1,4 +1,4 @@
-﻿using animal_service.Handlers.UserController.Post.Command;
+﻿using animal_service.Handlers.UserController.Post;
 using FluentValidation;
 
 namespace animal_service.Handlers.UserController.Validator;

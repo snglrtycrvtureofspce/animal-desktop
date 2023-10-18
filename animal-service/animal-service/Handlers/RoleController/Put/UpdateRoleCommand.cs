@@ -1,7 +1,7 @@
 ﻿using animal_service.ViewModels;
 using MediatR;
 
-namespace animal_service.Handlers.UserController.Put;
+namespace animal_service.Handlers.RoleController.Put;
 
 /// <inheritdoc />
 public class UpdateRoleCommand : IRequest<RoleViewModelSummary>

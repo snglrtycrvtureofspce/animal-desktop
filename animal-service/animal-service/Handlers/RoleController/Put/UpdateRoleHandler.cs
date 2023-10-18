@@ -4,7 +4,7 @@ using FluentValidation;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace animal_service.Handlers.UserController.Put;
+namespace animal_service.Handlers.RoleController.Put;
 
 /// <summary>
 /// Handler for the UpdateRole method

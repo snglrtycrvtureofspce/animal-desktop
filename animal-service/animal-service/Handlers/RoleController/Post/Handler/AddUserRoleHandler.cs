@@ -1,9 +1,9 @@
 ﻿using animal_service.Data;
-using animal_service.Handlers.UserController.Post.Command;
+using animal_service.Handlers.RoleController.Post.Command;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace animal_service.Handlers.UserController.Post.Handler;
+namespace animal_service.Handlers.RoleController.Post.Handler;
 
 /// <summary>
 /// Handler for the AddUserRole method

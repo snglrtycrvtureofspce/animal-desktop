@@ -1,7 +1,7 @@
-﻿using animal_service.Handlers.UserController.Post.Command;
+﻿using animal_service.Handlers.RoleController.Post.Command;
 using FluentValidation;
 
-namespace animal_service.Handlers.UserController.Validator;
+namespace animal_service.Handlers.RoleController.Validator;
 
 /// <summary>
 /// Data validator for the role creation method

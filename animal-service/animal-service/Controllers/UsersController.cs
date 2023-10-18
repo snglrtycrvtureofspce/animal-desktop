@@ -1,6 +1,6 @@
 ﻿using animal_service.Handlers.UserController.Delete;
 using animal_service.Handlers.UserController.Get.Query;
-using animal_service.Handlers.UserController.Post.Command;
+using animal_service.Handlers.UserController.Post;
 using animal_service.Handlers.UserController.Put;
 using animal_service.Infrastructure;
 using animal_service.ViewModels;
@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace animal_service.Controllers;
 
 /// <summary>
-/// Controller for interaction with the user and roles
+/// Controller for interaction with the users
 /// </summary>
 [Route("api/[controller]")]
 [ApiController]
@@ -67,17 +67,6 @@ public class UsersController : ControllerBase
             }
         };
     }
-
-    /// <summary>
-    /// The method provider possibility to add a role to user
-    /// </summary>
-    [HttpPost("AddUserRole/{userId:guid}/roles/{roleId:guid}", Name = "AddUserRole")]
-    [ProducesResponseType(typeof(string), StatusCodes.Status200OK)]
-    public async Task<ActionResult<string>> AddUserRole(Guid userId, Guid roleId)
-    {
-        await _mediator.Send(new AddUserRoleCommand { UserId = userId, RoleId = roleId });
-        return Ok($"Role added successfully for user: {userId}");
-    }
     
     /// <summary>
     /// The method provider possibility to create a user
@@ -104,31 +93,6 @@ public class UsersController : ControllerBase
                 Age = query.Age,
                 Email = query.Email,
                 Roles = query.Roles
-            }
-        };
-    }
-    
-    /// <summary>
-    /// The method provider possibility to create a role
-    /// </summary>
-    [HttpPost("CreateRole", Name = "CreateRole")]
-    [ProducesResponseType(typeof(ItemResponse<RoleViewModelSummary>), StatusCodes.Status200OK)]
-    [ProducesResponseType(typeof(ValidationErrorResponse), StatusCodes.Status400BadRequest)]
-    public async Task<ItemResponse<RoleViewModelSummary>> CreateRole(CreateRoleCommand createRoleCommand)
-    {
-        var query = await _mediator.Send(createRoleCommand);
-        
-        return new ItemResponse<RoleViewModelSummary>
-        {
-            Message = "Role created successfully.",
-            StatusCode = 200,
-            Item = new RoleViewModelSummary
-            {
-                Id = query.Id,
-                CreatedDate = query.CreatedDate,
-                ModificationDate = query.ModificationDate,
-                Name = query.Name,
-                Users = query.Users
             }
         };
     }
@@ -162,31 +126,6 @@ public class UsersController : ControllerBase
             }
         };
     }
-    
-    /// <summary>
-    /// The method provider possibility to update a role
-    /// </summary>
-    [HttpPut("UpdateRole/{roleId:guid}", Name = "UpdateRole")]
-    [ProducesResponseType(typeof(ItemResponse<RoleViewModelSummary>), StatusCodes.Status200OK)]
-    [ProducesResponseType(typeof(ValidationErrorResponse), StatusCodes.Status400BadRequest)]
-    public async Task<ItemResponse<RoleViewModelSummary>> UpdateRole(Guid roleId, UpdateRoleCommand updateRoleCommand)
-    {
-        updateRoleCommand.RoleId = roleId;
-        var query = await _mediator.Send(updateRoleCommand);
-        
-        return new ItemResponse<RoleViewModelSummary>
-        {
-            Message = "Role updated successfully.",
-            StatusCode = 200,
-            Item = new RoleViewModelSummary
-            {
-                Id = query.Id,
-                CreatedDate = query.CreatedDate,
-                ModificationDate = query.ModificationDate,
-                Name = query.Name
-            }
-        };
-    }
 
     /// <summary>
     /// The method provider possibility to delete a user
@@ -197,16 +136,5 @@ public class UsersController : ControllerBase
     {
         await _mediator.Send(new DeleteUserCommand { UserId = userId });
         return Ok("User deleted successfully.");
-    }
-    
-    /// <summary>
-    /// The method provider possibility to delete a role
-    /// </summary>
-    [HttpDelete("DeleteRole/{roleId:guid}", Name = "DeleteRole")]
-    [ProducesResponseType(typeof(string), StatusCodes.Status200OK)]
-    public async Task<ActionResult<string>> DeleteRole(Guid roleId)
-    {
-        await _mediator.Send(new DeleteRoleCommand { RoleId = roleId });
-        return Ok("Role deleted successfully.");
     }
 }
