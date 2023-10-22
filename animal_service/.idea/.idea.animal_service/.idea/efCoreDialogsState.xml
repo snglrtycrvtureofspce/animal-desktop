@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="EfCoreDialogsState">
+    <option name="keyValueStorage">
+      <map>
+        <entry key="Common:83f96711-ef0f-4d99-bec8-a07687cd6155:dbContext" value="Service.Animals.Web.Data.AnimalsDbContext" />
+        <entry key="Common:buildConfiguration" value="Debug" />
+        <entry key="Common:idempotent" value="false" />
+        <entry key="Common:noBuild" value="false" />
+        <entry key="Common:noTransactions" value="false" />
+        <entry key="Common:outputFilePath" value="script.sql" />
+        <entry key="Common:outputFolder" value="Migrations" />
+        <entry key="Common:targetFramework" value="net6.0" />
+        <entry key="Common:useDefaultConnection" value="true" />
+      </map>
+    </option>
+  </component>
+</project>

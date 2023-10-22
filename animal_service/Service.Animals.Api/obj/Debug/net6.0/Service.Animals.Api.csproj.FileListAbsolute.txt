@@ -1,0 +1,12 @@
+C:\Users\asp1r\OneDrive\Документы\snglrtycrvtureofspce\Git\animal_service\animal_service\Service.Animals.Api\bin\Debug\net6.0\Service.Animals.Api.deps.json
+C:\Users\asp1r\OneDrive\Документы\snglrtycrvtureofspce\Git\animal_service\animal_service\Service.Animals.Api\bin\Debug\net6.0\Service.Animals.Api.dll
+C:\Users\asp1r\OneDrive\Документы\snglrtycrvtureofspce\Git\animal_service\animal_service\Service.Animals.Api\bin\Debug\net6.0\Service.Animals.Api.pdb
+C:\Users\asp1r\OneDrive\Документы\snglrtycrvtureofspce\Git\animal_service\animal_service\Service.Animals.Api\obj\Debug\net6.0\Service.Animals.Api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\asp1r\OneDrive\Документы\snglrtycrvtureofspce\Git\animal_service\animal_service\Service.Animals.Api\obj\Debug\net6.0\Service.Animals.Api.AssemblyInfoInputs.cache
+C:\Users\asp1r\OneDrive\Документы\snglrtycrvtureofspce\Git\animal_service\animal_service\Service.Animals.Api\obj\Debug\net6.0\Service.Animals.Api.AssemblyInfo.cs
+C:\Users\asp1r\OneDrive\Документы\snglrtycrvtureofspce\Git\animal_service\animal_service\Service.Animals.Api\obj\Debug\net6.0\Service.Animals.Api.csproj.CoreCompileInputs.cache
+C:\Users\asp1r\OneDrive\Документы\snglrtycrvtureofspce\Git\animal_service\animal_service\Service.Animals.Api\obj\Debug\net6.0\Service.Animals.Api.dll
+C:\Users\asp1r\OneDrive\Документы\snglrtycrvtureofspce\Git\animal_service\animal_service\Service.Animals.Api\obj\Debug\net6.0\refint\Service.Animals.Api.dll
+C:\Users\asp1r\OneDrive\Документы\snglrtycrvtureofspce\Git\animal_service\animal_service\Service.Animals.Api\obj\Debug\net6.0\Service.Animals.Api.pdb
+C:\Users\asp1r\OneDrive\Документы\snglrtycrvtureofspce\Git\animal_service\animal_service\Service.Animals.Api\obj\Debug\net6.0\ref\Service.Animals.Api.dll
+C:\Users\asp1r\OneDrive\Документы\snglrtycrvtureofspce\Git\animal_service\animal_service\Service.Animals.Api\obj\Debug\net6.0\Service.Animals.Api.csproj.AssemblyReference.cache
