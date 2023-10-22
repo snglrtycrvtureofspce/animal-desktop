@@ -10,3 +10,4 @@ C:\Users\asp1r\OneDrive\Документы\snglrtycrvtureofspce\Git\animal_servi
 C:\Users\asp1r\OneDrive\Документы\snglrtycrvtureofspce\Git\animal_service\animal_service\Service.Animals.Api\obj\Debug\net6.0\Service.Animals.Api.pdb
 C:\Users\asp1r\OneDrive\Документы\snglrtycrvtureofspce\Git\animal_service\animal_service\Service.Animals.Api\obj\Debug\net6.0\ref\Service.Animals.Api.dll
 C:\Users\asp1r\OneDrive\Документы\snglrtycrvtureofspce\Git\animal_service\animal_service\Service.Animals.Api\obj\Debug\net6.0\Service.Animals.Api.csproj.AssemblyReference.cache
+C:\Users\asp1r\OneDrive\Документы\snglrtycrvtureofspce\Git\animal_service\animal_service\Service.Animals.Api\bin\Debug\net6.0\Service.Animals.Api.xml
