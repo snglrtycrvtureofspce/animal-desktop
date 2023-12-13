@@ -5,6 +5,7 @@
       <map>
         <entry key="Common:83f96711-ef0f-4d99-bec8-a07687cd6155:dbContext" value="Service.Animals.Web.Data.AnimalsDbContext" />
         <entry key="Common:buildConfiguration" value="Debug" />
+        <entry key="Common:enableDiagnosticLogging" value="false" />
         <entry key="Common:idempotent" value="false" />
         <entry key="Common:noBuild" value="false" />
         <entry key="Common:noTransactions" value="false" />

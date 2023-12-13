@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "1NykzgJegt/TuTh0qZjrMoyojbXMmqElzPGMz7IQgJyl/PIUFt0ApiyREAYb0YKcXJFfVr+0QLQVpKxngX9g5w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\asp1r\\OneDrive\\Документы\\snglrtycrvtureofspce\\Git\\animal_service\\animal_service\\Service.Animals.Desktop\\Service.Animals.Desktop.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\asp1r\\.nuget\\packages\\epplus\\7.0.3\\epplus.7.0.3.nupkg.sha512",
+    "C:\\Users\\asp1r\\.nuget\\packages\\epplus.interfaces\\6.1.1\\epplus.interfaces.6.1.1.nupkg.sha512",
+    "C:\\Users\\asp1r\\.nuget\\packages\\epplus.system.drawing\\6.1.1\\epplus.system.drawing.6.1.1.nupkg.sha512",
+    "C:\\Users\\asp1r\\.nuget\\packages\\guna.ui2.winforms\\2.0.4.6\\guna.ui2.winforms.2.0.4.6.nupkg.sha512",
+    "C:\\Users\\asp1r\\.nuget\\packages\\microsoft.io.recyclablememorystream\\1.4.1\\microsoft.io.recyclablememorystream.1.4.1.nupkg.sha512",
+    "C:\\Users\\asp1r\\.nuget\\packages\\microsoft.sqlserver.types\\160.1000.6\\microsoft.sqlserver.types.160.1000.6.nupkg.sha512",
+    "C:\\Users\\asp1r\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
