@@ -3,23 +3,23 @@ using System.Windows.Forms;
 
 namespace Service.Animals.Desktop.Form.Admin
 {
-    public partial class UsersAdminForm : System.Windows.Forms.Form
+    public partial class RolesAdminForm : System.Windows.Forms.Form
     {
-        public UsersAdminForm()
+        public RolesAdminForm()
         {
             InitializeComponent();
         }
 
         private void AddButton_Click(object sender, System.EventArgs e)
         {
-            usersBindingSource.AddNew();
+            rolesBindingSource.AddNew();
         }
 
         private void DeleteButton_Click(object sender, System.EventArgs e)
         {
             if (DialogResult.Yes == MessageBox.Show("Вы уверены что хотите удалить?", "Подтверждение", MessageBoxButtons.YesNo))
             {
-                usersBindingSource.RemoveCurrent();
+                rolesBindingSource.RemoveCurrent();
             }
         }
 
@@ -28,8 +28,8 @@ namespace Service.Animals.Desktop.Form.Admin
             try
             {
                 this.Validate();
-                this.usersBindingSource.EndEdit();
-                this.usersTableAdapter.Update(this.lostAnimalsDesktop_ServiceDataSet.Users);
+                this.rolesBindingSource.EndEdit();
+                this.rolesTableAdapter.Update(this.lostAnimalsDesktop_ServiceDataSet);
                 MessageBox.Show("Запись сохранена", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
@@ -38,19 +38,19 @@ namespace Service.Animals.Desktop.Form.Admin
             }
         }
 
-        private void UsersBindingNavigatorSaveItem_Click(object sender, System.EventArgs e)
+        private void RolesBindingNavigatorSaveItem_Click(object sender, System.EventArgs e)
         {
             this.Validate();
-            this.usersBindingSource.EndEdit();
+            this.rolesBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.lostAnimalsDesktop_ServiceDataSet);
         }
 
-        private void UsersAdminForm_Load(object sender, System.EventArgs e)
+        private void RolesAdminForm_Load(object sender, System.EventArgs e)
         {
-            this.usersTableAdapter.Fill(this.lostAnimalsDesktop_ServiceDataSet.Users);
+            this.rolesTableAdapter.Fill(this.lostAnimalsDesktop_ServiceDataSet.Roles);
         }
 
-        private void UsersAdminForm_FormClosing(object sender, FormClosingEventArgs e)
+        private void RolesAdminForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.Hide();
             Home.Instance.Show();

@@ -34,8 +34,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.logo = new Guna.UI.WinForms.GunaPictureBox();
             this.AdminPanel = new Guna.UI.WinForms.GunaPanel();
-            this.flightsAdminButton = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.ticketsAdminButton = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.usersAdminButton = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.RolesAdminButton = new Guna.UI.WinForms.GunaAdvenceButton();
             this.crewAdminButton = new Guna.UI.WinForms.GunaAdvenceButton();
             this.passengersButton = new Guna.UI.WinForms.GunaAdvenceButton();
             this.crewMemberButton = new Guna.UI.WinForms.GunaAdvenceButton();
@@ -107,8 +107,8 @@
             // 
             // AdminPanel
             // 
-            this.AdminPanel.Controls.Add(this.flightsAdminButton);
-            this.AdminPanel.Controls.Add(this.ticketsAdminButton);
+            this.AdminPanel.Controls.Add(this.usersAdminButton);
+            this.AdminPanel.Controls.Add(this.RolesAdminButton);
             this.AdminPanel.Controls.Add(this.crewAdminButton);
             this.AdminPanel.Controls.Add(this.passengersButton);
             this.AdminPanel.Controls.Add(this.crewMemberButton);
@@ -124,75 +124,75 @@
             this.AdminPanel.TabIndex = 6;
             this.AdminPanel.Visible = false;
             // 
-            // flightsAdminButton
+            // usersAdminButton
             // 
-            this.flightsAdminButton.AnimationHoverSpeed = 0.07F;
-            this.flightsAdminButton.AnimationSpeed = 0.03F;
-            this.flightsAdminButton.BaseColor = System.Drawing.Color.White;
-            this.flightsAdminButton.BorderColor = System.Drawing.Color.Black;
-            this.flightsAdminButton.CheckedBaseColor = System.Drawing.Color.Gray;
-            this.flightsAdminButton.CheckedBorderColor = System.Drawing.Color.Black;
-            this.flightsAdminButton.CheckedForeColor = System.Drawing.Color.Black;
-            this.flightsAdminButton.CheckedImage = null;
-            this.flightsAdminButton.CheckedLineColor = System.Drawing.Color.Gray;
-            this.flightsAdminButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.flightsAdminButton.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.flightsAdminButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.flightsAdminButton.FocusedColor = System.Drawing.Color.Empty;
-            this.flightsAdminButton.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.flightsAdminButton.ForeColor = System.Drawing.Color.Black;
-            this.flightsAdminButton.Image = null;
-            this.flightsAdminButton.ImageOffsetX = 5;
-            this.flightsAdminButton.ImageSize = new System.Drawing.Size(20, 20);
-            this.flightsAdminButton.LineColor = System.Drawing.SystemColors.Control;
-            this.flightsAdminButton.Location = new System.Drawing.Point(0, 232);
-            this.flightsAdminButton.Name = "flightsAdminButton";
-            this.flightsAdminButton.OnHoverBaseColor = System.Drawing.SystemColors.Control;
-            this.flightsAdminButton.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.flightsAdminButton.OnHoverForeColor = System.Drawing.Color.Black;
-            this.flightsAdminButton.OnHoverImage = null;
-            this.flightsAdminButton.OnHoverLineColor = System.Drawing.SystemColors.Control;
-            this.flightsAdminButton.OnPressedColor = System.Drawing.Color.Black;
-            this.flightsAdminButton.Size = new System.Drawing.Size(170, 30);
-            this.flightsAdminButton.TabIndex = 16;
-            this.flightsAdminButton.Text = "Пользователи";
-            this.flightsAdminButton.TextOffsetX = 10;
-            this.flightsAdminButton.Click += new System.EventHandler(this.flightsAdminButton_Click);
+            this.usersAdminButton.AnimationHoverSpeed = 0.07F;
+            this.usersAdminButton.AnimationSpeed = 0.03F;
+            this.usersAdminButton.BaseColor = System.Drawing.Color.White;
+            this.usersAdminButton.BorderColor = System.Drawing.Color.Black;
+            this.usersAdminButton.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.usersAdminButton.CheckedBorderColor = System.Drawing.Color.Black;
+            this.usersAdminButton.CheckedForeColor = System.Drawing.Color.Black;
+            this.usersAdminButton.CheckedImage = null;
+            this.usersAdminButton.CheckedLineColor = System.Drawing.Color.Gray;
+            this.usersAdminButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.usersAdminButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.usersAdminButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.usersAdminButton.FocusedColor = System.Drawing.Color.Empty;
+            this.usersAdminButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.usersAdminButton.ForeColor = System.Drawing.Color.Black;
+            this.usersAdminButton.Image = null;
+            this.usersAdminButton.ImageOffsetX = 5;
+            this.usersAdminButton.ImageSize = new System.Drawing.Size(20, 20);
+            this.usersAdminButton.LineColor = System.Drawing.SystemColors.Control;
+            this.usersAdminButton.Location = new System.Drawing.Point(0, 232);
+            this.usersAdminButton.Name = "usersAdminButton";
+            this.usersAdminButton.OnHoverBaseColor = System.Drawing.SystemColors.Control;
+            this.usersAdminButton.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.usersAdminButton.OnHoverForeColor = System.Drawing.Color.Black;
+            this.usersAdminButton.OnHoverImage = null;
+            this.usersAdminButton.OnHoverLineColor = System.Drawing.SystemColors.Control;
+            this.usersAdminButton.OnPressedColor = System.Drawing.Color.Black;
+            this.usersAdminButton.Size = new System.Drawing.Size(170, 30);
+            this.usersAdminButton.TabIndex = 16;
+            this.usersAdminButton.Text = "Пользователи";
+            this.usersAdminButton.TextOffsetX = 10;
+            this.usersAdminButton.Click += new System.EventHandler(this.UsersAdminButton_Click);
             // 
-            // ticketsAdminButton
+            // RolesAdminButton
             // 
-            this.ticketsAdminButton.AnimationHoverSpeed = 0.07F;
-            this.ticketsAdminButton.AnimationSpeed = 0.03F;
-            this.ticketsAdminButton.BaseColor = System.Drawing.Color.White;
-            this.ticketsAdminButton.BorderColor = System.Drawing.Color.Black;
-            this.ticketsAdminButton.CheckedBaseColor = System.Drawing.Color.Gray;
-            this.ticketsAdminButton.CheckedBorderColor = System.Drawing.Color.Black;
-            this.ticketsAdminButton.CheckedForeColor = System.Drawing.Color.Black;
-            this.ticketsAdminButton.CheckedImage = null;
-            this.ticketsAdminButton.CheckedLineColor = System.Drawing.Color.Gray;
-            this.ticketsAdminButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ticketsAdminButton.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.ticketsAdminButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ticketsAdminButton.FocusedColor = System.Drawing.Color.Empty;
-            this.ticketsAdminButton.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ticketsAdminButton.ForeColor = System.Drawing.Color.Black;
-            this.ticketsAdminButton.Image = null;
-            this.ticketsAdminButton.ImageOffsetX = 5;
-            this.ticketsAdminButton.ImageSize = new System.Drawing.Size(20, 20);
-            this.ticketsAdminButton.LineColor = System.Drawing.SystemColors.Control;
-            this.ticketsAdminButton.Location = new System.Drawing.Point(0, 202);
-            this.ticketsAdminButton.Name = "ticketsAdminButton";
-            this.ticketsAdminButton.OnHoverBaseColor = System.Drawing.SystemColors.Control;
-            this.ticketsAdminButton.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.ticketsAdminButton.OnHoverForeColor = System.Drawing.Color.Black;
-            this.ticketsAdminButton.OnHoverImage = null;
-            this.ticketsAdminButton.OnHoverLineColor = System.Drawing.SystemColors.Control;
-            this.ticketsAdminButton.OnPressedColor = System.Drawing.Color.Black;
-            this.ticketsAdminButton.Size = new System.Drawing.Size(170, 30);
-            this.ticketsAdminButton.TabIndex = 15;
-            this.ticketsAdminButton.Text = "Билеты";
-            this.ticketsAdminButton.TextOffsetX = 10;
-            this.ticketsAdminButton.Click += new System.EventHandler(this.ticketsAdminButton_Click);
+            this.RolesAdminButton.AnimationHoverSpeed = 0.07F;
+            this.RolesAdminButton.AnimationSpeed = 0.03F;
+            this.RolesAdminButton.BaseColor = System.Drawing.Color.White;
+            this.RolesAdminButton.BorderColor = System.Drawing.Color.Black;
+            this.RolesAdminButton.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.RolesAdminButton.CheckedBorderColor = System.Drawing.Color.Black;
+            this.RolesAdminButton.CheckedForeColor = System.Drawing.Color.Black;
+            this.RolesAdminButton.CheckedImage = null;
+            this.RolesAdminButton.CheckedLineColor = System.Drawing.Color.Gray;
+            this.RolesAdminButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RolesAdminButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.RolesAdminButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.RolesAdminButton.FocusedColor = System.Drawing.Color.Empty;
+            this.RolesAdminButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.RolesAdminButton.ForeColor = System.Drawing.Color.Black;
+            this.RolesAdminButton.Image = null;
+            this.RolesAdminButton.ImageOffsetX = 5;
+            this.RolesAdminButton.ImageSize = new System.Drawing.Size(20, 20);
+            this.RolesAdminButton.LineColor = System.Drawing.SystemColors.Control;
+            this.RolesAdminButton.Location = new System.Drawing.Point(0, 202);
+            this.RolesAdminButton.Name = "RolesAdminButton";
+            this.RolesAdminButton.OnHoverBaseColor = System.Drawing.SystemColors.Control;
+            this.RolesAdminButton.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.RolesAdminButton.OnHoverForeColor = System.Drawing.Color.Black;
+            this.RolesAdminButton.OnHoverImage = null;
+            this.RolesAdminButton.OnHoverLineColor = System.Drawing.SystemColors.Control;
+            this.RolesAdminButton.OnPressedColor = System.Drawing.Color.Black;
+            this.RolesAdminButton.Size = new System.Drawing.Size(170, 30);
+            this.RolesAdminButton.TabIndex = 15;
+            this.RolesAdminButton.Text = "Роли";
+            this.RolesAdminButton.TextOffsetX = 10;
+            this.RolesAdminButton.Click += new System.EventHandler(this.RolesAdminButton_Click);
             // 
             // crewAdminButton
             // 
@@ -408,7 +408,7 @@
             this.btnAdmin.OnPressedColor = System.Drawing.Color.Black;
             this.btnAdmin.Size = new System.Drawing.Size(170, 30);
             this.btnAdmin.TabIndex = 0;
-            this.btnAdmin.Text = "Пользователи";
+            this.btnAdmin.Text = "Статистика";
             this.btnAdmin.TextOffsetX = 10;
             this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
             // 
@@ -890,8 +890,8 @@
         private Guna.UI.WinForms.GunaAdvenceButton flightsButton;
         private Guna.UI.WinForms.GunaLabel gunaLabel4;
         private Guna.UI.WinForms.GunaAdvenceButton sellTicketsButton;
-        public Guna.UI.WinForms.GunaAdvenceButton flightsAdminButton;
-        public Guna.UI.WinForms.GunaAdvenceButton ticketsAdminButton;
+        public Guna.UI.WinForms.GunaAdvenceButton usersAdminButton;
+        public Guna.UI.WinForms.GunaAdvenceButton RolesAdminButton;
         public Guna.UI.WinForms.GunaAdvenceButton crewAdminButton;
     }
 }

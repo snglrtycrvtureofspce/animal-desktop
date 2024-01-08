@@ -36,7 +36,7 @@
             System.Windows.Forms.Label ageLabel;
             System.Windows.Forms.Label emailLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UsersAdminForm));
-            this._LostAnimalsDesktop_ServiceDataSet = new Service.Animals.Desktop.LostAnimalsDesktop_ServiceDataSet();
+            this.lostAnimalsDesktop_ServiceDataSet = new Service.Animals.Desktop.LostAnimalsDesktop_ServiceDataSet();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usersTableAdapter = new Service.Animals.Desktop.LostAnimalsDesktop_ServiceDataSetTableAdapters.UsersTableAdapter();
             this.tableAdapterManager = new Service.Animals.Desktop.LostAnimalsDesktop_ServiceDataSetTableAdapters.TableAdapterManager();
@@ -66,16 +66,16 @@
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.ageTextBox = new System.Windows.Forms.TextBox();
             this.emailTextBox = new System.Windows.Forms.TextBox();
-            this.saveButton = new System.Windows.Forms.Button();
-            this.deleteButton = new System.Windows.Forms.Button();
-            this.addButton = new System.Windows.Forms.Button();
+            this.SaveButton = new System.Windows.Forms.Button();
+            this.DeleteButton = new System.Windows.Forms.Button();
+            this.AddButton = new System.Windows.Forms.Button();
             idLabel = new System.Windows.Forms.Label();
             usernameLabel = new System.Windows.Forms.Label();
             passwordLabel = new System.Windows.Forms.Label();
             nameLabel = new System.Windows.Forms.Label();
             ageLabel = new System.Windows.Forms.Label();
             emailLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this._LostAnimalsDesktop_ServiceDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lostAnimalsDesktop_ServiceDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingNavigator)).BeginInit();
             this.usersBindingNavigator.SuspendLayout();
@@ -144,13 +144,13 @@
             // 
             // _LostAnimalsDesktop_ServiceDataSet
             // 
-            this._LostAnimalsDesktop_ServiceDataSet.DataSetName = "_LostAnimalsDesktop_ServiceDataSet";
-            this._LostAnimalsDesktop_ServiceDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.lostAnimalsDesktop_ServiceDataSet.DataSetName = "_LostAnimalsDesktop_ServiceDataSet";
+            this.lostAnimalsDesktop_ServiceDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // usersBindingSource
             // 
             this.usersBindingSource.DataMember = "Users";
-            this.usersBindingSource.DataSource = this._LostAnimalsDesktop_ServiceDataSet;
+            this.usersBindingSource.DataSource = this.lostAnimalsDesktop_ServiceDataSet;
             // 
             // usersTableAdapter
             // 
@@ -291,7 +291,7 @@
             this.usersBindingNavigatorSaveItem.Name = "usersBindingNavigatorSaveItem";
             this.usersBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.usersBindingNavigatorSaveItem.Text = "Сохранить данные";
-            this.usersBindingNavigatorSaveItem.Click += new System.EventHandler(this.usersBindingNavigatorSaveItem_Click);
+            this.usersBindingNavigatorSaveItem.Click += new System.EventHandler(this.UsersBindingNavigatorSaveItem_Click);
             // 
             // usersDataGridView
             // 
@@ -395,47 +395,47 @@
             this.emailTextBox.Size = new System.Drawing.Size(200, 20);
             this.emailTextBox.TabIndex = 13;
             // 
-            // saveButton
+            // SaveButton
             // 
-            this.saveButton.Font = new System.Drawing.Font("Courier New", 9.75F);
-            this.saveButton.Location = new System.Drawing.Point(306, 338);
-            this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(349, 72);
-            this.saveButton.TabIndex = 49;
-            this.saveButton.Text = "Сохранить";
-            this.saveButton.UseVisualStyleBackColor = true;
-            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
+            this.SaveButton.Font = new System.Drawing.Font("Courier New", 9.75F);
+            this.SaveButton.Location = new System.Drawing.Point(306, 338);
+            this.SaveButton.Name = "SaveButton";
+            this.SaveButton.Size = new System.Drawing.Size(349, 72);
+            this.SaveButton.TabIndex = 49;
+            this.SaveButton.Text = "Сохранить";
+            this.SaveButton.UseVisualStyleBackColor = true;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
-            // deleteButton
+            // DeleteButton
             // 
-            this.deleteButton.Font = new System.Drawing.Font("Courier New", 9.75F);
-            this.deleteButton.Location = new System.Drawing.Point(487, 258);
-            this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Size = new System.Drawing.Size(168, 74);
-            this.deleteButton.TabIndex = 48;
-            this.deleteButton.Text = "Удалить";
-            this.deleteButton.UseVisualStyleBackColor = true;
-            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
+            this.DeleteButton.Font = new System.Drawing.Font("Courier New", 9.75F);
+            this.DeleteButton.Location = new System.Drawing.Point(487, 258);
+            this.DeleteButton.Name = "DeleteButton";
+            this.DeleteButton.Size = new System.Drawing.Size(168, 74);
+            this.DeleteButton.TabIndex = 48;
+            this.DeleteButton.Text = "Удалить";
+            this.DeleteButton.UseVisualStyleBackColor = true;
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
-            // addButton
+            // AddButton
             // 
-            this.addButton.Font = new System.Drawing.Font("Courier New", 9.75F);
-            this.addButton.Location = new System.Drawing.Point(306, 258);
-            this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(168, 74);
-            this.addButton.TabIndex = 47;
-            this.addButton.Text = "Добавить";
-            this.addButton.UseVisualStyleBackColor = true;
-            this.addButton.Click += new System.EventHandler(this.addButton_Click);
+            this.AddButton.Font = new System.Drawing.Font("Courier New", 9.75F);
+            this.AddButton.Location = new System.Drawing.Point(306, 258);
+            this.AddButton.Name = "AddButton";
+            this.AddButton.Size = new System.Drawing.Size(168, 74);
+            this.AddButton.TabIndex = 47;
+            this.AddButton.Text = "Добавить";
+            this.AddButton.UseVisualStyleBackColor = true;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // UsersAdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(664, 420);
-            this.Controls.Add(this.saveButton);
-            this.Controls.Add(this.deleteButton);
-            this.Controls.Add(this.addButton);
+            this.Controls.Add(this.SaveButton);
+            this.Controls.Add(this.DeleteButton);
+            this.Controls.Add(this.AddButton);
             this.Controls.Add(idLabel);
             this.Controls.Add(this.idTextBox);
             this.Controls.Add(usernameLabel);
@@ -450,11 +450,13 @@
             this.Controls.Add(this.emailTextBox);
             this.Controls.Add(this.usersDataGridView);
             this.Controls.Add(this.usersBindingNavigator);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UsersAdminForm";
-            this.Text = "UsersAdminForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Пользователи";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.UsersAdminForm_FormClosing);
             this.Load += new System.EventHandler(this.UsersAdminForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this._LostAnimalsDesktop_ServiceDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lostAnimalsDesktop_ServiceDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingNavigator)).EndInit();
             this.usersBindingNavigator.ResumeLayout(false);
@@ -467,7 +469,7 @@
 
         #endregion
 
-        private LostAnimalsDesktop_ServiceDataSet _LostAnimalsDesktop_ServiceDataSet;
+        private LostAnimalsDesktop_ServiceDataSet lostAnimalsDesktop_ServiceDataSet;
         private System.Windows.Forms.BindingSource usersBindingSource;
         private LostAnimalsDesktop_ServiceDataSetTableAdapters.UsersTableAdapter usersTableAdapter;
         private LostAnimalsDesktop_ServiceDataSetTableAdapters.TableAdapterManager tableAdapterManager;
@@ -499,8 +501,8 @@
         private System.Windows.Forms.TextBox nameTextBox;
         private System.Windows.Forms.TextBox ageTextBox;
         private System.Windows.Forms.TextBox emailTextBox;
-        private System.Windows.Forms.Button saveButton;
-        private System.Windows.Forms.Button deleteButton;
-        private System.Windows.Forms.Button addButton;
+        private System.Windows.Forms.Button SaveButton;
+        private System.Windows.Forms.Button DeleteButton;
+        private System.Windows.Forms.Button AddButton;
     }
 }

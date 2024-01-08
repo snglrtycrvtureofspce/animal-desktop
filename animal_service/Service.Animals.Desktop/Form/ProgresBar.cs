@@ -15,7 +15,7 @@ namespace Service.Animals.Desktop.Form
         private void timer1_Tick(object sender, EventArgs e) // генерация ленты
         {
             Random rnd = new Random();
-            Progress.Value += 2;
+            Progress.Value += 100; // 2
             if (Progress.Value == 100)
             {
                 timer1.Stop();

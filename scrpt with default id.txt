@@ -1,0 +1,111 @@
+create table Animals
+(
+    Id               int not null identity(1,1)
+        constraint PK_Animals
+            primary key,
+    Name             nvarchar(max)    not null,
+    Description      nvarchar(max)    not null,
+    DateOfBirth      datetime2        not null,
+    Status           nvarchar(max)    not null,
+    Breed            nvarchar(max)    not null,
+    PhotoUrl         nvarchar(max)    not null,
+    CreatedDate      datetime2        not null,
+    ModificationDate datetime2        not null
+)
+go
+
+create table Markers
+(
+    Id               int not null identity(1,1)
+        constraint PK_Markers
+            primary key,
+    Latitude         float            not null,
+    Longitude        float            not null,
+    LocationName     nvarchar(max)    not null,
+    CreatedDate      datetime2        not null,
+    ModificationDate datetime2        not null
+)
+go
+
+create table AnimalMarkerEntity
+(
+    AnimalId int not null
+        constraint FK_AnimalMarkerEntity_Animals_AnimalId
+            references Animals
+            on delete cascade,
+    MarkerId int not null
+        constraint FK_AnimalMarkerEntity_Markers_MarkerId
+            references Markers
+            on delete cascade,
+    constraint PK_AnimalMarkerEntity
+        primary key (AnimalId, MarkerId)
+)
+go
+
+create index IX_AnimalMarkerEntity_MarkerId
+    on AnimalMarkerEntity (MarkerId)
+go
+
+create table Roles
+(
+    Id               int not null identity(1,1)
+        constraint PK_Roles
+            primary key,
+    Name             nvarchar(max)    not null,
+    CreatedDate      datetime2        not null,
+    ModificationDate datetime2        not null
+)
+go
+
+create table Users
+(
+    Id               int not null identity(1,1)
+        constraint PK_Users
+            primary key,
+    Username         nvarchar(max)    not null,
+    Password         nvarchar(max)    not null,
+    Name             nvarchar(max)    not null,
+    Age              int              not null,
+    Email            nvarchar(max)    not null,
+    CreatedDate      datetime2        not null,
+    ModificationDate datetime2        not null
+)
+go
+
+create table AnimalUserEntity
+(
+    AnimalId int not null
+        constraint FK_AnimalUserEntity_Animals_AnimalId
+            references Animals
+            on delete cascade,
+    UserId   int not null
+        constraint FK_AnimalUserEntity_Users_UserId
+            references Users
+            on delete cascade,
+    constraint PK_AnimalUserEntity
+        primary key (AnimalId, UserId)
+)
+go
+
+create index IX_AnimalUserEntity_UserId
+    on AnimalUserEntity (UserId)
+go
+
+create table UserRoleEntity
+(
+    UserId int not null
+        constraint FK_UserRoleEntity_Users_UserId
+            references Users
+            on delete cascade,
+    RoleId int not null
+        constraint FK_UserRoleEntity_Roles_RoleId
+            references Roles
+            on delete cascade,
+    constraint PK_UserRoleEntity
+        primary key (RoleId, UserId)
+)
+go
+
+create index IX_UserRoleEntity_UserId
+    on UserRoleEntity (UserId)
+go

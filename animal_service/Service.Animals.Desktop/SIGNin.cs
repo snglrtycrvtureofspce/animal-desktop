@@ -11,13 +11,14 @@ namespace Service.Animals.Desktop
     {
         private readonly string _connectionString = System.Configuration.ConfigurationManager.ConnectionStrings
             ["connectionString"].ConnectionString;
+
         public SIGNin()
         {
             InitializeComponent();
             this.ActiveControl = Label;
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+        private void BtnClose_Click(object sender, EventArgs e)
         {
             this.Hide();
             Home.Instance.Show();
@@ -59,9 +60,10 @@ namespace Service.Animals.Desktop
             }
         }
 
-        private void btnSignIN_Click(object sender, EventArgs e)
+        private void BtnSignIN_Click(object sender, EventArgs e)
         {
             SqlConnection connection = new SqlConnection(_connectionString);
+
             try
             {
                 if (TextBoxUser.Text != "Имя пользователя" && TextBoxPassword.Text != "Пароль")

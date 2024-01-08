@@ -181,3 +181,4 @@ C:\Users\asp1r\OneDrive\Документы\snglrtycrvtureofspce\Git\animal_servi
 C:\Users\asp1r\OneDrive\Документы\snglrtycrvtureofspce\Git\animal_service\animal_service\Service.Animals.Desktop\obj\Debug\Service.Animals.Desktop.exe
 C:\Users\asp1r\OneDrive\Документы\snglrtycrvtureofspce\Git\animal_service\animal_service\Service.Animals.Desktop\obj\Debug\Service.Animals.Desktop.pdb
 C:\Users\asp1r\OneDrive\Документы\snglrtycrvtureofspce\Git\animal_service\animal_service\Service.Animals.Desktop\obj\Debug\Service.Animals.Desktop.Form.Admin.UsersAdminForm.resources
+C:\Users\asp1r\OneDrive\Документы\snglrtycrvtureofspce\Git\animal_service\animal_service\Service.Animals.Desktop\obj\Debug\Service.Animals.Desktop.Form.Admin.RolesAdminForm.resources

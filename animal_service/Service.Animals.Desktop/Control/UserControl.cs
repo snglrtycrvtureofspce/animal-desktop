@@ -11,8 +11,7 @@ namespace Service.Animals.Desktop.Control
             InitializeComponent();
         }
 
-
-        private void btnSignIN_Click(object sender, EventArgs e)
+        private void BtnSignIN_Click(object sender, EventArgs e)
         {
             this.Hide();
             Home.Instance.Hide();
@@ -20,7 +19,7 @@ namespace Service.Animals.Desktop.Control
             sIGNin.Show();
         }
 
-        private void btnSignUP_Click(object sender, EventArgs e)
+        private void BtnSignUP_Click(object sender, EventArgs e)
         {
             this.Hide();
             Home.Instance.Hide();

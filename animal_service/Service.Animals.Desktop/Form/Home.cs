@@ -216,58 +216,9 @@ namespace Service.Animals.Desktop.Form
             connection.Close();
         }
 
-        private void flightsButton_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FlightsForm flightsForm = new FlightsForm();
-            flightsForm.Show();
-        }
-
-        private void crewButton_Click(object sender, EventArgs e) // форма экипажа
-        {
-            this.Hide();
-            CrewForm crewForm = new CrewForm();
-            crewForm.Show();
-        }
-
-        private void ticketsButton_Click(object sender, EventArgs e) // форма билетов
-        {
-            this.Hide();
-            TicketsForm ticketsForm = new TicketsForm();
-            ticketsForm.Show();
-        }
-
-        private void queryButton_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            QueryForm queryForm = new QueryForm();
-            queryForm.Show();
-        }
-
         private void referenceButton_Click(object sender, EventArgs e) // справка
         {
             Process.Start(Directory.GetCurrentDirectory() + @"\reference.chm");
-        }
-
-        private void airplanesButton_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            AirplanesForm airplanesForm = new AirplanesForm();
-            airplanesForm.Show();
-        }
-
-        private void crewMemberButton_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            CrewMemberForm crewMemberForm = new CrewMemberForm();
-            crewMemberForm.Show();
-        }
-
-        private void passengersButton_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            PassengersForm passengersForm = new PassengersForm();
-            passengersForm.Show();
         }
 
         private void sellTicketsButton_Click(object sender, EventArgs e)
@@ -302,16 +253,16 @@ namespace Service.Animals.Desktop.Form
 
         private void CountBasket(BasketControl basketControl)
         {
-            SqlConnection connection = new SqlConnection(_connectionString);
+            /*SqlConnection connection = new SqlConnection(_connectionString);
             SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM basket", connection);
             connection.Open();
             basketControl.gunaLabel5.Text = "Итого: " + cmd.ExecuteScalar().ToString() + " билетов";
-            connection.Close();
+            connection.Close();*/
         }
 
         private void PrintBasket(BasketControl basketControl)
         {
-            SqlConnection connection = new SqlConnection(_connectionString);
+            /*SqlConnection connection = new SqlConnection(_connectionString);
             SqlCommand cmd = new SqlCommand("SELECT * FROM basket", connection);
             connection.Open();
             SqlDataReader reader = cmd.ExecuteReader();
@@ -325,27 +276,97 @@ namespace Service.Animals.Desktop.Form
                 basketControl.flowLayoutPanel1.Controls.Add(Item);
             }
             reader.Close();
-            connection.Close();
+            connection.Close();*/
         }
 
         private void UserPicture_Click(object sender, EventArgs e)
         {
-            UserControl1 userControl1 = new UserControl1();
-            InfoPanel.Controls.Add(userControl1);
+            Control.UserControl1 userControl = new Control.UserControl1();
+            InfoPanel.Controls.Add(userControl);
 
             if (UserName.Text != "Имя")
             {
-                userControl1.PanelLogReg.Visible = false;
-                userControl1.Size = new Size(134, 45);
+                userControl.PanelLogReg.Visible = false;
+                userControl.Size = new Size(134, 45);
             }
 
-            userControl1.Location = new Point(626, 0);
-            userControl1.BringToFront();
+            userControl.Location = new Point(626, 0);
+            userControl.BringToFront();
+        }
+
+        private void flightsButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FlightsForm flightsForm = new FlightsForm();
+            flightsForm.Show();
+        }
+
+        private void crewButton_Click(object sender, EventArgs e) // форма экипажа
+        {
+            this.Hide();
+            CrewForm crewForm = new CrewForm();
+            crewForm.Show();
+        }
+
+        private void ticketsButton_Click(object sender, EventArgs e) // форма билетов
+        {
+            this.Hide();
+            TicketsForm ticketsForm = new TicketsForm();
+            ticketsForm.Show();
+        }
+
+        private void queryButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            QueryForm queryForm = new QueryForm();
+            queryForm.Show();
+        }
+
+        private void airplanesButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AirplanesForm airplanesForm = new AirplanesForm();
+            airplanesForm.Show();
+        }
+
+        private void crewMemberButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CrewMemberForm crewMemberForm = new CrewMemberForm();
+            crewMemberForm.Show();
+        }
+
+        private void passengersButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            PassengersForm passengersForm = new PassengersForm();
+            passengersForm.Show();
+        }
+
+        private void crewAdminButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            crewAdminForm crewAdminForm = new crewAdminForm();
+            crewAdminForm.Show();
+        }
+
+        private void RolesAdminButton_Click(object sender, EventArgs e) // Таблица "Роли" 
+        {
+            this.Hide();
+            RolesAdminForm rolesAdminForm = new RolesAdminForm();
+            rolesAdminForm.Show();
+        }
+
+        private void UsersAdminButton_Click(object sender, EventArgs e) // Таблица "Пользователи" 
+        {
+            this.Hide();
+            UsersAdminForm usersAdminForm = new UsersAdminForm();
+            usersAdminForm.Show();
         }
 
         private void Home_Load(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection(_connectionString);
+            /*SqlConnection connection = new SqlConnection(_connectionString);
             try
             {
                 SqlCommand cmd = new SqlCommand("DELETE FROM [basket]", connection);
@@ -358,28 +379,7 @@ namespace Service.Animals.Desktop.Form
             {
                 MessageBox.Show(ex.Message, "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 connection.Close();
-            }
-        }
-
-        private void crewAdminButton_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            crewAdminForm crewAdminForm = new crewAdminForm();
-            crewAdminForm.Show();
-        }
-
-        private void ticketsAdminButton_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            ticketsAdminForm ticketsAdminForm = new ticketsAdminForm();
-            ticketsAdminForm.Show();
-        }
-
-        private void flightsAdminButton_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            UsersAdminForm usersAdminForm = new UsersAdminForm();
-            usersAdminForm.Show();
+            }*/
         }
     }
 }

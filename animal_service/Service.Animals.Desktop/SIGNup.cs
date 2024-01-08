@@ -9,13 +9,14 @@ namespace Service.Animals.Desktop
     {
         private readonly string _connectionString = System.Configuration.ConfigurationManager.ConnectionStrings
             ["connectionString"].ConnectionString;
+
         public SIGNup()
         {
             InitializeComponent();
             this.ActiveControl = Label;
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+        private void BtnClose_Click(object sender, EventArgs e)
         {
             this.Hide();
             Home.Instance.Show();
@@ -39,21 +40,21 @@ namespace Service.Animals.Desktop
             }
         }
 
-        private void TextBoxSurname_Enter(object sender, EventArgs e)
+        private void TextBoxEmail_Enter(object sender, EventArgs e)
         {
-            if (TextBoxSurname.Text == "Фамилия")
+            if (TextBoxEmail.Text == "Почта")
             {
-                TextBoxSurname.Text = "";
-                TextBoxSurname.ForeColor = Color.Black;
+                TextBoxEmail.Text = "";
+                TextBoxEmail.ForeColor = Color.Black;
             }
         }
 
-        private void TextBoxSurname_Leave(object sender, EventArgs e)
+        private void TextBoxEmail_Leave(object sender, EventArgs e)
         {
-            if (TextBoxSurname.Text == "")
+            if (TextBoxEmail.Text == "")
             {
-                TextBoxSurname.Text = "Фамилия";
-                TextBoxSurname.ForeColor = Color.Gray;
+                TextBoxEmail.Text = "В";
+                TextBoxEmail.ForeColor = Color.Gray;
             }
         }
 
@@ -93,19 +94,22 @@ namespace Service.Animals.Desktop
             }
         }
 
-        private void btnSignUP_Click(object sender, EventArgs e)
+        private void BtnSignUP_Click(object sender, EventArgs e)
         {
             SqlConnection connection = new SqlConnection(_connectionString);
+
             try
             {
-                if (TextBoxName.Text != "Имя" && TextBoxSurname.Text != "Фамилия" && TextBoxUsername.Text != "Имя пользователя" && TextBoxPassword.Text != "Пароль")
+                if (TextBoxName.Text != "Имя" && TextBoxEmail.Text != "Почта" && TextBoxUsername.Text != "Имя пользователя" && TextBoxPassword.Text != "Пароль")
                 {
-                    SqlCommand cmd = 
-                        new SqlCommand("INSERT INTO People (username, password, name, surname) " +
-                                       "VALUES ('" + TextBoxUsername.Text + "', '" 
-                                       + TextBoxPassword.Text + "', '" 
-                                       + TextBoxUsername.Text + "', '" 
-                                       + TextBoxSurname.Text + "')", connection);
+                    SqlCommand cmd = new SqlCommand("INSERT INTO Users (Username, Password, Name, Email, Age) " +
+                                "VALUES (@Username, @Password, @Name, @Email, @Age)", connection);
+                    cmd.Parameters.AddWithValue("@Username", TextBoxUsername.Text);
+                    cmd.Parameters.AddWithValue("@Password", TextBoxPassword.Text);
+                    cmd.Parameters.AddWithValue("@Name", TextBoxName.Text);
+                    cmd.Parameters.AddWithValue("@Email", TextBoxEmail.Text);
+                    cmd.Parameters.AddWithValue("@Age", 0);
+
                     connection.Open();
                     cmd.ExecuteNonQuery();
                     connection.Close();   
@@ -118,8 +122,8 @@ namespace Service.Animals.Desktop
                 {
                     if (TextBoxName.Text == "Имя")
                         TextBoxName.BorderColor = Color.Red;
-                    if (TextBoxSurname.Text == "Фамилия")
-                        TextBoxSurname.BorderColor = Color.Red;
+                    if (TextBoxEmail.Text == "Почта")
+                        TextBoxEmail.BorderColor = Color.Red;
                     if (TextBoxPassword.Text == "Пароль")
                         TextBoxPassword.BorderColor = Color.Red;
                     if (TextBoxUsername.Text == "Имя пользователя")
