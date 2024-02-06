@@ -6,7 +6,7 @@ EXPOSE 8081
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
-WORKDIR /animal-service
+WORKDIR /src
 COPY ["Service.Animals.Web/Service.Animals.Web.csproj", "Service.Animals.Web/"]
 RUN dotnet restore "./Service.Animals.Web/./Service.Animals.Web.csproj"
 COPY . .
