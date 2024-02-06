@@ -12,7 +12,7 @@ using Service.Animals.Web.Data;
 namespace Service.Animals.Web.Migrations
 {
     [DbContext(typeof(AnimalsDbContext))]
-    [Migration("20240205234301_InitialDatabase")]
+    [Migration("20240206003158_InitialDatabase")]
     partial class InitialDatabase
     {
         /// <inheritdoc />

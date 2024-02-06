@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Service.Animals.Web.Models;
+using snglrtycrvtureofspce.Core.Infrastructure;
 
 namespace Service.Animals.Web.Data;
 
@@ -8,12 +9,58 @@ namespace Service.Animals.Web.Data;
 /// </summary>
 public class AnimalsDbContext : DbContext
 {
-    public DbSet<UserEntity> Users { get; set; }
-    public DbSet<RoleEntity> Roles { get; set; }
-    public DbSet<AnimalEntity> Animals { get; set; }
-    public DbSet<MarkerEntity> Markers { get; set; }
+    public virtual DbSet<UserEntity> Users { get; set; }
+    public virtual DbSet<RoleEntity> Roles { get; set; }
+    public virtual DbSet<AnimalEntity> Animals { get; set; }
+    public virtual DbSet<MarkerEntity> Markers { get; set; }
     
     public AnimalsDbContext(DbContextOptions<AnimalsDbContext> opt) : base(opt) { }
+    public AnimalsDbContext() { }
+
+    /// <inheritdoc />
+    public override int SaveChanges()
+    {
+        ChangeTracker.DetectChanges();
+
+        var added = ChangeTracker
+            .Entries()
+            .Where(w => w.State == EntityState.Added)
+            .Select(s => s.Entity)
+            .ToList();
+
+        foreach (var entry in added)
+        {
+            if (entry is not IEntity entity)
+            {
+                continue;
+            }
+            
+            entity.CreatedDate = DateTime.UtcNow;
+            entity.ModificationDate = DateTime.UtcNow;
+        }
+
+        var updated = ChangeTracker
+            .Entries()
+            .Where(w => w.State == EntityState.Modified)
+            .Select(s => s.Entity)
+            .ToList();
+
+        foreach (var entry in updated)
+        {
+            if (entry is IEntity entity)
+            {
+                entity.ModificationDate = DateTime.UtcNow;
+            }
+        }
+
+        return base.SaveChanges();
+    }
+
+    /// <inheritdoc />
+    public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new())
+    {
+        return Task.Run(SaveChanges, cancellationToken);
+    }
 
     /// <inheritdoc />
     protected override void OnModelCreating(ModelBuilder modelBuilder)
