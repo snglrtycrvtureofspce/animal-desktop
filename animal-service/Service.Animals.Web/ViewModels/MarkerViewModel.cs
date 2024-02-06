@@ -1,6 +1,6 @@
 ﻿using snglrtycrvtureofspce.Core.Infrastructure;
 
-namespace Service.Animals.Api.ViewModels;
+namespace Service.Animals.Web.ViewModels;
 
 /// <summary>
 /// ViewModel for the marker

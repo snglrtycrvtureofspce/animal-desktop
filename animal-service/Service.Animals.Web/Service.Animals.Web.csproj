@@ -66,10 +66,6 @@
       <Folder Include="Handlers\MarkersController\Put\" />
     </ItemGroup>
 
-    <ItemGroup>
-      <ProjectReference Include="..\Service.Animals.Api\Service.Animals.Api.csproj" />
-    </ItemGroup>
-
     <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
         <!-- Ensure Node.js is installed -->
         <Exec Command="node --version" ContinueOnError="true">

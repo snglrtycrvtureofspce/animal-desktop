@@ -1,8 +1,8 @@
 ﻿using FluentValidation;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using Service.Animals.Api.ViewModels;
 using Service.Animals.Web.Data;
+using Service.Animals.Web.ViewModels;
 
 namespace Service.Animals.Web.Handlers.UserController.Put;
 

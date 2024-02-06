@@ -1,5 +1,5 @@
 ﻿using MediatR;
-using Service.Animals.Api.ViewModels;
+using Service.Animals.Web.ViewModels;
 
 namespace Service.Animals.Web.Handlers.RoleController.Post.Command;
 

@@ -1,11 +1,11 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Service.Animals.Api.ViewModels;
 using Service.Animals.Web.Handlers.RoleController.Delete;
 using Service.Animals.Web.Handlers.RoleController.Get;
 using Service.Animals.Web.Handlers.RoleController.Post.Command;
 using Service.Animals.Web.Handlers.RoleController.Put;
+using Service.Animals.Web.ViewModels;
 using snglrtycrvtureofspce.Core.Infrastructure;
 
 namespace Service.Animals.Web.Controllers;

@@ -1,8 +1,8 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Service.Animals.Api.ViewModels;
 using Service.Animals.Web.Handlers.AnimalsController.Get;
+using Service.Animals.Web.ViewModels;
 using snglrtycrvtureofspce.Core.Infrastructure;
 
 namespace Service.Animals.Web.Controllers;
