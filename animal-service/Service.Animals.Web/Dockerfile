@@ -13,7 +13,7 @@ RUN curl -fsSL https://deb.nodesource.com/setup_14.x | bash - \
 
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["animal-service/Service.Animals.Web/Service.Animals.Web.csproj", "Service.Animals.Web/"]
+COPY ["/Service.Animals.Web/Service.Animals.Web.csproj", "Service.Animals.Web/"]
 RUN dotnet restore "./Service.Animals.Web/./Service.Animals.Web.csproj"
 COPY . .
 WORKDIR "/src/Service.Animals.Web"
