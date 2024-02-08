@@ -1,3 +1,5 @@
+#See https://aka.ms/customizecontainer to learn how to customize your debug container and how Visual Studio uses this Dockerfile to build your images for faster debugging.
+
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 USER app
 WORKDIR /app
@@ -5,15 +7,9 @@ EXPOSE 8080
 EXPOSE 8081
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-
-RUN curl -fsSL https://deb.nodesource.com/setup_14.x | bash - \
-    && apt-get install -y \
-        nodejs \
-    && rm -rf /var/lib/apt/lists/* \
-
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["animal-service/Service.Animals.Web/Service.Animals.Web.csproj", "Service.Animals.Web/"]
+COPY ["Service.Animals.Web/Service.Animals.Web.csproj", "Service.Animals.Web/"]
 RUN dotnet restore "./Service.Animals.Web/./Service.Animals.Web.csproj"
 COPY . .
 WORKDIR "/src/Service.Animals.Web"
