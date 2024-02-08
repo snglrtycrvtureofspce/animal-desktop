@@ -1,8 +1,8 @@
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 USER app
 WORKDIR /app
-EXPOSE 8080
-EXPOSE 8081
+EXPOSE 80
+EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 
@@ -10,18 +10,18 @@ RUN curl -fsSL https://deb.nodesource.com/setup_14.x | bash - \
     && apt-get install -y \
         nodejs \
     && rm -rf /var/lib/apt/lists/* \
-    
+
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["Service.Animals.Web/Service.Animals.Web.csproj", "Service.Animals.Web/"]
-RUN dotnet restore "Service.Animals.Web/Service.Animals.Web.csproj"
+RUN dotnet restore "./Service.Animals.Web/./Service.Animals.Web.csproj"
 COPY . .
 WORKDIR "/src/Service.Animals.Web"
-RUN dotnet build "Service.Animals.Web.csproj" -c $BUILD_CONFIGURATION -o /app/build
+RUN dotnet build "./Service.Animals.Web.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "Service.Animals.Web.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "./Service.Animals.Web.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
