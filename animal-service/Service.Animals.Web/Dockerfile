@@ -1,5 +1,3 @@
-#See https://aka.ms/customizecontainer to learn how to customize your debug container and how Visual Studio uses this Dockerfile to build your images for faster debugging.
-
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 USER app
 WORKDIR /app
@@ -7,17 +5,22 @@ EXPOSE 8080
 EXPOSE 8081
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["Service.Animals.Web/Service.Animals.Web.csproj", "Service.Animals.Web/"]
-RUN dotnet restore "./Service.Animals.Web/./Service.Animals.Web.csproj"
-COPY . .
-WORKDIR "/src/Service.Animals.Web"
-RUN dotnet build "./Service.Animals.Web.csproj" -c $BUILD_CONFIGURATION -o /app/build
+COPY Service.Animals.Web/ ./Service.Animals.Web
+WORKDIR /src/Service.Animals.Web
+RUN dotnet restore
+RUN dotnet build -c Release -o /app -p:TargetFramework=net8.0
+RUN dotnet build -c Release -o /swagger -p:TargetFramework=net8.0
+
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS swagger
+WORKDIR /app
+COPY --from=build /swagger ./
+RUN dotnet tool install --version 6.5.0 Swashbuckle.AspNetCore.Cli --tool-path /dotnet-global-tools
+LABEL swagger=true
+RUN /dotnet-global-tools/swagger tofile --output swagger.json /app/Service.Animals.Web.dll v1
 
 FROM build AS publish
-ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./Service.Animals.Web.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+RUN dotnet publish -c Release -o /app  -p:TargetFramework=net8.0
 
 FROM base AS final
 WORKDIR /app
