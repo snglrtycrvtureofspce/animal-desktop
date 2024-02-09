@@ -13,6 +13,8 @@ COPY . .
 WORKDIR "/src/Service.Animals.Web"
 RUN dotnet build "./Service.Animals.Web.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
+RUN apt-get update && apt-get install -y npm
+
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
 RUN dotnet publish "./Service.Animals.Web.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false

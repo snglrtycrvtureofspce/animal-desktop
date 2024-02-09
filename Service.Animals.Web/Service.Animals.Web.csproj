@@ -14,6 +14,7 @@
         <AssemblyName>Service.Animals.Web</AssemblyName>
         <RootNamespace>Service.Animals.Web</RootNamespace>
         <UserSecretsId>4ffe2ea7-989e-4889-990f-7ffb8762883e</UserSecretsId>
+        <Company>snglrtycrvtureofspce</Company>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
