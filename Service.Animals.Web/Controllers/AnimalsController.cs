@@ -27,7 +27,7 @@ public class AnimalController : ControllerBase
     /// <summary>
     /// The method provider possibility to get a animal by id 
     /// </summary>
-    [HttpGet("GetAnimalById/{animalId:guid}", Name = "GetAnimalById")]
+    [HttpGet("{animalId:guid}/GetAnimalById", Name = "GetAnimalById")]
     [ProducesResponseType(typeof(ItemResponse<AnimalViewModel>), StatusCodes.Status200OK)]
     [AllowAnonymous]
     public async Task<ItemResponse<AnimalViewModel>> GetAnimalById(Guid animalId)
