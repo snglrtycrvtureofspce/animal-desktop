@@ -7,9 +7,6 @@ using snglrtycrvtureofspce.Core.Base.Responses;
 
 namespace Service.Animals.Web.Controllers;
 
-/// <summary>
-/// Controller for interaction with the animals
-/// </summary>
 [Route("api/[controller]")]
 [ApiController]
 // [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
@@ -25,33 +22,12 @@ public class AnimalController : ControllerBase
     }
     
     /// <summary>
-    /// The method provider possibility to get a animal by id 
+    /// The method provider possibility to get a animal by id
     /// </summary>
-    [HttpGet("{animalId:guid}/GetAnimalById", Name = "GetAnimalById")]
+    /// <param name="id">Identifier of the animal to be received</param>
+    /// <returns></returns>
+    [HttpGet("{id:guid}", Name = "GetAnimal")]
     [ProducesResponseType(typeof(ItemResponse<AnimalViewModel>), StatusCodes.Status200OK)]
-    [AllowAnonymous]
-    public async Task<ItemResponse<AnimalViewModel>> GetAnimalById(Guid animalId)
-    {
-        var query = await _mediator.Send(new GetAnimalByIdQuery { AnimalId = animalId });
-        
-        return new ItemResponse<AnimalViewModel>
-        {
-            Message = "The response was received successfully.",
-            StatusCode = 200,
-            Item = new AnimalViewModel
-            {
-               Id = query.Id,
-               CreatedDate = query.CreatedDate,
-               ModificationDate = query.ModificationDate,
-               Name = query.Name,
-               PhotoUrl = query.PhotoUrl,
-               DateOfBirth = query.DateOfBirth,
-               Description = query.Description,
-               Status = query.Status,
-               Breed = query.Breed,
-               Users = query.Users,
-               Markers = query.Markers
-            }
-        };
-    }
+    public async Task<IActionResult> GetAnimal(Guid id) =>
+        Ok(await _mediator.Send(new GetAnimalQuery { Id = id }));
 }
