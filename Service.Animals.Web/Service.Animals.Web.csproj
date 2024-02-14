@@ -70,8 +70,6 @@
       <Folder Include="ClientApp\src\app\components\" />
       <Folder Include="ClientApp\src\app\models\" />
       <Folder Include="ClientApp\src\app\services\" />
-      <Folder Include="Handlers\AnimalsController\Post\" />
-      <Folder Include="Handlers\AnimalsController\Put\" />
       <Folder Include="Handlers\MarkersController\Delete\" />
       <Folder Include="Handlers\MarkersController\Get\" />
       <Folder Include="Handlers\MarkersController\Put\" />

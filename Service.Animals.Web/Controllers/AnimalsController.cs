@@ -1,33 +1,59 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Service.Animals.Web.Handlers.AnimalsController.Get;
-using Service.Animals.Web.ViewModels;
-using snglrtycrvtureofspce.Core.Base.Responses;
+using Service.Animals.Web.Handlers.AnimalsController.DeleteAnimal;
+using Service.Animals.Web.Handlers.AnimalsController.GetAnimal;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace Service.Animals.Web.Controllers;
 
-[Route("api/[controller]")]
+[Route("[controller]")]
 [ApiController]
 // [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
 [Produces("application/json")]
-public class AnimalController : ControllerBase
+public class AnimalController(ISender sender) : ControllerBase
 {
-    private readonly IMediator _mediator;
-
-    /// <inheritdoc />
-    public AnimalController(IMediator mediator)
-    {
-        _mediator = mediator;
-    }
-    
     /// <summary>
     /// The method provider possibility to get a animal by id
     /// </summary>
     /// <param name="id">Identifier of the animal to be received</param>
     /// <returns></returns>
     [HttpGet("{id:guid}", Name = "GetAnimal")]
-    [ProducesResponseType(typeof(ItemResponse<AnimalViewModel>), StatusCodes.Status200OK)]
-    public async Task<IActionResult> GetAnimal(Guid id) =>
-        Ok(await _mediator.Send(new GetAnimalQuery { Id = id }));
+    [SwaggerResponse(statusCode: StatusCodes.Status200OK,type: typeof(GetAnimalResponse))]
+    public async Task<IActionResult> GetAnimal(Guid id) => 
+        Ok(await sender.Send(new GetAnimalRequest { Id = id }));
+
+    /// <summary>
+    /// The method provider possibility to create a animal
+    /// </summary>
+    /// <param name="request"></param>
+    /// <returns></returns>
+    [HttpPost(Name = "CreateAnimal")]
+    [SwaggerResponse(statusCode: StatusCodes.Status201Created, type: typeof(CreateAnimalResponse))]
+    public async Task<IActionResult> CreateAnimal([FromBody] CreateAnimalRequest request) =>
+        Ok(await sender.Send(request));
+
+    /// <summary>
+    /// The method provider possibility to update a animal by id
+    /// </summary>
+    /// <param name="id">Identifier of the animal to be received</param>
+    /// <param name="request"></param>
+    /// <returns></returns>
+    [HttpPut("{id:guid}", Name = "UpdateAnimal")]
+    [SwaggerResponse(statusCode: StatusCodes.Status200OK, type: typeof(UpdateAnimalResponse))]
+    public async Task<IActionResult> UpdateAnimal(Guid id, [FromBody] UpdateAnimalRequest request)
+    {
+        request.Id = id;
+        return Ok(await sender.Send(request));
+    }
+    
+    /// <summary>
+    /// The method provider possibility to delete a animal by id
+    /// </summary>
+    /// <param name="id">Identifier of the animal to be received</param>
+    /// <returns></returns>
+    [HttpDelete("{id:guid}", Name = "DeleteAnimal")]
+    [SwaggerResponse(statusCode: StatusCodes.Status200OK, type: typeof(DeleteAnimalResponse))]
+    public async Task<IActionResult> DeleteAnimal(Guid id) => 
+        Ok(await sender.Send(new DeleteAnimalRequest { Id = id }));
 }

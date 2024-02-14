@@ -6,12 +6,12 @@ using Microsoft.EntityFrameworkCore;
 using Service.Animals.Web.Data;
 using Service.Animals.Web.ViewModels;
 
-namespace Service.Animals.Web.Handlers.AnimalsController.Get;
+namespace Service.Animals.Web.Handlers.AnimalsController.GetAnimal;
 
-public class GetAnimalHandler(AnimalsDbContext context, IMapperBase mapper) : IRequestHandler<GetAnimalQuery, 
+public class GetAnimalHandler(AnimalsDbContext context, IMapperBase mapper) : IRequestHandler<GetAnimalRequest, 
     GetAnimalResponse>
 {
-    public async Task<GetAnimalResponse> Handle(GetAnimalQuery request, CancellationToken cancellationToken)
+    public async Task<GetAnimalResponse> Handle(GetAnimalRequest request, CancellationToken cancellationToken)
     {
         var animal = await context.Animals
             .FirstOrDefaultAsync(u => u.Id == request.Id, cancellationToken: cancellationToken);
