@@ -339,8 +339,8 @@ namespace Service.Animals.Desktop.Form
         private void passengersButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            PassengersForm passengersForm = new PassengersForm();
-            passengersForm.Show();
+            /*PassengersForm passengersForm = new PassengersForm();
+            passengersForm.Show();*/
         }
 
         private void crewAdminButton_Click(object sender, EventArgs e)

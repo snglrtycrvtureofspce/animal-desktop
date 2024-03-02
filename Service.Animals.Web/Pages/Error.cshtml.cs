@@ -2,24 +2,17 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace animal_service.Pages;
+namespace Service.Animals.Web.Pages;
 
 [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-public class ErrorModel : PageModel
+public class ErrorModel(ILogger<ErrorModel> logger) : PageModel
 {
-    private readonly ILogger<ErrorModel> _logger;
-
-    public ErrorModel(ILogger<ErrorModel> logger)
-    {
-        _logger = logger;
-    }
+    private readonly ILogger<ErrorModel> _logger = logger;
 
     public string? RequestId { get; set; }
 
     public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
 
-    public void OnGet()
-    {
-        RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier;
-    }
+    public void OnGet() => RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier;
+    
 }

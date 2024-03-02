@@ -23,37 +23,34 @@
       <NoWarn>1701;1702;1591;8632</NoWarn>
     </PropertyGroup>
 
-    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-      <DocumentationFile>bin\Release\Service.Animals.Web.xml</DocumentationFile>
-      <WarningLevel>4</WarningLevel>
-      <NoWarn>1701;1702;1591;8632</NoWarn>
-    </PropertyGroup>
-
     <ItemGroup>
         <PackageReference Include="Asp.Versioning.Abstractions" Version="8.0.0" />
         <PackageReference Include="Asp.Versioning.Http" Version="8.0.0" />
         <PackageReference Include="Asp.Versioning.Mvc.ApiExplorer" Version="8.0.0" />
-        <PackageReference Include="AutoMapper" Version="12.0.1" />
+        <PackageReference Include="AutoMapper" Version="13.0.1" />
         <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
-        <PackageReference Include="MediatR" Version="12.1.1" />
-        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.1" />
-        <PackageReference Include="Microsoft.AspNetCore.SpaProxy" Version="8.0.1" />
-        <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.5" />
+        <PackageReference Include="Hangfire" Version="1.8.11" />
+        <PackageReference Include="MediatR" Version="12.2.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.2" />
+        <PackageReference Include="Microsoft.AspNetCore.SpaProxy" Version="8.0.2" />
+        <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.6" />
         <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.0" />
-        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.1" />
-        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.1">
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.2" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.2">
           <PrivateAssets>all</PrivateAssets>
           <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
-        <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="8.0.1" />
-        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.1" />
-        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.1">
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="8.0.2" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.2" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.2">
           <PrivateAssets>all</PrivateAssets>
           <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
-        <PackageReference Include="Npgsql" Version="8.0.1" />
-        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.0" />
-        <PackageReference Include="snglrtycrvtureofspce.Core" Version="1.0.5" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+        <PackageReference Include="Npgsql" Version="8.0.2" />
+        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.2" />
+        <PackageReference Include="Refit" Version="7.0.0" />
+        <PackageReference Include="snglrtycrvtureofspce.Core" Version="1.0.8" />
         <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.5.0" />
         <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.5.0" />
         <PackageReference Include="Serilog.AspNetCore" Version="8.0.1" />
@@ -70,9 +67,6 @@
       <Folder Include="ClientApp\src\app\components\" />
       <Folder Include="ClientApp\src\app\models\" />
       <Folder Include="ClientApp\src\app\services\" />
-      <Folder Include="Handlers\MarkersController\Delete\" />
-      <Folder Include="Handlers\MarkersController\Get\" />
-      <Folder Include="Handlers\MarkersController\Put\" />
     </ItemGroup>
 
     <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

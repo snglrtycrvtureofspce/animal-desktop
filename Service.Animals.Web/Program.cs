@@ -2,10 +2,13 @@ using System.Reflection;
 using Asp.Versioning;
 using AutoMapper;
 using FluentValidation;
+using Hangfire;
+using Hangfire.SqlServer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using Serilog;
 using Service.Animals.Web.Data;
+using Service.Animals.Web.Filters;
 using snglrtycrvtureofspce.Core.Filters;
 using SwaggerDefaultValues = Service.Animals.Web.Filters.SwaggerDefaultValues;
 
@@ -17,6 +20,7 @@ builder.Services.AddDbContext<AnimalsDbContext>(options =>
     if (connectionString != null) options.UseNpgsql(connectionString);
 });
 
+// builder.Services.AddServerControllers();
 builder.Services.AddControllersWithViews();
 builder.Services.AddControllers();
 
@@ -111,9 +115,42 @@ builder.Services.AddSwaggerGen(
         });
     });
 
+/*builder.Services.AddHangfire(configuration => configuration
+    .SetDataCompatibilityLevel(CompatibilityLevel.Version_170)
+    .UseSimpleAssemblyNameTypeSerializer()
+    .UseRecommendedSerializerSettings()
+    .UseSqlServerStorage(connectionString, new SqlServerStorageOptions
+    {
+        SchemaName = "snglrtycrvtureofspceHangfire",
+        CommandBatchMaxTimeout = TimeSpan.FromMinutes(5),
+        SlidingInvisibilityTimeout = TimeSpan.FromMinutes(5),
+        QueuePollInterval = TimeSpan.Zero,
+        UseRecommendedIsolationLevel = true,
+        DisableGlobalLocks = true
+    }));*/
+
+/*builder.Services.AddHangfireServer();*/
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll",
+        corsPolicyBuilder =>
+        {
+            corsPolicyBuilder.AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader();
+        });
+});
+
 var app = builder.Build();
 
 app.UseRouting();
+
+app.UseCors("AllowAll");
+
+/*app.UseHangfireDashboard("/hangfire", new DashboardOptions
+{
+    Authorization = new[] { new MyAuthorizationFilter() }
+});*/
 
 app.UseSwagger();
 app.UseSwaggerUI(
@@ -121,6 +158,7 @@ app.UseSwaggerUI(
     {
         var descriptions = app.DescribeApiVersions();
         
+        // build a swagger endpoint for each discovered API version
         foreach (var description in descriptions)
         {
             var url = $"{description.GroupName}/swagger.json";

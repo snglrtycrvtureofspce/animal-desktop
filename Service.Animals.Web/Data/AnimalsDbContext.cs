@@ -4,9 +4,6 @@ using snglrtycrvtureofspce.Core.Base.Infrastructure;
 
 namespace Service.Animals.Web.Data;
 
-/// <summary>
-/// Database context
-/// </summary>
 public class AnimalsDbContext : DbContext
 {
     public virtual DbSet<UserEntity> Users { get; set; }

@@ -1,4 +1,4 @@
-﻿using Service.Animals.Desktop.airlinesDataSetTableAdapters;
+﻿/*using Service.Animals.Desktop.airlinesDataSetTableAdapters;
 
 namespace Service.Animals.Desktop.Form
 {
@@ -507,4 +507,4 @@ namespace Service.Animals.Desktop.Form
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
     }
-}
+}*/

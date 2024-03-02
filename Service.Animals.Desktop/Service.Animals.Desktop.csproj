@@ -53,7 +53,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Guna.UI">
-      <HintPath>packages\Guna\Guna.UI.dll</HintPath>
+      <HintPath>packages\Guna.UI.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System">
@@ -403,7 +403,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="EPPlus">
-      <Version>7.0.3</Version>
+      <Version>7.0.9</Version>
     </PackageReference>
     <PackageReference Include="Guna.UI2.WinForms" Version="2.0.4.6" />
     <PackageReference Include="Microsoft.SqlServer.Types">
