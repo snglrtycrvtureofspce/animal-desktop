@@ -41,7 +41,7 @@ namespace Service.Animals.Desktop.Form
             set { InfoPanel = value; }
         }
 
-        public Guna.UI.WinForms.GunaPanel pnlAdmin
+        public Guna.UI.WinForms.GunaPanel PnlAdmin
         {
             get { return AdminPanel; }
             set { AdminPanel = value; }
@@ -52,7 +52,7 @@ namespace Service.Animals.Desktop.Form
             get { return UserName; }
             set { UserName = value; }
         }
-        public Guna.UI.WinForms.GunaPanel pnlBasket
+        public Guna.UI.WinForms.GunaPanel PnlBasket
         {
             get { return gunaPanel1; }
             set { gunaPanel1 = value; }
@@ -72,91 +72,7 @@ namespace Service.Animals.Desktop.Form
                 this.Left += e.X - lastPoint.X;
                 this.Top += e.Y - lastPoint.Y;
             }
-        }
-
-        //-------------------------------- Admin
-        private void btnAdmin_Click(object sender, EventArgs e)
-        {
-            _obj = this;
-
-            if (InfoPanel.Controls.Count > 0)
-                InfoPanel.Controls.RemoveAt(0);
-            AdminControl adminControl1 = new AdminControl();
-            InfoPanel.Controls.Add(adminControl1);
-            adminControl1.Dock = DockStyle.Fill;
-            adminControl1.BringToFront();
-
-            PrintListUserAdmin(adminControl1);
-            PrintListProductAdmin(adminControl1);
-            PrintStatisticAdmin(adminControl1);
-        }
-
-        private void PrintStatisticAdmin(AdminControl adminControl1)
-        {
-            SqlConnection connection = new SqlConnection(_connectionString);
-
-            /*SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM Tickets", connection);
-            connection.Open();
-            adminControl1.CountTickets.Text = "0" + cmd.ExecuteScalar().ToString();
-            connection.Close();
-
-            cmd = new SqlCommand("SELECT COUNT(*) FROM Tickets", connection);
-            connection.Open();
-            adminControl1.CountBuyTickets.Text = "0" + cmd.ExecuteScalar().ToString();
-            connection.Close();*/
-
-            SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM Users", connection);
-            connection.Open();
-            adminControl1.CountUsers.Text = "0" + cmd.ExecuteScalar().ToString();
-            connection.Close();
-        }
-
-        private void PrintListProductAdmin(AdminControl adminControl1)
-        {
-            SqlConnection connection = new SqlConnection(_connectionString);
-            SqlCommand cmd = new SqlCommand("SELECT * FROM [Tickets]", connection);
-            connection.Open();
-            SqlDataReader reader = cmd.ExecuteReader();
-            adminControl1.flowLayoutPanel1.Controls.Clear();
-
-            while (reader.Read())
-            {
-                ElProductList Item = new ElProductList();
-                Item.gunaLabel1.Text = reader[5].ToString();
-                Item.gunaLabel2.Text = reader[3].ToString();
-                Item.gunaLabel3.Text = reader[4].ToString();
-                Item.gunaLabel4.Text += reader[0].ToString();
-                adminControl1.flowLayoutPanel1.Controls.Add(Item);
-            }
-            reader.Close();
-            connection.Close();
-        }
-
-        private void PrintListUserAdmin(AdminControl adminControl1)
-        {
-            SqlConnection connection = new SqlConnection(_connectionString);
-            connection.Open();
-
-            SqlCommand cmd = new SqlCommand("SELECT * FROM [People]", connection);
-
-            SqlCommand cmd2 = new SqlCommand("SELECT COUNT(*) FROM Tickets", connection);
-            var temp = cmd2.ExecuteScalar().ToString();
-
-            SqlDataReader reader = cmd.ExecuteReader();
-            adminControl1.flowLayoutPanel3.Controls.Clear();
-            while (reader.Read())
-            {
-                ElUserList Item = new ElUserList();
-                Item.gunaLabel1.Text += reader[3].ToString();
-                Item.gunaLabel3.Text += reader[4].ToString();
-                Item.gunaLabel4.Text += reader[1].ToString();
-                Item.gunaLabel2.Text += temp.ToString();
-                adminControl1.flowLayoutPanel3.Controls.Add(Item);
-            }
-
-            reader.Close();
-            connection.Close();
-        }
+        }        
 
         //--------------------------------- Заказы
         private void btnOrder_Click(object sender, EventArgs e)
@@ -214,11 +130,6 @@ namespace Service.Animals.Desktop.Form
             }
             reader.Close();
             connection.Close();
-        }
-
-        private void referenceButton_Click(object sender, EventArgs e) // справка
-        {
-            Process.Start(Directory.GetCurrentDirectory() + @"\reference.chm");
         }
 
         private void sellTicketsButton_Click(object sender, EventArgs e)
@@ -315,7 +226,7 @@ namespace Service.Animals.Desktop.Form
             ticketsForm.Show();
         }
 
-        private void queryButton_Click(object sender, EventArgs e)
+        private void QueryButton_Click(object sender, EventArgs e)
         {
             this.Hide();
             QueryForm queryForm = new QueryForm();
@@ -329,35 +240,129 @@ namespace Service.Animals.Desktop.Form
             airplanesForm.Show();
         }
 
-        private void crewMemberButton_Click(object sender, EventArgs e)
+        private void ReferenceButton_Click(object sender, EventArgs e) // Reference
         {
-            this.Hide();
-            CrewMemberForm crewMemberForm = new CrewMemberForm();
-            crewMemberForm.Show();
+            Process.Start(Directory.GetCurrentDirectory() + @"\reference.chm");
         }
 
-        private void passengersButton_Click(object sender, EventArgs e)
+        // User Part
+
+
+
+        // Administrative Part
+
+        private void BtnAdmin_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            /*PassengersForm passengersForm = new PassengersForm();
-            passengersForm.Show();*/
+            _obj = this;
+
+            if (InfoPanel.Controls.Count > 0)
+                InfoPanel.Controls.RemoveAt(0);
+            AdminControl adminControl1 = new AdminControl();
+            InfoPanel.Controls.Add(adminControl1);
+            adminControl1.Dock = DockStyle.Fill;
+            adminControl1.BringToFront();
+
+            PrintListUserAdmin(adminControl1);
+            /*PrintListProductAdmin(adminControl1);*/
+            PrintStatisticAdmin(adminControl1);
         }
 
-        private void crewAdminButton_Click(object sender, EventArgs e)
+        private void PrintStatisticAdmin(AdminControl adminControl1)
         {
-            this.Hide();
-            crewAdminForm crewAdminForm = new crewAdminForm();
-            crewAdminForm.Show();
+            SqlConnection connection = new SqlConnection(_connectionString);
+
+            /*SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM Tickets", connection);
+            connection.Open();
+            adminControl1.CountTickets.Text = "0" + cmd.ExecuteScalar().ToString();
+            connection.Close();
+
+            cmd = new SqlCommand("SELECT COUNT(*) FROM Tickets", connection);
+            connection.Open();
+            adminControl1.CountBuyTickets.Text = "0" + cmd.ExecuteScalar().ToString();
+            connection.Close();*/
+
+            SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM Users", connection);
+            connection.Open();
+            adminControl1.CountUsers.Text = "0" + cmd.ExecuteScalar().ToString();
+            connection.Close();
         }
 
-        private void RolesAdminButton_Click(object sender, EventArgs e) // Таблица "Роли" 
+        private void PrintListProductAdmin(AdminControl adminControl1)
         {
-            this.Hide();
-            RolesAdminForm rolesAdminForm = new RolesAdminForm();
-            rolesAdminForm.Show();
+            SqlConnection connection = new SqlConnection(_connectionString);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM [Tickets]", connection);
+            connection.Open();
+            SqlDataReader reader = cmd.ExecuteReader();
+            adminControl1.flowLayoutPanel1.Controls.Clear();
+
+            while (reader.Read())
+            {
+                ElProductList Item = new ElProductList();
+                Item.gunaLabel1.Text = reader[5].ToString();
+                Item.gunaLabel2.Text = reader[3].ToString();
+                Item.gunaLabel3.Text = reader[4].ToString();
+                Item.gunaLabel4.Text += reader[0].ToString();
+                adminControl1.flowLayoutPanel1.Controls.Add(Item);
+            }
+            reader.Close();
+            connection.Close();
         }
 
-        private void UsersAdminButton_Click(object sender, EventArgs e) // Таблица "Пользователи" 
+        private void PrintListUserAdmin(AdminControl adminControl1)
+        {
+            SqlConnection connection = new SqlConnection(_connectionString);
+            connection.Open();
+
+            SqlCommand cmd = new SqlCommand("SELECT * FROM [Users]", connection);
+
+            // SqlCommand cmd2 = new SqlCommand("SELECT COUNT(*) FROM Tickets", connection);
+            // var temp = cmd2.ExecuteScalar().ToString();
+
+            SqlDataReader reader = cmd.ExecuteReader();
+            adminControl1.flowLayoutPanel3.Controls.Clear();
+            while (reader.Read())
+            {
+                ElUserList Item = new ElUserList();
+                Item.gunaLabel1.Text += reader[3].ToString();
+                Item.gunaLabel3.Text += reader[1].ToString();
+                Item.gunaLabel4.Text += reader[5].ToString();
+                // Item.gunaLabel2.Text += temp.ToString();
+                adminControl1.flowLayoutPanel3.Controls.Add(Item);
+            }
+
+            reader.Close();
+            connection.Close();
+        }
+
+        private void AnimalTypesAdminButton_Click(object sender, EventArgs e) // Table "AnimalTypes"
+        {
+            this.Hide();
+            AnimalTypesAdminForm animalTypesAdminForm = new AnimalTypesAdminForm();
+            animalTypesAdminForm.Show();
+        }
+
+        private void AnimalsAdminButton_Click(object sender, EventArgs e) // Table "Animals"
+        {
+            this.Hide();
+            AnimalsAdminForm animalsAdminForm = new AnimalsAdminForm();
+            animalsAdminForm.Show();
+        }
+
+        private void LocationsAdminButton_Click(object sender, EventArgs e) // Table "Locations"
+        {
+            this.Hide();
+            LocationsAdminForm locationsAdminForm = new LocationsAdminForm();
+            locationsAdminForm.Show();
+        }
+
+        private void MovementPointsAdminButton_Click(object sender, EventArgs e) // Table "MovementPoints"
+        {
+            this.Hide();
+            MovementPointsAdminForm movementPointsAdminForm = new MovementPointsAdminForm();
+            movementPointsAdminForm.Show();
+        }
+
+        private void UsersAdminButton_Click(object sender, EventArgs e) // Table "Users"
         {
             this.Hide();
             UsersAdminForm usersAdminForm = new UsersAdminForm();

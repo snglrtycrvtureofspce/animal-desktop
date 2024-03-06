@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label idLabel;
             System.Windows.Forms.Label usernameLabel;
             System.Windows.Forms.Label passwordLabel;
             System.Windows.Forms.Label nameLabel;
@@ -60,7 +59,6 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idTextBox = new System.Windows.Forms.TextBox();
             this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.nameTextBox = new System.Windows.Forms.TextBox();
@@ -69,7 +67,6 @@
             this.SaveButton = new System.Windows.Forms.Button();
             this.DeleteButton = new System.Windows.Forms.Button();
             this.AddButton = new System.Windows.Forms.Button();
-            idLabel = new System.Windows.Forms.Label();
             usernameLabel = new System.Windows.Forms.Label();
             passwordLabel = new System.Windows.Forms.Label();
             nameLabel = new System.Windows.Forms.Label();
@@ -82,21 +79,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.usersDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // idLabel
-            // 
-            idLabel.AutoSize = true;
-            idLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            idLabel.Location = new System.Drawing.Point(12, 260);
-            idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(32, 18);
-            idLabel.TabIndex = 2;
-            idLabel.Text = "Id:";
-            // 
             // usernameLabel
             // 
             usernameLabel.AutoSize = true;
             usernameLabel.Font = new System.Drawing.Font("Verdana", 12F);
-            usernameLabel.Location = new System.Drawing.Point(12, 286);
+            usernameLabel.Location = new System.Drawing.Point(12, 260);
             usernameLabel.Name = "usernameLabel";
             usernameLabel.Size = new System.Drawing.Size(87, 18);
             usernameLabel.TabIndex = 4;
@@ -106,7 +93,7 @@
             // 
             passwordLabel.AutoSize = true;
             passwordLabel.Font = new System.Drawing.Font("Verdana", 12F);
-            passwordLabel.Location = new System.Drawing.Point(12, 312);
+            passwordLabel.Location = new System.Drawing.Point(12, 286);
             passwordLabel.Name = "passwordLabel";
             passwordLabel.Size = new System.Drawing.Size(76, 18);
             passwordLabel.TabIndex = 6;
@@ -116,7 +103,7 @@
             // 
             nameLabel.AutoSize = true;
             nameLabel.Font = new System.Drawing.Font("Verdana", 12F);
-            nameLabel.Location = new System.Drawing.Point(12, 338);
+            nameLabel.Location = new System.Drawing.Point(12, 312);
             nameLabel.Name = "nameLabel";
             nameLabel.Size = new System.Drawing.Size(48, 18);
             nameLabel.TabIndex = 8;
@@ -126,7 +113,7 @@
             // 
             ageLabel.AutoSize = true;
             ageLabel.Font = new System.Drawing.Font("Verdana", 12F);
-            ageLabel.Location = new System.Drawing.Point(12, 364);
+            ageLabel.Location = new System.Drawing.Point(12, 338);
             ageLabel.Name = "ageLabel";
             ageLabel.Size = new System.Drawing.Size(81, 18);
             ageLabel.TabIndex = 10;
@@ -136,13 +123,13 @@
             // 
             emailLabel.AutoSize = true;
             emailLabel.Font = new System.Drawing.Font("Verdana", 12F);
-            emailLabel.Location = new System.Drawing.Point(12, 390);
+            emailLabel.Location = new System.Drawing.Point(12, 364);
             emailLabel.Name = "emailLabel";
             emailLabel.Size = new System.Drawing.Size(60, 18);
             emailLabel.TabIndex = 12;
             emailLabel.Text = "Email:";
             // 
-            // _LostAnimalsDesktop_ServiceDataSet
+            // lostAnimalsDesktop_ServiceDataSet
             // 
             this.lostAnimalsDesktop_ServiceDataSet.DataSetName = "_LostAnimalsDesktop_ServiceDataSet";
             this.lostAnimalsDesktop_ServiceDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
@@ -158,14 +145,9 @@
             // 
             // tableAdapterManager
             // 
-            this.tableAdapterManager.AnimalMarkerEntityTableAdapter = null;
             this.tableAdapterManager.AnimalsTableAdapter = null;
-            this.tableAdapterManager.AnimalUserEntityTableAdapter = null;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.MarkersTableAdapter = null;
-            this.tableAdapterManager.RolesTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Service.Animals.Desktop.LostAnimalsDesktop_ServiceDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.UserRoleEntityTableAdapter = null;
             this.tableAdapterManager.UsersTableAdapter = this.usersTableAdapter;
             // 
             // usersBindingNavigator
@@ -347,18 +329,10 @@
             this.dataGridViewTextBoxColumn6.HeaderText = "Email";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
-            // idTextBox
-            // 
-            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "Id", true));
-            this.idTextBox.Location = new System.Drawing.Point(100, 260);
-            this.idTextBox.Name = "idTextBox";
-            this.idTextBox.Size = new System.Drawing.Size(200, 20);
-            this.idTextBox.TabIndex = 3;
-            // 
             // usernameTextBox
             // 
             this.usernameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "Username", true));
-            this.usernameTextBox.Location = new System.Drawing.Point(100, 286);
+            this.usernameTextBox.Location = new System.Drawing.Point(100, 260);
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(200, 20);
             this.usernameTextBox.TabIndex = 5;
@@ -366,7 +340,7 @@
             // passwordTextBox
             // 
             this.passwordTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "Password", true));
-            this.passwordTextBox.Location = new System.Drawing.Point(100, 312);
+            this.passwordTextBox.Location = new System.Drawing.Point(100, 286);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(200, 20);
             this.passwordTextBox.TabIndex = 7;
@@ -374,7 +348,7 @@
             // nameTextBox
             // 
             this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "Name", true));
-            this.nameTextBox.Location = new System.Drawing.Point(100, 338);
+            this.nameTextBox.Location = new System.Drawing.Point(100, 312);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(200, 20);
             this.nameTextBox.TabIndex = 9;
@@ -382,7 +356,7 @@
             // ageTextBox
             // 
             this.ageTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "Age", true));
-            this.ageTextBox.Location = new System.Drawing.Point(100, 364);
+            this.ageTextBox.Location = new System.Drawing.Point(100, 338);
             this.ageTextBox.Name = "ageTextBox";
             this.ageTextBox.Size = new System.Drawing.Size(200, 20);
             this.ageTextBox.TabIndex = 11;
@@ -390,7 +364,7 @@
             // emailTextBox
             // 
             this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "Email", true));
-            this.emailTextBox.Location = new System.Drawing.Point(100, 390);
+            this.emailTextBox.Location = new System.Drawing.Point(100, 364);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(200, 20);
             this.emailTextBox.TabIndex = 13;
@@ -398,9 +372,9 @@
             // SaveButton
             // 
             this.SaveButton.Font = new System.Drawing.Font("Courier New", 9.75F);
-            this.SaveButton.Location = new System.Drawing.Point(306, 338);
+            this.SaveButton.Location = new System.Drawing.Point(306, 312);
             this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(349, 72);
+            this.SaveButton.Size = new System.Drawing.Size(349, 73);
             this.SaveButton.TabIndex = 49;
             this.SaveButton.Text = "Сохранить";
             this.SaveButton.UseVisualStyleBackColor = true;
@@ -411,7 +385,7 @@
             this.DeleteButton.Font = new System.Drawing.Font("Courier New", 9.75F);
             this.DeleteButton.Location = new System.Drawing.Point(487, 258);
             this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(168, 74);
+            this.DeleteButton.Size = new System.Drawing.Size(168, 48);
             this.DeleteButton.TabIndex = 48;
             this.DeleteButton.Text = "Удалить";
             this.DeleteButton.UseVisualStyleBackColor = true;
@@ -422,7 +396,7 @@
             this.AddButton.Font = new System.Drawing.Font("Courier New", 9.75F);
             this.AddButton.Location = new System.Drawing.Point(306, 258);
             this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(168, 74);
+            this.AddButton.Size = new System.Drawing.Size(168, 48);
             this.AddButton.TabIndex = 47;
             this.AddButton.Text = "Добавить";
             this.AddButton.UseVisualStyleBackColor = true;
@@ -432,12 +406,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(664, 420);
+            this.ClientSize = new System.Drawing.Size(664, 395);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.AddButton);
-            this.Controls.Add(idLabel);
-            this.Controls.Add(this.idTextBox);
             this.Controls.Add(usernameLabel);
             this.Controls.Add(this.usernameTextBox);
             this.Controls.Add(passwordLabel);
@@ -495,7 +467,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.TextBox idTextBox;
         private System.Windows.Forms.TextBox usernameTextBox;
         private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.TextBox nameTextBox;

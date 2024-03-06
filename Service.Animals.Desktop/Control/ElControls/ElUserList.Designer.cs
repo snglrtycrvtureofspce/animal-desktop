@@ -30,7 +30,6 @@
         {
             this.gunaCirclePictureBox1 = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).BeginInit();
@@ -39,9 +38,10 @@
             // gunaCirclePictureBox1
             // 
             this.gunaCirclePictureBox1.BaseColor = System.Drawing.Color.Black;
-            this.gunaCirclePictureBox1.Location = new System.Drawing.Point(28, 3);
+            this.gunaCirclePictureBox1.Location = new System.Drawing.Point(42, 5);
+            this.gunaCirclePictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gunaCirclePictureBox1.Name = "gunaCirclePictureBox1";
-            this.gunaCirclePictureBox1.Size = new System.Drawing.Size(28, 28);
+            this.gunaCirclePictureBox1.Size = new System.Drawing.Size(42, 43);
             this.gunaCirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.gunaCirclePictureBox1.TabIndex = 0;
             this.gunaCirclePictureBox1.TabStop = false;
@@ -51,53 +51,46 @@
             // 
             this.gunaLabel1.AutoSize = true;
             this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel1.Location = new System.Drawing.Point(87, 10);
+            this.gunaLabel1.Location = new System.Drawing.Point(130, 15);
+            this.gunaLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(37, 15);
+            this.gunaLabel1.Size = new System.Drawing.Size(56, 25);
             this.gunaLabel1.TabIndex = 1;
             this.gunaLabel1.Text = "Имя: ";
-            // 
-            // gunaLabel2
-            // 
-            this.gunaLabel2.AutoSize = true;
-            this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel2.Location = new System.Drawing.Point(569, 10);
-            this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(108, 15);
-            this.gunaLabel2.TabIndex = 2;
-            this.gunaLabel2.Text = "Куплено билетов: ";
             // 
             // gunaLabel3
             // 
             this.gunaLabel3.AutoSize = true;
             this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel3.Location = new System.Drawing.Point(247, 10);
+            this.gunaLabel3.Location = new System.Drawing.Point(349, 15);
+            this.gunaLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel3.Name = "gunaLabel3";
-            this.gunaLabel3.Size = new System.Drawing.Size(64, 15);
+            this.gunaLabel3.Size = new System.Drawing.Size(172, 25);
             this.gunaLabel3.TabIndex = 3;
-            this.gunaLabel3.Text = "Фамилия: ";
+            this.gunaLabel3.Text = "Имя пользователя: ";
             // 
             // gunaLabel4
             // 
             this.gunaLabel4.AutoSize = true;
             this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel4.Location = new System.Drawing.Point(403, 10);
+            this.gunaLabel4.Location = new System.Drawing.Point(656, 15);
+            this.gunaLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel4.Name = "gunaLabel4";
-            this.gunaLabel4.Size = new System.Drawing.Size(115, 15);
+            this.gunaLabel4.Size = new System.Drawing.Size(71, 25);
             this.gunaLabel4.TabIndex = 4;
-            this.gunaLabel4.Text = "Имя пользователя: ";
+            this.gunaLabel4.Text = "Почта: ";
             // 
             // ElUserList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gunaLabel4);
             this.Controls.Add(this.gunaLabel3);
-            this.Controls.Add(this.gunaLabel2);
             this.Controls.Add(this.gunaLabel1);
             this.Controls.Add(this.gunaCirclePictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ElUserList";
-            this.Size = new System.Drawing.Size(716, 34);
+            this.Size = new System.Drawing.Size(1074, 52);
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -108,7 +101,6 @@
 
         private Guna.UI.WinForms.GunaCirclePictureBox gunaCirclePictureBox1;
         public Guna.UI.WinForms.GunaLabel gunaLabel1;
-        public Guna.UI.WinForms.GunaLabel gunaLabel2;
         public Guna.UI.WinForms.GunaLabel gunaLabel3;
         public Guna.UI.WinForms.GunaLabel gunaLabel4;
     }

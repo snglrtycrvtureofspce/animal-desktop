@@ -90,10 +90,10 @@ namespace Service.Animals.Desktop
                     }
                     else
                     {
-                        if (TextBoxUser.Text == "admin") { Home.Instance.pnlAdmin.Visible = true; }
+                        if (TextBoxUser.Text == "admin") { Home.Instance.PnlAdmin.Visible = true; }
                         Home.Instance.PnlLableUser.Text = TextBoxUser.Text;
                         Home.Instance.PnlLableUser.Visible = true;
-                        Home.Instance.pnlBasket.Visible = true;
+                        Home.Instance.PnlBasket.Visible = true;
                         Home.Instance.Show();
                         this.Hide();
                     }

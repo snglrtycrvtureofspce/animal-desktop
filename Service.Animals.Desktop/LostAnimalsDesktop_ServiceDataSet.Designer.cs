@@ -24,31 +24,21 @@ namespace Service.Animals.Desktop {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class LostAnimalsDesktop_ServiceDataSet : global::System.Data.DataSet {
         
-        private AnimalMarkerEntityDataTable tableAnimalMarkerEntity;
-        
         private AnimalsDataTable tableAnimals;
         
-        private AnimalUserEntityDataTable tableAnimalUserEntity;
+        private AnimalTypesDataTable tableAnimalTypes;
         
-        private MarkersDataTable tableMarkers;
+        private LocationsDataTable tableLocations;
         
-        private RolesDataTable tableRoles;
-        
-        private UserRoleEntityDataTable tableUserRoleEntity;
+        private MovementPointsDataTable tableMovementPoints;
         
         private UsersDataTable tableUsers;
         
-        private global::System.Data.DataRelation relationFK_AnimalMarkerEntity_Animals_AnimalId;
+        private global::System.Data.DataRelation relationFK__Animals__AnimalT__398D8EEE;
         
-        private global::System.Data.DataRelation relationFK_AnimalMarkerEntity_Markers_MarkerId;
+        private global::System.Data.DataRelation relationFK__MovementP__Anima__3E52440B;
         
-        private global::System.Data.DataRelation relationFK_AnimalUserEntity_Animals_AnimalId;
-        
-        private global::System.Data.DataRelation relationFK_AnimalUserEntity_Users_UserId;
-        
-        private global::System.Data.DataRelation relationFK_UserRoleEntity_Roles_RoleId;
-        
-        private global::System.Data.DataRelation relationFK_UserRoleEntity_Users_UserId;
+        private global::System.Data.DataRelation relationFK__MovementP__Locat__3F466844;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -78,23 +68,17 @@ namespace Service.Animals.Desktop {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["AnimalMarkerEntity"] != null)) {
-                    base.Tables.Add(new AnimalMarkerEntityDataTable(ds.Tables["AnimalMarkerEntity"]));
-                }
                 if ((ds.Tables["Animals"] != null)) {
                     base.Tables.Add(new AnimalsDataTable(ds.Tables["Animals"]));
                 }
-                if ((ds.Tables["AnimalUserEntity"] != null)) {
-                    base.Tables.Add(new AnimalUserEntityDataTable(ds.Tables["AnimalUserEntity"]));
+                if ((ds.Tables["AnimalTypes"] != null)) {
+                    base.Tables.Add(new AnimalTypesDataTable(ds.Tables["AnimalTypes"]));
                 }
-                if ((ds.Tables["Markers"] != null)) {
-                    base.Tables.Add(new MarkersDataTable(ds.Tables["Markers"]));
+                if ((ds.Tables["Locations"] != null)) {
+                    base.Tables.Add(new LocationsDataTable(ds.Tables["Locations"]));
                 }
-                if ((ds.Tables["Roles"] != null)) {
-                    base.Tables.Add(new RolesDataTable(ds.Tables["Roles"]));
-                }
-                if ((ds.Tables["UserRoleEntity"] != null)) {
-                    base.Tables.Add(new UserRoleEntityDataTable(ds.Tables["UserRoleEntity"]));
+                if ((ds.Tables["MovementPoints"] != null)) {
+                    base.Tables.Add(new MovementPointsDataTable(ds.Tables["MovementPoints"]));
                 }
                 if ((ds.Tables["Users"] != null)) {
                     base.Tables.Add(new UsersDataTable(ds.Tables["Users"]));
@@ -121,16 +105,6 @@ namespace Service.Animals.Desktop {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public AnimalMarkerEntityDataTable AnimalMarkerEntity {
-            get {
-                return this.tableAnimalMarkerEntity;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Browsable(false)]
-        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
         public AnimalsDataTable Animals {
             get {
                 return this.tableAnimals;
@@ -141,9 +115,9 @@ namespace Service.Animals.Desktop {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public AnimalUserEntityDataTable AnimalUserEntity {
+        public AnimalTypesDataTable AnimalTypes {
             get {
-                return this.tableAnimalUserEntity;
+                return this.tableAnimalTypes;
             }
         }
         
@@ -151,9 +125,9 @@ namespace Service.Animals.Desktop {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public MarkersDataTable Markers {
+        public LocationsDataTable Locations {
             get {
-                return this.tableMarkers;
+                return this.tableLocations;
             }
         }
         
@@ -161,19 +135,9 @@ namespace Service.Animals.Desktop {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public RolesDataTable Roles {
+        public MovementPointsDataTable MovementPoints {
             get {
-                return this.tableRoles;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Browsable(false)]
-        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public UserRoleEntityDataTable UserRoleEntity {
-            get {
-                return this.tableUserRoleEntity;
+                return this.tableMovementPoints;
             }
         }
         
@@ -254,23 +218,17 @@ namespace Service.Animals.Desktop {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["AnimalMarkerEntity"] != null)) {
-                    base.Tables.Add(new AnimalMarkerEntityDataTable(ds.Tables["AnimalMarkerEntity"]));
-                }
                 if ((ds.Tables["Animals"] != null)) {
                     base.Tables.Add(new AnimalsDataTable(ds.Tables["Animals"]));
                 }
-                if ((ds.Tables["AnimalUserEntity"] != null)) {
-                    base.Tables.Add(new AnimalUserEntityDataTable(ds.Tables["AnimalUserEntity"]));
+                if ((ds.Tables["AnimalTypes"] != null)) {
+                    base.Tables.Add(new AnimalTypesDataTable(ds.Tables["AnimalTypes"]));
                 }
-                if ((ds.Tables["Markers"] != null)) {
-                    base.Tables.Add(new MarkersDataTable(ds.Tables["Markers"]));
+                if ((ds.Tables["Locations"] != null)) {
+                    base.Tables.Add(new LocationsDataTable(ds.Tables["Locations"]));
                 }
-                if ((ds.Tables["Roles"] != null)) {
-                    base.Tables.Add(new RolesDataTable(ds.Tables["Roles"]));
-                }
-                if ((ds.Tables["UserRoleEntity"] != null)) {
-                    base.Tables.Add(new UserRoleEntityDataTable(ds.Tables["UserRoleEntity"]));
+                if ((ds.Tables["MovementPoints"] != null)) {
+                    base.Tables.Add(new MovementPointsDataTable(ds.Tables["MovementPoints"]));
                 }
                 if ((ds.Tables["Users"] != null)) {
                     base.Tables.Add(new UsersDataTable(ds.Tables["Users"]));
@@ -308,40 +266,28 @@ namespace Service.Animals.Desktop {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableAnimalMarkerEntity = ((AnimalMarkerEntityDataTable)(base.Tables["AnimalMarkerEntity"]));
-            if ((initTable == true)) {
-                if ((this.tableAnimalMarkerEntity != null)) {
-                    this.tableAnimalMarkerEntity.InitVars();
-                }
-            }
             this.tableAnimals = ((AnimalsDataTable)(base.Tables["Animals"]));
             if ((initTable == true)) {
                 if ((this.tableAnimals != null)) {
                     this.tableAnimals.InitVars();
                 }
             }
-            this.tableAnimalUserEntity = ((AnimalUserEntityDataTable)(base.Tables["AnimalUserEntity"]));
+            this.tableAnimalTypes = ((AnimalTypesDataTable)(base.Tables["AnimalTypes"]));
             if ((initTable == true)) {
-                if ((this.tableAnimalUserEntity != null)) {
-                    this.tableAnimalUserEntity.InitVars();
+                if ((this.tableAnimalTypes != null)) {
+                    this.tableAnimalTypes.InitVars();
                 }
             }
-            this.tableMarkers = ((MarkersDataTable)(base.Tables["Markers"]));
+            this.tableLocations = ((LocationsDataTable)(base.Tables["Locations"]));
             if ((initTable == true)) {
-                if ((this.tableMarkers != null)) {
-                    this.tableMarkers.InitVars();
+                if ((this.tableLocations != null)) {
+                    this.tableLocations.InitVars();
                 }
             }
-            this.tableRoles = ((RolesDataTable)(base.Tables["Roles"]));
+            this.tableMovementPoints = ((MovementPointsDataTable)(base.Tables["MovementPoints"]));
             if ((initTable == true)) {
-                if ((this.tableRoles != null)) {
-                    this.tableRoles.InitVars();
-                }
-            }
-            this.tableUserRoleEntity = ((UserRoleEntityDataTable)(base.Tables["UserRoleEntity"]));
-            if ((initTable == true)) {
-                if ((this.tableUserRoleEntity != null)) {
-                    this.tableUserRoleEntity.InitVars();
+                if ((this.tableMovementPoints != null)) {
+                    this.tableMovementPoints.InitVars();
                 }
             }
             this.tableUsers = ((UsersDataTable)(base.Tables["Users"]));
@@ -350,12 +296,9 @@ namespace Service.Animals.Desktop {
                     this.tableUsers.InitVars();
                 }
             }
-            this.relationFK_AnimalMarkerEntity_Animals_AnimalId = this.Relations["FK_AnimalMarkerEntity_Animals_AnimalId"];
-            this.relationFK_AnimalMarkerEntity_Markers_MarkerId = this.Relations["FK_AnimalMarkerEntity_Markers_MarkerId"];
-            this.relationFK_AnimalUserEntity_Animals_AnimalId = this.Relations["FK_AnimalUserEntity_Animals_AnimalId"];
-            this.relationFK_AnimalUserEntity_Users_UserId = this.Relations["FK_AnimalUserEntity_Users_UserId"];
-            this.relationFK_UserRoleEntity_Roles_RoleId = this.Relations["FK_UserRoleEntity_Roles_RoleId"];
-            this.relationFK_UserRoleEntity_Users_UserId = this.Relations["FK_UserRoleEntity_Users_UserId"];
+            this.relationFK__Animals__AnimalT__398D8EEE = this.Relations["FK__Animals__AnimalT__398D8EEE"];
+            this.relationFK__MovementP__Anima__3E52440B = this.Relations["FK__MovementP__Anima__3E52440B"];
+            this.relationFK__MovementP__Locat__3F466844 = this.Relations["FK__MovementP__Locat__3F466844"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -366,50 +309,28 @@ namespace Service.Animals.Desktop {
             this.Namespace = "http://tempuri.org/LostAnimalsDesktop_ServiceDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableAnimalMarkerEntity = new AnimalMarkerEntityDataTable();
-            base.Tables.Add(this.tableAnimalMarkerEntity);
             this.tableAnimals = new AnimalsDataTable();
             base.Tables.Add(this.tableAnimals);
-            this.tableAnimalUserEntity = new AnimalUserEntityDataTable();
-            base.Tables.Add(this.tableAnimalUserEntity);
-            this.tableMarkers = new MarkersDataTable();
-            base.Tables.Add(this.tableMarkers);
-            this.tableRoles = new RolesDataTable();
-            base.Tables.Add(this.tableRoles);
-            this.tableUserRoleEntity = new UserRoleEntityDataTable();
-            base.Tables.Add(this.tableUserRoleEntity);
+            this.tableAnimalTypes = new AnimalTypesDataTable();
+            base.Tables.Add(this.tableAnimalTypes);
+            this.tableLocations = new LocationsDataTable();
+            base.Tables.Add(this.tableLocations);
+            this.tableMovementPoints = new MovementPointsDataTable();
+            base.Tables.Add(this.tableMovementPoints);
             this.tableUsers = new UsersDataTable();
             base.Tables.Add(this.tableUsers);
-            this.relationFK_AnimalMarkerEntity_Animals_AnimalId = new global::System.Data.DataRelation("FK_AnimalMarkerEntity_Animals_AnimalId", new global::System.Data.DataColumn[] {
-                        this.tableAnimals.IdColumn}, new global::System.Data.DataColumn[] {
-                        this.tableAnimalMarkerEntity.AnimalIdColumn}, false);
-            this.Relations.Add(this.relationFK_AnimalMarkerEntity_Animals_AnimalId);
-            this.relationFK_AnimalMarkerEntity_Markers_MarkerId = new global::System.Data.DataRelation("FK_AnimalMarkerEntity_Markers_MarkerId", new global::System.Data.DataColumn[] {
-                        this.tableMarkers.IdColumn}, new global::System.Data.DataColumn[] {
-                        this.tableAnimalMarkerEntity.MarkerIdColumn}, false);
-            this.Relations.Add(this.relationFK_AnimalMarkerEntity_Markers_MarkerId);
-            this.relationFK_AnimalUserEntity_Animals_AnimalId = new global::System.Data.DataRelation("FK_AnimalUserEntity_Animals_AnimalId", new global::System.Data.DataColumn[] {
-                        this.tableAnimals.IdColumn}, new global::System.Data.DataColumn[] {
-                        this.tableAnimalUserEntity.AnimalIdColumn}, false);
-            this.Relations.Add(this.relationFK_AnimalUserEntity_Animals_AnimalId);
-            this.relationFK_AnimalUserEntity_Users_UserId = new global::System.Data.DataRelation("FK_AnimalUserEntity_Users_UserId", new global::System.Data.DataColumn[] {
-                        this.tableUsers.IdColumn}, new global::System.Data.DataColumn[] {
-                        this.tableAnimalUserEntity.UserIdColumn}, false);
-            this.Relations.Add(this.relationFK_AnimalUserEntity_Users_UserId);
-            this.relationFK_UserRoleEntity_Roles_RoleId = new global::System.Data.DataRelation("FK_UserRoleEntity_Roles_RoleId", new global::System.Data.DataColumn[] {
-                        this.tableRoles.IdColumn}, new global::System.Data.DataColumn[] {
-                        this.tableUserRoleEntity.RoleIdColumn}, false);
-            this.Relations.Add(this.relationFK_UserRoleEntity_Roles_RoleId);
-            this.relationFK_UserRoleEntity_Users_UserId = new global::System.Data.DataRelation("FK_UserRoleEntity_Users_UserId", new global::System.Data.DataColumn[] {
-                        this.tableUsers.IdColumn}, new global::System.Data.DataColumn[] {
-                        this.tableUserRoleEntity.UserIdColumn}, false);
-            this.Relations.Add(this.relationFK_UserRoleEntity_Users_UserId);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeAnimalMarkerEntity() {
-            return false;
+            this.relationFK__Animals__AnimalT__398D8EEE = new global::System.Data.DataRelation("FK__Animals__AnimalT__398D8EEE", new global::System.Data.DataColumn[] {
+                        this.tableAnimalTypes.AnimalTypeIdColumn}, new global::System.Data.DataColumn[] {
+                        this.tableAnimals.AnimalTypeIdColumn}, false);
+            this.Relations.Add(this.relationFK__Animals__AnimalT__398D8EEE);
+            this.relationFK__MovementP__Anima__3E52440B = new global::System.Data.DataRelation("FK__MovementP__Anima__3E52440B", new global::System.Data.DataColumn[] {
+                        this.tableAnimals.AnimalIdColumn}, new global::System.Data.DataColumn[] {
+                        this.tableMovementPoints.AnimalIdColumn}, false);
+            this.Relations.Add(this.relationFK__MovementP__Anima__3E52440B);
+            this.relationFK__MovementP__Locat__3F466844 = new global::System.Data.DataRelation("FK__MovementP__Locat__3F466844", new global::System.Data.DataColumn[] {
+                        this.tableLocations.LocationIdColumn}, new global::System.Data.DataColumn[] {
+                        this.tableMovementPoints.LocationIdColumn}, false);
+            this.Relations.Add(this.relationFK__MovementP__Locat__3F466844);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -420,25 +341,19 @@ namespace Service.Animals.Desktop {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeAnimalUserEntity() {
+        private bool ShouldSerializeAnimalTypes() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeMarkers() {
+        private bool ShouldSerializeLocations() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeRoles() {
-            return false;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeUserRoleEntity() {
+        private bool ShouldSerializeMovementPoints() {
             return false;
         }
         
@@ -504,22 +419,16 @@ namespace Service.Animals.Desktop {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void AnimalMarkerEntityRowChangeEventHandler(object sender, AnimalMarkerEntityRowChangeEvent e);
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void AnimalsRowChangeEventHandler(object sender, AnimalsRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void AnimalUserEntityRowChangeEventHandler(object sender, AnimalUserEntityRowChangeEvent e);
+        public delegate void AnimalTypesRowChangeEventHandler(object sender, AnimalTypesRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void MarkersRowChangeEventHandler(object sender, MarkersRowChangeEvent e);
+        public delegate void LocationsRowChangeEventHandler(object sender, LocationsRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void RolesRowChangeEventHandler(object sender, RolesRowChangeEvent e);
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void UserRoleEntityRowChangeEventHandler(object sender, UserRoleEntityRowChangeEvent e);
+        public delegate void MovementPointsRowChangeEventHandler(object sender, MovementPointsRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void UsersRowChangeEventHandler(object sender, UsersRowChangeEvent e);
@@ -529,301 +438,15 @@ namespace Service.Animals.Desktop {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class AnimalMarkerEntityDataTable : global::System.Data.TypedTableBase<AnimalMarkerEntityRow> {
+        public partial class AnimalsDataTable : global::System.Data.TypedTableBase<AnimalsRow> {
             
             private global::System.Data.DataColumn columnAnimalId;
             
-            private global::System.Data.DataColumn columnMarkerId;
+            private global::System.Data.DataColumn columnAnimalTypeId;
             
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AnimalMarkerEntityDataTable() {
-                this.TableName = "AnimalMarkerEntity";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
+            private global::System.Data.DataColumn columnAnimalName;
             
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal AnimalMarkerEntityDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected AnimalMarkerEntityDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn AnimalIdColumn {
-                get {
-                    return this.columnAnimalId;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn MarkerIdColumn {
-                get {
-                    return this.columnMarkerId;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AnimalMarkerEntityRow this[int index] {
-                get {
-                    return ((AnimalMarkerEntityRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event AnimalMarkerEntityRowChangeEventHandler AnimalMarkerEntityRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event AnimalMarkerEntityRowChangeEventHandler AnimalMarkerEntityRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event AnimalMarkerEntityRowChangeEventHandler AnimalMarkerEntityRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event AnimalMarkerEntityRowChangeEventHandler AnimalMarkerEntityRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddAnimalMarkerEntityRow(AnimalMarkerEntityRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AnimalMarkerEntityRow AddAnimalMarkerEntityRow(AnimalsRow parentAnimalsRowByFK_AnimalMarkerEntity_Animals_AnimalId, MarkersRow parentMarkersRowByFK_AnimalMarkerEntity_Markers_MarkerId) {
-                AnimalMarkerEntityRow rowAnimalMarkerEntityRow = ((AnimalMarkerEntityRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        null,
-                        null};
-                if ((parentAnimalsRowByFK_AnimalMarkerEntity_Animals_AnimalId != null)) {
-                    columnValuesArray[0] = parentAnimalsRowByFK_AnimalMarkerEntity_Animals_AnimalId[0];
-                }
-                if ((parentMarkersRowByFK_AnimalMarkerEntity_Markers_MarkerId != null)) {
-                    columnValuesArray[1] = parentMarkersRowByFK_AnimalMarkerEntity_Markers_MarkerId[0];
-                }
-                rowAnimalMarkerEntityRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowAnimalMarkerEntityRow);
-                return rowAnimalMarkerEntityRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AnimalMarkerEntityRow FindByAnimalIdMarkerId(int AnimalId, int MarkerId) {
-                return ((AnimalMarkerEntityRow)(this.Rows.Find(new object[] {
-                            AnimalId,
-                            MarkerId})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                AnimalMarkerEntityDataTable cln = ((AnimalMarkerEntityDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new AnimalMarkerEntityDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal void InitVars() {
-                this.columnAnimalId = base.Columns["AnimalId"];
-                this.columnMarkerId = base.Columns["MarkerId"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            private void InitClass() {
-                this.columnAnimalId = new global::System.Data.DataColumn("AnimalId", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAnimalId);
-                this.columnMarkerId = new global::System.Data.DataColumn("MarkerId", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMarkerId);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnAnimalId,
-                                this.columnMarkerId}, true));
-                this.columnAnimalId.AllowDBNull = false;
-                this.columnMarkerId.AllowDBNull = false;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AnimalMarkerEntityRow NewAnimalMarkerEntityRow() {
-                return ((AnimalMarkerEntityRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new AnimalMarkerEntityRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(AnimalMarkerEntityRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.AnimalMarkerEntityRowChanged != null)) {
-                    this.AnimalMarkerEntityRowChanged(this, new AnimalMarkerEntityRowChangeEvent(((AnimalMarkerEntityRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.AnimalMarkerEntityRowChanging != null)) {
-                    this.AnimalMarkerEntityRowChanging(this, new AnimalMarkerEntityRowChangeEvent(((AnimalMarkerEntityRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.AnimalMarkerEntityRowDeleted != null)) {
-                    this.AnimalMarkerEntityRowDeleted(this, new AnimalMarkerEntityRowChangeEvent(((AnimalMarkerEntityRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.AnimalMarkerEntityRowDeleting != null)) {
-                    this.AnimalMarkerEntityRowDeleting(this, new AnimalMarkerEntityRowChangeEvent(((AnimalMarkerEntityRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveAnimalMarkerEntityRow(AnimalMarkerEntityRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                LostAnimalsDesktop_ServiceDataSet ds = new LostAnimalsDesktop_ServiceDataSet();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "AnimalMarkerEntityDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class AnimalsDataTable : global::System.Data.TypedTableBase<AnimalsRow> {
-            
-            private global::System.Data.DataColumn columnId;
-            
-            private global::System.Data.DataColumn columnName;
-            
-            private global::System.Data.DataColumn columnDescription;
-            
-            private global::System.Data.DataColumn columnDateOfBirth;
-            
-            private global::System.Data.DataColumn columnStatus;
-            
-            private global::System.Data.DataColumn columnBreed;
-            
-            private global::System.Data.DataColumn columnPhotoUrl;
+            private global::System.Data.DataColumn columnAnimalDescription;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -860,57 +483,33 @@ namespace Service.Animals.Desktop {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn IdColumn {
+            public global::System.Data.DataColumn AnimalIdColumn {
                 get {
-                    return this.columnId;
+                    return this.columnAnimalId;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn NameColumn {
+            public global::System.Data.DataColumn AnimalTypeIdColumn {
                 get {
-                    return this.columnName;
+                    return this.columnAnimalTypeId;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn DescriptionColumn {
+            public global::System.Data.DataColumn AnimalNameColumn {
                 get {
-                    return this.columnDescription;
+                    return this.columnAnimalName;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn DateOfBirthColumn {
+            public global::System.Data.DataColumn AnimalDescriptionColumn {
                 get {
-                    return this.columnDateOfBirth;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn StatusColumn {
-                get {
-                    return this.columnStatus;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn BreedColumn {
-                get {
-                    return this.columnBreed;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn PhotoUrlColumn {
-                get {
-                    return this.columnPhotoUrl;
+                    return this.columnAnimalDescription;
                 }
             }
             
@@ -951,16 +550,16 @@ namespace Service.Animals.Desktop {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AnimalsRow AddAnimalsRow(string Name, string Description, System.DateTime DateOfBirth, string Status, string Breed, string PhotoUrl) {
+            public AnimalsRow AddAnimalsRow(AnimalTypesRow parentAnimalTypesRowByFK__Animals__AnimalT__398D8EEE, string AnimalName, string AnimalDescription) {
                 AnimalsRow rowAnimalsRow = ((AnimalsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        Name,
-                        Description,
-                        DateOfBirth,
-                        Status,
-                        Breed,
-                        PhotoUrl};
+                        null,
+                        AnimalName,
+                        AnimalDescription};
+                if ((parentAnimalTypesRowByFK__Animals__AnimalT__398D8EEE != null)) {
+                    columnValuesArray[1] = parentAnimalTypesRowByFK__Animals__AnimalT__398D8EEE[0];
+                }
                 rowAnimalsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowAnimalsRow);
                 return rowAnimalsRow;
@@ -968,9 +567,9 @@ namespace Service.Animals.Desktop {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AnimalsRow FindById(int Id) {
+            public AnimalsRow FindByAnimalId(int AnimalId) {
                 return ((AnimalsRow)(this.Rows.Find(new object[] {
-                            Id})));
+                            AnimalId})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -990,51 +589,35 @@ namespace Service.Animals.Desktop {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnId = base.Columns["Id"];
-                this.columnName = base.Columns["Name"];
-                this.columnDescription = base.Columns["Description"];
-                this.columnDateOfBirth = base.Columns["DateOfBirth"];
-                this.columnStatus = base.Columns["Status"];
-                this.columnBreed = base.Columns["Breed"];
-                this.columnPhotoUrl = base.Columns["PhotoUrl"];
+                this.columnAnimalId = base.Columns["AnimalId"];
+                this.columnAnimalTypeId = base.Columns["AnimalTypeId"];
+                this.columnAnimalName = base.Columns["AnimalName"];
+                this.columnAnimalDescription = base.Columns["AnimalDescription"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnId);
-                this.columnName = new global::System.Data.DataColumn("Name", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnName);
-                this.columnDescription = new global::System.Data.DataColumn("Description", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDescription);
-                this.columnDateOfBirth = new global::System.Data.DataColumn("DateOfBirth", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDateOfBirth);
-                this.columnStatus = new global::System.Data.DataColumn("Status", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnStatus);
-                this.columnBreed = new global::System.Data.DataColumn("Breed", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBreed);
-                this.columnPhotoUrl = new global::System.Data.DataColumn("PhotoUrl", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPhotoUrl);
+                this.columnAnimalId = new global::System.Data.DataColumn("AnimalId", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAnimalId);
+                this.columnAnimalTypeId = new global::System.Data.DataColumn("AnimalTypeId", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAnimalTypeId);
+                this.columnAnimalName = new global::System.Data.DataColumn("AnimalName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAnimalName);
+                this.columnAnimalDescription = new global::System.Data.DataColumn("AnimalDescription", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAnimalDescription);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnId}, true));
-                this.columnId.AutoIncrement = true;
-                this.columnId.AutoIncrementSeed = -1;
-                this.columnId.AutoIncrementStep = -1;
-                this.columnId.AllowDBNull = false;
-                this.columnId.ReadOnly = true;
-                this.columnId.Unique = true;
-                this.columnName.AllowDBNull = false;
-                this.columnName.MaxLength = 2147483647;
-                this.columnDescription.AllowDBNull = false;
-                this.columnDescription.MaxLength = 2147483647;
-                this.columnDateOfBirth.AllowDBNull = false;
-                this.columnStatus.AllowDBNull = false;
-                this.columnStatus.MaxLength = 2147483647;
-                this.columnBreed.AllowDBNull = false;
-                this.columnBreed.MaxLength = 2147483647;
-                this.columnPhotoUrl.AllowDBNull = false;
-                this.columnPhotoUrl.MaxLength = 2147483647;
+                                this.columnAnimalId}, true));
+                this.columnAnimalId.AutoIncrement = true;
+                this.columnAnimalId.AutoIncrementSeed = -1;
+                this.columnAnimalId.AutoIncrementStep = -1;
+                this.columnAnimalId.AllowDBNull = false;
+                this.columnAnimalId.ReadOnly = true;
+                this.columnAnimalId.Unique = true;
+                this.columnAnimalTypeId.AllowDBNull = false;
+                this.columnAnimalName.AllowDBNull = false;
+                this.columnAnimalName.MaxLength = 50;
+                this.columnAnimalDescription.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1166,16 +749,18 @@ namespace Service.Animals.Desktop {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class AnimalUserEntityDataTable : global::System.Data.TypedTableBase<AnimalUserEntityRow> {
+        public partial class AnimalTypesDataTable : global::System.Data.TypedTableBase<AnimalTypesRow> {
             
-            private global::System.Data.DataColumn columnAnimalId;
+            private global::System.Data.DataColumn columnAnimalTypeId;
             
-            private global::System.Data.DataColumn columnUserId;
+            private global::System.Data.DataColumn columnTypeName;
+            
+            private global::System.Data.DataColumn columnTypeDescription;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AnimalUserEntityDataTable() {
-                this.TableName = "AnimalUserEntity";
+            public AnimalTypesDataTable() {
+                this.TableName = "AnimalTypes";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -1183,7 +768,7 @@ namespace Service.Animals.Desktop {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal AnimalUserEntityDataTable(global::System.Data.DataTable table) {
+            internal AnimalTypesDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1200,24 +785,32 @@ namespace Service.Animals.Desktop {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected AnimalUserEntityDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected AnimalTypesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn AnimalIdColumn {
+            public global::System.Data.DataColumn AnimalTypeIdColumn {
                 get {
-                    return this.columnAnimalId;
+                    return this.columnAnimalTypeId;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn UserIdColumn {
+            public global::System.Data.DataColumn TypeNameColumn {
                 get {
-                    return this.columnUserId;
+                    return this.columnTypeName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn TypeDescriptionColumn {
+                get {
+                    return this.columnTypeDescription;
                 }
             }
             
@@ -1232,60 +825,54 @@ namespace Service.Animals.Desktop {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AnimalUserEntityRow this[int index] {
+            public AnimalTypesRow this[int index] {
                 get {
-                    return ((AnimalUserEntityRow)(this.Rows[index]));
+                    return ((AnimalTypesRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event AnimalUserEntityRowChangeEventHandler AnimalUserEntityRowChanging;
+            public event AnimalTypesRowChangeEventHandler AnimalTypesRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event AnimalUserEntityRowChangeEventHandler AnimalUserEntityRowChanged;
+            public event AnimalTypesRowChangeEventHandler AnimalTypesRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event AnimalUserEntityRowChangeEventHandler AnimalUserEntityRowDeleting;
+            public event AnimalTypesRowChangeEventHandler AnimalTypesRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event AnimalUserEntityRowChangeEventHandler AnimalUserEntityRowDeleted;
+            public event AnimalTypesRowChangeEventHandler AnimalTypesRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddAnimalUserEntityRow(AnimalUserEntityRow row) {
+            public void AddAnimalTypesRow(AnimalTypesRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AnimalUserEntityRow AddAnimalUserEntityRow(AnimalsRow parentAnimalsRowByFK_AnimalUserEntity_Animals_AnimalId, UsersRow parentUsersRowByFK_AnimalUserEntity_Users_UserId) {
-                AnimalUserEntityRow rowAnimalUserEntityRow = ((AnimalUserEntityRow)(this.NewRow()));
+            public AnimalTypesRow AddAnimalTypesRow(string TypeName, string TypeDescription) {
+                AnimalTypesRow rowAnimalTypesRow = ((AnimalTypesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        null};
-                if ((parentAnimalsRowByFK_AnimalUserEntity_Animals_AnimalId != null)) {
-                    columnValuesArray[0] = parentAnimalsRowByFK_AnimalUserEntity_Animals_AnimalId[0];
-                }
-                if ((parentUsersRowByFK_AnimalUserEntity_Users_UserId != null)) {
-                    columnValuesArray[1] = parentUsersRowByFK_AnimalUserEntity_Users_UserId[0];
-                }
-                rowAnimalUserEntityRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowAnimalUserEntityRow);
-                return rowAnimalUserEntityRow;
+                        TypeName,
+                        TypeDescription};
+                rowAnimalTypesRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowAnimalTypesRow);
+                return rowAnimalTypesRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AnimalUserEntityRow FindByAnimalIdUserId(int AnimalId, int UserId) {
-                return ((AnimalUserEntityRow)(this.Rows.Find(new object[] {
-                            AnimalId,
-                            UserId})));
+            public AnimalTypesRow FindByAnimalTypeId(int AnimalTypeId) {
+                return ((AnimalTypesRow)(this.Rows.Find(new object[] {
+                            AnimalTypeId})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                AnimalUserEntityDataTable cln = ((AnimalUserEntityDataTable)(base.Clone()));
+                AnimalTypesDataTable cln = ((AnimalTypesDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1293,54 +880,63 @@ namespace Service.Animals.Desktop {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new AnimalUserEntityDataTable();
+                return new AnimalTypesDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnAnimalId = base.Columns["AnimalId"];
-                this.columnUserId = base.Columns["UserId"];
+                this.columnAnimalTypeId = base.Columns["AnimalTypeId"];
+                this.columnTypeName = base.Columns["TypeName"];
+                this.columnTypeDescription = base.Columns["TypeDescription"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnAnimalId = new global::System.Data.DataColumn("AnimalId", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAnimalId);
-                this.columnUserId = new global::System.Data.DataColumn("UserId", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnUserId);
+                this.columnAnimalTypeId = new global::System.Data.DataColumn("AnimalTypeId", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAnimalTypeId);
+                this.columnTypeName = new global::System.Data.DataColumn("TypeName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTypeName);
+                this.columnTypeDescription = new global::System.Data.DataColumn("TypeDescription", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTypeDescription);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnAnimalId,
-                                this.columnUserId}, true));
-                this.columnAnimalId.AllowDBNull = false;
-                this.columnUserId.AllowDBNull = false;
+                                this.columnAnimalTypeId}, true));
+                this.columnAnimalTypeId.AutoIncrement = true;
+                this.columnAnimalTypeId.AutoIncrementSeed = -1;
+                this.columnAnimalTypeId.AutoIncrementStep = -1;
+                this.columnAnimalTypeId.AllowDBNull = false;
+                this.columnAnimalTypeId.ReadOnly = true;
+                this.columnAnimalTypeId.Unique = true;
+                this.columnTypeName.AllowDBNull = false;
+                this.columnTypeName.MaxLength = 50;
+                this.columnTypeDescription.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AnimalUserEntityRow NewAnimalUserEntityRow() {
-                return ((AnimalUserEntityRow)(this.NewRow()));
+            public AnimalTypesRow NewAnimalTypesRow() {
+                return ((AnimalTypesRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new AnimalUserEntityRow(builder);
+                return new AnimalTypesRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(AnimalUserEntityRow);
+                return typeof(AnimalTypesRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.AnimalUserEntityRowChanged != null)) {
-                    this.AnimalUserEntityRowChanged(this, new AnimalUserEntityRowChangeEvent(((AnimalUserEntityRow)(e.Row)), e.Action));
+                if ((this.AnimalTypesRowChanged != null)) {
+                    this.AnimalTypesRowChanged(this, new AnimalTypesRowChangeEvent(((AnimalTypesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1348,8 +944,8 @@ namespace Service.Animals.Desktop {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.AnimalUserEntityRowChanging != null)) {
-                    this.AnimalUserEntityRowChanging(this, new AnimalUserEntityRowChangeEvent(((AnimalUserEntityRow)(e.Row)), e.Action));
+                if ((this.AnimalTypesRowChanging != null)) {
+                    this.AnimalTypesRowChanging(this, new AnimalTypesRowChangeEvent(((AnimalTypesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1357,8 +953,8 @@ namespace Service.Animals.Desktop {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.AnimalUserEntityRowDeleted != null)) {
-                    this.AnimalUserEntityRowDeleted(this, new AnimalUserEntityRowChangeEvent(((AnimalUserEntityRow)(e.Row)), e.Action));
+                if ((this.AnimalTypesRowDeleted != null)) {
+                    this.AnimalTypesRowDeleted(this, new AnimalTypesRowChangeEvent(((AnimalTypesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1366,14 +962,14 @@ namespace Service.Animals.Desktop {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.AnimalUserEntityRowDeleting != null)) {
-                    this.AnimalUserEntityRowDeleting(this, new AnimalUserEntityRowChangeEvent(((AnimalUserEntityRow)(e.Row)), e.Action));
+                if ((this.AnimalTypesRowDeleting != null)) {
+                    this.AnimalTypesRowDeleting(this, new AnimalTypesRowChangeEvent(((AnimalTypesRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveAnimalUserEntityRow(AnimalUserEntityRow row) {
+            public void RemoveAnimalTypesRow(AnimalTypesRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -1400,7 +996,7 @@ namespace Service.Animals.Desktop {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "AnimalUserEntityDataTable";
+                attribute2.FixedValue = "AnimalTypesDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1446,20 +1042,22 @@ namespace Service.Animals.Desktop {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class MarkersDataTable : global::System.Data.TypedTableBase<MarkersRow> {
+        public partial class LocationsDataTable : global::System.Data.TypedTableBase<LocationsRow> {
             
-            private global::System.Data.DataColumn columnId;
+            private global::System.Data.DataColumn columnLocationId;
+            
+            private global::System.Data.DataColumn columnLocationName;
+            
+            private global::System.Data.DataColumn columnLocationDescription;
             
             private global::System.Data.DataColumn columnLatitude;
             
             private global::System.Data.DataColumn columnLongitude;
             
-            private global::System.Data.DataColumn columnLocationName;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public MarkersDataTable() {
-                this.TableName = "Markers";
+            public LocationsDataTable() {
+                this.TableName = "Locations";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -1467,7 +1065,7 @@ namespace Service.Animals.Desktop {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal MarkersDataTable(global::System.Data.DataTable table) {
+            internal LocationsDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1484,16 +1082,32 @@ namespace Service.Animals.Desktop {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected MarkersDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected LocationsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn IdColumn {
+            public global::System.Data.DataColumn LocationIdColumn {
                 get {
-                    return this.columnId;
+                    return this.columnLocationId;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn LocationNameColumn {
+                get {
+                    return this.columnLocationName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn LocationDescriptionColumn {
+                get {
+                    return this.columnLocationDescription;
                 }
             }
             
@@ -1515,14 +1129,6 @@ namespace Service.Animals.Desktop {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn LocationNameColumn {
-                get {
-                    return this.columnLocationName;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1532,55 +1138,56 @@ namespace Service.Animals.Desktop {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public MarkersRow this[int index] {
+            public LocationsRow this[int index] {
                 get {
-                    return ((MarkersRow)(this.Rows[index]));
+                    return ((LocationsRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event MarkersRowChangeEventHandler MarkersRowChanging;
+            public event LocationsRowChangeEventHandler LocationsRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event MarkersRowChangeEventHandler MarkersRowChanged;
+            public event LocationsRowChangeEventHandler LocationsRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event MarkersRowChangeEventHandler MarkersRowDeleting;
+            public event LocationsRowChangeEventHandler LocationsRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event MarkersRowChangeEventHandler MarkersRowDeleted;
+            public event LocationsRowChangeEventHandler LocationsRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddMarkersRow(MarkersRow row) {
+            public void AddLocationsRow(LocationsRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public MarkersRow AddMarkersRow(double Latitude, double Longitude, string LocationName) {
-                MarkersRow rowMarkersRow = ((MarkersRow)(this.NewRow()));
+            public LocationsRow AddLocationsRow(string LocationName, string LocationDescription, decimal Latitude, decimal Longitude) {
+                LocationsRow rowLocationsRow = ((LocationsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
+                        LocationName,
+                        LocationDescription,
                         Latitude,
-                        Longitude,
-                        LocationName};
-                rowMarkersRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowMarkersRow);
-                return rowMarkersRow;
+                        Longitude};
+                rowLocationsRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowLocationsRow);
+                return rowLocationsRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public MarkersRow FindById(int Id) {
-                return ((MarkersRow)(this.Rows.Find(new object[] {
-                            Id})));
+            public LocationsRow FindByLocationId(int LocationId) {
+                return ((LocationsRow)(this.Rows.Find(new object[] {
+                            LocationId})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                MarkersDataTable cln = ((MarkersDataTable)(base.Clone()));
+                LocationsDataTable cln = ((LocationsDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1588,67 +1195,69 @@ namespace Service.Animals.Desktop {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new MarkersDataTable();
+                return new LocationsDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnId = base.Columns["Id"];
+                this.columnLocationId = base.Columns["LocationId"];
+                this.columnLocationName = base.Columns["LocationName"];
+                this.columnLocationDescription = base.Columns["LocationDescription"];
                 this.columnLatitude = base.Columns["Latitude"];
                 this.columnLongitude = base.Columns["Longitude"];
-                this.columnLocationName = base.Columns["LocationName"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnId);
-                this.columnLatitude = new global::System.Data.DataColumn("Latitude", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnLatitude);
-                this.columnLongitude = new global::System.Data.DataColumn("Longitude", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnLongitude);
+                this.columnLocationId = new global::System.Data.DataColumn("LocationId", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLocationId);
                 this.columnLocationName = new global::System.Data.DataColumn("LocationName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLocationName);
+                this.columnLocationDescription = new global::System.Data.DataColumn("LocationDescription", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLocationDescription);
+                this.columnLatitude = new global::System.Data.DataColumn("Latitude", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLatitude);
+                this.columnLongitude = new global::System.Data.DataColumn("Longitude", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLongitude);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnId}, true));
-                this.columnId.AutoIncrement = true;
-                this.columnId.AutoIncrementSeed = -1;
-                this.columnId.AutoIncrementStep = -1;
-                this.columnId.AllowDBNull = false;
-                this.columnId.ReadOnly = true;
-                this.columnId.Unique = true;
-                this.columnLatitude.AllowDBNull = false;
-                this.columnLongitude.AllowDBNull = false;
+                                this.columnLocationId}, true));
+                this.columnLocationId.AutoIncrement = true;
+                this.columnLocationId.AutoIncrementSeed = -1;
+                this.columnLocationId.AutoIncrementStep = -1;
+                this.columnLocationId.AllowDBNull = false;
+                this.columnLocationId.ReadOnly = true;
+                this.columnLocationId.Unique = true;
                 this.columnLocationName.AllowDBNull = false;
-                this.columnLocationName.MaxLength = 2147483647;
+                this.columnLocationName.MaxLength = 50;
+                this.columnLocationDescription.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public MarkersRow NewMarkersRow() {
-                return ((MarkersRow)(this.NewRow()));
+            public LocationsRow NewLocationsRow() {
+                return ((LocationsRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new MarkersRow(builder);
+                return new LocationsRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(MarkersRow);
+                return typeof(LocationsRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.MarkersRowChanged != null)) {
-                    this.MarkersRowChanged(this, new MarkersRowChangeEvent(((MarkersRow)(e.Row)), e.Action));
+                if ((this.LocationsRowChanged != null)) {
+                    this.LocationsRowChanged(this, new LocationsRowChangeEvent(((LocationsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1656,8 +1265,8 @@ namespace Service.Animals.Desktop {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.MarkersRowChanging != null)) {
-                    this.MarkersRowChanging(this, new MarkersRowChangeEvent(((MarkersRow)(e.Row)), e.Action));
+                if ((this.LocationsRowChanging != null)) {
+                    this.LocationsRowChanging(this, new LocationsRowChangeEvent(((LocationsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1665,8 +1274,8 @@ namespace Service.Animals.Desktop {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.MarkersRowDeleted != null)) {
-                    this.MarkersRowDeleted(this, new MarkersRowChangeEvent(((MarkersRow)(e.Row)), e.Action));
+                if ((this.LocationsRowDeleted != null)) {
+                    this.LocationsRowDeleted(this, new LocationsRowChangeEvent(((LocationsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1674,14 +1283,14 @@ namespace Service.Animals.Desktop {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.MarkersRowDeleting != null)) {
-                    this.MarkersRowDeleting(this, new MarkersRowChangeEvent(((MarkersRow)(e.Row)), e.Action));
+                if ((this.LocationsRowDeleting != null)) {
+                    this.LocationsRowDeleting(this, new LocationsRowChangeEvent(((LocationsRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveMarkersRow(MarkersRow row) {
+            public void RemoveLocationsRow(LocationsRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -1708,7 +1317,7 @@ namespace Service.Animals.Desktop {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "MarkersDataTable";
+                attribute2.FixedValue = "LocationsDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1754,16 +1363,20 @@ namespace Service.Animals.Desktop {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class RolesDataTable : global::System.Data.TypedTableBase<RolesRow> {
+        public partial class MovementPointsDataTable : global::System.Data.TypedTableBase<MovementPointsRow> {
             
-            private global::System.Data.DataColumn columnId;
+            private global::System.Data.DataColumn columnMovementPointId;
             
-            private global::System.Data.DataColumn columnName;
+            private global::System.Data.DataColumn columnAnimalId;
+            
+            private global::System.Data.DataColumn columnLocationId;
+            
+            private global::System.Data.DataColumn columnDateTime;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public RolesDataTable() {
-                this.TableName = "Roles";
+            public MovementPointsDataTable() {
+                this.TableName = "MovementPoints";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -1771,7 +1384,7 @@ namespace Service.Animals.Desktop {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal RolesDataTable(global::System.Data.DataTable table) {
+            internal MovementPointsDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1788,24 +1401,40 @@ namespace Service.Animals.Desktop {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected RolesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected MovementPointsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn IdColumn {
+            public global::System.Data.DataColumn MovementPointIdColumn {
                 get {
-                    return this.columnId;
+                    return this.columnMovementPointId;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn NameColumn {
+            public global::System.Data.DataColumn AnimalIdColumn {
                 get {
-                    return this.columnName;
+                    return this.columnAnimalId;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn LocationIdColumn {
+                get {
+                    return this.columnLocationId;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn DateTimeColumn {
+                get {
+                    return this.columnDateTime;
                 }
             }
             
@@ -1820,53 +1449,61 @@ namespace Service.Animals.Desktop {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public RolesRow this[int index] {
+            public MovementPointsRow this[int index] {
                 get {
-                    return ((RolesRow)(this.Rows[index]));
+                    return ((MovementPointsRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event RolesRowChangeEventHandler RolesRowChanging;
+            public event MovementPointsRowChangeEventHandler MovementPointsRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event RolesRowChangeEventHandler RolesRowChanged;
+            public event MovementPointsRowChangeEventHandler MovementPointsRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event RolesRowChangeEventHandler RolesRowDeleting;
+            public event MovementPointsRowChangeEventHandler MovementPointsRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event RolesRowChangeEventHandler RolesRowDeleted;
+            public event MovementPointsRowChangeEventHandler MovementPointsRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddRolesRow(RolesRow row) {
+            public void AddMovementPointsRow(MovementPointsRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public RolesRow AddRolesRow(string Name) {
-                RolesRow rowRolesRow = ((RolesRow)(this.NewRow()));
+            public MovementPointsRow AddMovementPointsRow(AnimalsRow parentAnimalsRowByFK__MovementP__Anima__3E52440B, LocationsRow parentLocationsRowByFK__MovementP__Locat__3F466844, System.DateTime DateTime) {
+                MovementPointsRow rowMovementPointsRow = ((MovementPointsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        Name};
-                rowRolesRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowRolesRow);
-                return rowRolesRow;
+                        null,
+                        null,
+                        DateTime};
+                if ((parentAnimalsRowByFK__MovementP__Anima__3E52440B != null)) {
+                    columnValuesArray[1] = parentAnimalsRowByFK__MovementP__Anima__3E52440B[0];
+                }
+                if ((parentLocationsRowByFK__MovementP__Locat__3F466844 != null)) {
+                    columnValuesArray[2] = parentLocationsRowByFK__MovementP__Locat__3F466844[0];
+                }
+                rowMovementPointsRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowMovementPointsRow);
+                return rowMovementPointsRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public RolesRow FindById(int Id) {
-                return ((RolesRow)(this.Rows.Find(new object[] {
-                            Id})));
+            public MovementPointsRow FindByMovementPointId(int MovementPointId) {
+                return ((MovementPointsRow)(this.Rows.Find(new object[] {
+                            MovementPointId})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                RolesDataTable cln = ((RolesDataTable)(base.Clone()));
+                MovementPointsDataTable cln = ((MovementPointsDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1874,59 +1511,66 @@ namespace Service.Animals.Desktop {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new RolesDataTable();
+                return new MovementPointsDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnId = base.Columns["Id"];
-                this.columnName = base.Columns["Name"];
+                this.columnMovementPointId = base.Columns["MovementPointId"];
+                this.columnAnimalId = base.Columns["AnimalId"];
+                this.columnLocationId = base.Columns["LocationId"];
+                this.columnDateTime = base.Columns["DateTime"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnId);
-                this.columnName = new global::System.Data.DataColumn("Name", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnName);
+                this.columnMovementPointId = new global::System.Data.DataColumn("MovementPointId", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMovementPointId);
+                this.columnAnimalId = new global::System.Data.DataColumn("AnimalId", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAnimalId);
+                this.columnLocationId = new global::System.Data.DataColumn("LocationId", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLocationId);
+                this.columnDateTime = new global::System.Data.DataColumn("DateTime", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDateTime);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnId}, true));
-                this.columnId.AutoIncrement = true;
-                this.columnId.AutoIncrementSeed = -1;
-                this.columnId.AutoIncrementStep = -1;
-                this.columnId.AllowDBNull = false;
-                this.columnId.ReadOnly = true;
-                this.columnId.Unique = true;
-                this.columnName.AllowDBNull = false;
-                this.columnName.MaxLength = 2147483647;
+                                this.columnMovementPointId}, true));
+                this.columnMovementPointId.AutoIncrement = true;
+                this.columnMovementPointId.AutoIncrementSeed = -1;
+                this.columnMovementPointId.AutoIncrementStep = -1;
+                this.columnMovementPointId.AllowDBNull = false;
+                this.columnMovementPointId.ReadOnly = true;
+                this.columnMovementPointId.Unique = true;
+                this.columnAnimalId.AllowDBNull = false;
+                this.columnLocationId.AllowDBNull = false;
+                this.columnDateTime.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public RolesRow NewRolesRow() {
-                return ((RolesRow)(this.NewRow()));
+            public MovementPointsRow NewMovementPointsRow() {
+                return ((MovementPointsRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new RolesRow(builder);
+                return new MovementPointsRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(RolesRow);
+                return typeof(MovementPointsRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.RolesRowChanged != null)) {
-                    this.RolesRowChanged(this, new RolesRowChangeEvent(((RolesRow)(e.Row)), e.Action));
+                if ((this.MovementPointsRowChanged != null)) {
+                    this.MovementPointsRowChanged(this, new MovementPointsRowChangeEvent(((MovementPointsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1934,8 +1578,8 @@ namespace Service.Animals.Desktop {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.RolesRowChanging != null)) {
-                    this.RolesRowChanging(this, new RolesRowChangeEvent(((RolesRow)(e.Row)), e.Action));
+                if ((this.MovementPointsRowChanging != null)) {
+                    this.MovementPointsRowChanging(this, new MovementPointsRowChangeEvent(((MovementPointsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1943,8 +1587,8 @@ namespace Service.Animals.Desktop {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.RolesRowDeleted != null)) {
-                    this.RolesRowDeleted(this, new RolesRowChangeEvent(((RolesRow)(e.Row)), e.Action));
+                if ((this.MovementPointsRowDeleted != null)) {
+                    this.MovementPointsRowDeleted(this, new MovementPointsRowChangeEvent(((MovementPointsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1952,14 +1596,14 @@ namespace Service.Animals.Desktop {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.RolesRowDeleting != null)) {
-                    this.RolesRowDeleting(this, new RolesRowChangeEvent(((RolesRow)(e.Row)), e.Action));
+                if ((this.MovementPointsRowDeleting != null)) {
+                    this.MovementPointsRowDeleting(this, new MovementPointsRowChangeEvent(((MovementPointsRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveRolesRow(RolesRow row) {
+            public void RemoveMovementPointsRow(MovementPointsRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -1986,287 +1630,7 @@ namespace Service.Animals.Desktop {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "RolesDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class UserRoleEntityDataTable : global::System.Data.TypedTableBase<UserRoleEntityRow> {
-            
-            private global::System.Data.DataColumn columnUserId;
-            
-            private global::System.Data.DataColumn columnRoleId;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public UserRoleEntityDataTable() {
-                this.TableName = "UserRoleEntity";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal UserRoleEntityDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected UserRoleEntityDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn UserIdColumn {
-                get {
-                    return this.columnUserId;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn RoleIdColumn {
-                get {
-                    return this.columnRoleId;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public UserRoleEntityRow this[int index] {
-                get {
-                    return ((UserRoleEntityRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event UserRoleEntityRowChangeEventHandler UserRoleEntityRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event UserRoleEntityRowChangeEventHandler UserRoleEntityRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event UserRoleEntityRowChangeEventHandler UserRoleEntityRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event UserRoleEntityRowChangeEventHandler UserRoleEntityRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddUserRoleEntityRow(UserRoleEntityRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public UserRoleEntityRow AddUserRoleEntityRow(UsersRow parentUsersRowByFK_UserRoleEntity_Users_UserId, RolesRow parentRolesRowByFK_UserRoleEntity_Roles_RoleId) {
-                UserRoleEntityRow rowUserRoleEntityRow = ((UserRoleEntityRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        null,
-                        null};
-                if ((parentUsersRowByFK_UserRoleEntity_Users_UserId != null)) {
-                    columnValuesArray[0] = parentUsersRowByFK_UserRoleEntity_Users_UserId[0];
-                }
-                if ((parentRolesRowByFK_UserRoleEntity_Roles_RoleId != null)) {
-                    columnValuesArray[1] = parentRolesRowByFK_UserRoleEntity_Roles_RoleId[0];
-                }
-                rowUserRoleEntityRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowUserRoleEntityRow);
-                return rowUserRoleEntityRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public UserRoleEntityRow FindByUserIdRoleId(int UserId, int RoleId) {
-                return ((UserRoleEntityRow)(this.Rows.Find(new object[] {
-                            UserId,
-                            RoleId})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                UserRoleEntityDataTable cln = ((UserRoleEntityDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new UserRoleEntityDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal void InitVars() {
-                this.columnUserId = base.Columns["UserId"];
-                this.columnRoleId = base.Columns["RoleId"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            private void InitClass() {
-                this.columnUserId = new global::System.Data.DataColumn("UserId", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnUserId);
-                this.columnRoleId = new global::System.Data.DataColumn("RoleId", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnRoleId);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnUserId,
-                                this.columnRoleId}, true));
-                this.columnUserId.AllowDBNull = false;
-                this.columnRoleId.AllowDBNull = false;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public UserRoleEntityRow NewUserRoleEntityRow() {
-                return ((UserRoleEntityRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new UserRoleEntityRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(UserRoleEntityRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.UserRoleEntityRowChanged != null)) {
-                    this.UserRoleEntityRowChanged(this, new UserRoleEntityRowChangeEvent(((UserRoleEntityRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.UserRoleEntityRowChanging != null)) {
-                    this.UserRoleEntityRowChanging(this, new UserRoleEntityRowChangeEvent(((UserRoleEntityRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.UserRoleEntityRowDeleted != null)) {
-                    this.UserRoleEntityRowDeleted(this, new UserRoleEntityRowChangeEvent(((UserRoleEntityRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.UserRoleEntityRowDeleting != null)) {
-                    this.UserRoleEntityRowDeleting(this, new UserRoleEntityRowChangeEvent(((UserRoleEntityRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveUserRoleEntityRow(UserRoleEntityRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                LostAnimalsDesktop_ServiceDataSet ds = new LostAnimalsDesktop_ServiceDataSet();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "UserRoleEntityDataTable";
+                attribute2.FixedValue = "MovementPointsDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -2519,8 +1883,6 @@ namespace Service.Animals.Desktop {
                 this.columnPassword.MaxLength = 2147483647;
                 this.columnName.AllowDBNull = false;
                 this.columnName.MaxLength = 2147483647;
-                this.columnAge.AllowDBNull = false;
-                this.columnEmail.AllowDBNull = false;
                 this.columnEmail.MaxLength = 2147483647;
             }
             
@@ -2651,65 +2013,6 @@ namespace Service.Animals.Desktop {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class AnimalMarkerEntityRow : global::System.Data.DataRow {
-            
-            private AnimalMarkerEntityDataTable tableAnimalMarkerEntity;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal AnimalMarkerEntityRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableAnimalMarkerEntity = ((AnimalMarkerEntityDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int AnimalId {
-                get {
-                    return ((int)(this[this.tableAnimalMarkerEntity.AnimalIdColumn]));
-                }
-                set {
-                    this[this.tableAnimalMarkerEntity.AnimalIdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int MarkerId {
-                get {
-                    return ((int)(this[this.tableAnimalMarkerEntity.MarkerIdColumn]));
-                }
-                set {
-                    this[this.tableAnimalMarkerEntity.MarkerIdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AnimalsRow AnimalsRow {
-                get {
-                    return ((AnimalsRow)(this.GetParentRow(this.Table.ParentRelations["FK_AnimalMarkerEntity_Animals_AnimalId"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_AnimalMarkerEntity_Animals_AnimalId"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public MarkersRow MarkersRow {
-                get {
-                    return ((MarkersRow)(this.GetParentRow(this.Table.ParentRelations["FK_AnimalMarkerEntity_Markers_MarkerId"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_AnimalMarkerEntity_Markers_MarkerId"]);
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
         public partial class AnimalsRow : global::System.Data.DataRow {
             
             private AnimalsDataTable tableAnimals;
@@ -2723,159 +2026,84 @@ namespace Service.Animals.Desktop {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int Id {
-                get {
-                    return ((int)(this[this.tableAnimals.IdColumn]));
-                }
-                set {
-                    this[this.tableAnimals.IdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Name {
-                get {
-                    return ((string)(this[this.tableAnimals.NameColumn]));
-                }
-                set {
-                    this[this.tableAnimals.NameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Description {
-                get {
-                    return ((string)(this[this.tableAnimals.DescriptionColumn]));
-                }
-                set {
-                    this[this.tableAnimals.DescriptionColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public System.DateTime DateOfBirth {
-                get {
-                    return ((global::System.DateTime)(this[this.tableAnimals.DateOfBirthColumn]));
-                }
-                set {
-                    this[this.tableAnimals.DateOfBirthColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Status {
-                get {
-                    return ((string)(this[this.tableAnimals.StatusColumn]));
-                }
-                set {
-                    this[this.tableAnimals.StatusColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Breed {
-                get {
-                    return ((string)(this[this.tableAnimals.BreedColumn]));
-                }
-                set {
-                    this[this.tableAnimals.BreedColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string PhotoUrl {
-                get {
-                    return ((string)(this[this.tableAnimals.PhotoUrlColumn]));
-                }
-                set {
-                    this[this.tableAnimals.PhotoUrlColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AnimalMarkerEntityRow[] GetAnimalMarkerEntityRows() {
-                if ((this.Table.ChildRelations["FK_AnimalMarkerEntity_Animals_AnimalId"] == null)) {
-                    return new AnimalMarkerEntityRow[0];
-                }
-                else {
-                    return ((AnimalMarkerEntityRow[])(base.GetChildRows(this.Table.ChildRelations["FK_AnimalMarkerEntity_Animals_AnimalId"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AnimalUserEntityRow[] GetAnimalUserEntityRows() {
-                if ((this.Table.ChildRelations["FK_AnimalUserEntity_Animals_AnimalId"] == null)) {
-                    return new AnimalUserEntityRow[0];
-                }
-                else {
-                    return ((AnimalUserEntityRow[])(base.GetChildRows(this.Table.ChildRelations["FK_AnimalUserEntity_Animals_AnimalId"])));
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class AnimalUserEntityRow : global::System.Data.DataRow {
-            
-            private AnimalUserEntityDataTable tableAnimalUserEntity;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal AnimalUserEntityRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableAnimalUserEntity = ((AnimalUserEntityDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int AnimalId {
                 get {
-                    return ((int)(this[this.tableAnimalUserEntity.AnimalIdColumn]));
+                    return ((int)(this[this.tableAnimals.AnimalIdColumn]));
                 }
                 set {
-                    this[this.tableAnimalUserEntity.AnimalIdColumn] = value;
+                    this[this.tableAnimals.AnimalIdColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int UserId {
+            public int AnimalTypeId {
                 get {
-                    return ((int)(this[this.tableAnimalUserEntity.UserIdColumn]));
+                    return ((int)(this[this.tableAnimals.AnimalTypeIdColumn]));
                 }
                 set {
-                    this[this.tableAnimalUserEntity.UserIdColumn] = value;
+                    this[this.tableAnimals.AnimalTypeIdColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AnimalsRow AnimalsRow {
+            public string AnimalName {
                 get {
-                    return ((AnimalsRow)(this.GetParentRow(this.Table.ParentRelations["FK_AnimalUserEntity_Animals_AnimalId"])));
+                    return ((string)(this[this.tableAnimals.AnimalNameColumn]));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_AnimalUserEntity_Animals_AnimalId"]);
+                    this[this.tableAnimals.AnimalNameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public UsersRow UsersRow {
+            public string AnimalDescription {
                 get {
-                    return ((UsersRow)(this.GetParentRow(this.Table.ParentRelations["FK_AnimalUserEntity_Users_UserId"])));
+                    try {
+                        return ((string)(this[this.tableAnimals.AnimalDescriptionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'AnimalDescription\' в таблице \'Animals\' равно DBNull.", e);
+                    }
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_AnimalUserEntity_Users_UserId"]);
+                    this[this.tableAnimals.AnimalDescriptionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public AnimalTypesRow AnimalTypesRow {
+                get {
+                    return ((AnimalTypesRow)(this.GetParentRow(this.Table.ParentRelations["FK__Animals__AnimalT__398D8EEE"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Animals__AnimalT__398D8EEE"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsAnimalDescriptionNull() {
+                return this.IsNull(this.tableAnimals.AnimalDescriptionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetAnimalDescriptionNull() {
+                this[this.tableAnimals.AnimalDescriptionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public MovementPointsRow[] GetMovementPointsRows() {
+                if ((this.Table.ChildRelations["FK__MovementP__Anima__3E52440B"] == null)) {
+                    return new MovementPointsRow[0];
+                }
+                else {
+                    return ((MovementPointsRow[])(base.GetChildRows(this.Table.ChildRelations["FK__MovementP__Anima__3E52440B"])));
                 }
             }
         }
@@ -2883,47 +2111,101 @@ namespace Service.Animals.Desktop {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class MarkersRow : global::System.Data.DataRow {
+        public partial class AnimalTypesRow : global::System.Data.DataRow {
             
-            private MarkersDataTable tableMarkers;
+            private AnimalTypesDataTable tableAnimalTypes;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal MarkersRow(global::System.Data.DataRowBuilder rb) : 
+            internal AnimalTypesRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableMarkers = ((MarkersDataTable)(this.Table));
+                this.tableAnimalTypes = ((AnimalTypesDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int Id {
+            public int AnimalTypeId {
                 get {
-                    return ((int)(this[this.tableMarkers.IdColumn]));
+                    return ((int)(this[this.tableAnimalTypes.AnimalTypeIdColumn]));
                 }
                 set {
-                    this[this.tableMarkers.IdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public double Latitude {
-                get {
-                    return ((double)(this[this.tableMarkers.LatitudeColumn]));
-                }
-                set {
-                    this[this.tableMarkers.LatitudeColumn] = value;
+                    this[this.tableAnimalTypes.AnimalTypeIdColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public double Longitude {
+            public string TypeName {
                 get {
-                    return ((double)(this[this.tableMarkers.LongitudeColumn]));
+                    return ((string)(this[this.tableAnimalTypes.TypeNameColumn]));
                 }
                 set {
-                    this[this.tableMarkers.LongitudeColumn] = value;
+                    this[this.tableAnimalTypes.TypeNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string TypeDescription {
+                get {
+                    try {
+                        return ((string)(this[this.tableAnimalTypes.TypeDescriptionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'TypeDescription\' в таблице \'AnimalTypes\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableAnimalTypes.TypeDescriptionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsTypeDescriptionNull() {
+                return this.IsNull(this.tableAnimalTypes.TypeDescriptionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetTypeDescriptionNull() {
+                this[this.tableAnimalTypes.TypeDescriptionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public AnimalsRow[] GetAnimalsRows() {
+                if ((this.Table.ChildRelations["FK__Animals__AnimalT__398D8EEE"] == null)) {
+                    return new AnimalsRow[0];
+                }
+                else {
+                    return ((AnimalsRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Animals__AnimalT__398D8EEE"])));
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class LocationsRow : global::System.Data.DataRow {
+            
+            private LocationsDataTable tableLocations;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal LocationsRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableLocations = ((LocationsDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int LocationId {
+                get {
+                    return ((int)(this[this.tableLocations.LocationIdColumn]));
+                }
+                set {
+                    this[this.tableLocations.LocationIdColumn] = value;
                 }
             }
             
@@ -2931,21 +2213,105 @@ namespace Service.Animals.Desktop {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string LocationName {
                 get {
-                    return ((string)(this[this.tableMarkers.LocationNameColumn]));
+                    return ((string)(this[this.tableLocations.LocationNameColumn]));
                 }
                 set {
-                    this[this.tableMarkers.LocationNameColumn] = value;
+                    this[this.tableLocations.LocationNameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AnimalMarkerEntityRow[] GetAnimalMarkerEntityRows() {
-                if ((this.Table.ChildRelations["FK_AnimalMarkerEntity_Markers_MarkerId"] == null)) {
-                    return new AnimalMarkerEntityRow[0];
+            public string LocationDescription {
+                get {
+                    try {
+                        return ((string)(this[this.tableLocations.LocationDescriptionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'LocationDescription\' в таблице \'Locations\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLocations.LocationDescriptionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public decimal Latitude {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableLocations.LatitudeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Latitude\' в таблице \'Locations\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLocations.LatitudeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public decimal Longitude {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableLocations.LongitudeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Longitude\' в таблице \'Locations\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLocations.LongitudeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsLocationDescriptionNull() {
+                return this.IsNull(this.tableLocations.LocationDescriptionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetLocationDescriptionNull() {
+                this[this.tableLocations.LocationDescriptionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsLatitudeNull() {
+                return this.IsNull(this.tableLocations.LatitudeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetLatitudeNull() {
+                this[this.tableLocations.LatitudeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsLongitudeNull() {
+                return this.IsNull(this.tableLocations.LongitudeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetLongitudeNull() {
+                this[this.tableLocations.LongitudeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public MovementPointsRow[] GetMovementPointsRows() {
+                if ((this.Table.ChildRelations["FK__MovementP__Locat__3F466844"] == null)) {
+                    return new MovementPointsRow[0];
                 }
                 else {
-                    return ((AnimalMarkerEntityRow[])(base.GetChildRows(this.Table.ChildRelations["FK_AnimalMarkerEntity_Markers_MarkerId"])));
+                    return ((MovementPointsRow[])(base.GetChildRows(this.Table.ChildRelations["FK__MovementP__Locat__3F466844"])));
                 }
             }
         }
@@ -2953,106 +2319,80 @@ namespace Service.Animals.Desktop {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class RolesRow : global::System.Data.DataRow {
+        public partial class MovementPointsRow : global::System.Data.DataRow {
             
-            private RolesDataTable tableRoles;
+            private MovementPointsDataTable tableMovementPoints;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal RolesRow(global::System.Data.DataRowBuilder rb) : 
+            internal MovementPointsRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableRoles = ((RolesDataTable)(this.Table));
+                this.tableMovementPoints = ((MovementPointsDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int Id {
+            public int MovementPointId {
                 get {
-                    return ((int)(this[this.tableRoles.IdColumn]));
+                    return ((int)(this[this.tableMovementPoints.MovementPointIdColumn]));
                 }
                 set {
-                    this[this.tableRoles.IdColumn] = value;
+                    this[this.tableMovementPoints.MovementPointIdColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Name {
+            public int AnimalId {
                 get {
-                    return ((string)(this[this.tableRoles.NameColumn]));
+                    return ((int)(this[this.tableMovementPoints.AnimalIdColumn]));
                 }
                 set {
-                    this[this.tableRoles.NameColumn] = value;
+                    this[this.tableMovementPoints.AnimalIdColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public UserRoleEntityRow[] GetUserRoleEntityRows() {
-                if ((this.Table.ChildRelations["FK_UserRoleEntity_Roles_RoleId"] == null)) {
-                    return new UserRoleEntityRow[0];
-                }
-                else {
-                    return ((UserRoleEntityRow[])(base.GetChildRows(this.Table.ChildRelations["FK_UserRoleEntity_Roles_RoleId"])));
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class UserRoleEntityRow : global::System.Data.DataRow {
-            
-            private UserRoleEntityDataTable tableUserRoleEntity;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal UserRoleEntityRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableUserRoleEntity = ((UserRoleEntityDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int UserId {
+            public int LocationId {
                 get {
-                    return ((int)(this[this.tableUserRoleEntity.UserIdColumn]));
+                    return ((int)(this[this.tableMovementPoints.LocationIdColumn]));
                 }
                 set {
-                    this[this.tableUserRoleEntity.UserIdColumn] = value;
+                    this[this.tableMovementPoints.LocationIdColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int RoleId {
+            public System.DateTime DateTime {
                 get {
-                    return ((int)(this[this.tableUserRoleEntity.RoleIdColumn]));
+                    return ((global::System.DateTime)(this[this.tableMovementPoints.DateTimeColumn]));
                 }
                 set {
-                    this[this.tableUserRoleEntity.RoleIdColumn] = value;
+                    this[this.tableMovementPoints.DateTimeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public RolesRow RolesRow {
+            public AnimalsRow AnimalsRow {
                 get {
-                    return ((RolesRow)(this.GetParentRow(this.Table.ParentRelations["FK_UserRoleEntity_Roles_RoleId"])));
+                    return ((AnimalsRow)(this.GetParentRow(this.Table.ParentRelations["FK__MovementP__Anima__3E52440B"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_UserRoleEntity_Roles_RoleId"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__MovementP__Anima__3E52440B"]);
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public UsersRow UsersRow {
+            public LocationsRow LocationsRow {
                 get {
-                    return ((UsersRow)(this.GetParentRow(this.Table.ParentRelations["FK_UserRoleEntity_Users_UserId"])));
+                    return ((LocationsRow)(this.GetParentRow(this.Table.ParentRelations["FK__MovementP__Locat__3F466844"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_UserRoleEntity_Users_UserId"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__MovementP__Locat__3F466844"]);
                 }
             }
         }
@@ -3119,7 +2459,12 @@ namespace Service.Animals.Desktop {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int Age {
                 get {
-                    return ((int)(this[this.tableUsers.AgeColumn]));
+                    try {
+                        return ((int)(this[this.tableUsers.AgeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Age\' в таблице \'Users\' равно DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableUsers.AgeColumn] = value;
@@ -3130,7 +2475,12 @@ namespace Service.Animals.Desktop {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string Email {
                 get {
-                    return ((string)(this[this.tableUsers.EmailColumn]));
+                    try {
+                        return ((string)(this[this.tableUsers.EmailColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Email\' в таблице \'Users\' равно DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableUsers.EmailColumn] = value;
@@ -3139,58 +2489,26 @@ namespace Service.Animals.Desktop {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AnimalUserEntityRow[] GetAnimalUserEntityRows() {
-                if ((this.Table.ChildRelations["FK_AnimalUserEntity_Users_UserId"] == null)) {
-                    return new AnimalUserEntityRow[0];
-                }
-                else {
-                    return ((AnimalUserEntityRow[])(base.GetChildRows(this.Table.ChildRelations["FK_AnimalUserEntity_Users_UserId"])));
-                }
+            public bool IsAgeNull() {
+                return this.IsNull(this.tableUsers.AgeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public UserRoleEntityRow[] GetUserRoleEntityRows() {
-                if ((this.Table.ChildRelations["FK_UserRoleEntity_Users_UserId"] == null)) {
-                    return new UserRoleEntityRow[0];
-                }
-                else {
-                    return ((UserRoleEntityRow[])(base.GetChildRows(this.Table.ChildRelations["FK_UserRoleEntity_Users_UserId"])));
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Row event argument class
-        ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class AnimalMarkerEntityRowChangeEvent : global::System.EventArgs {
-            
-            private AnimalMarkerEntityRow eventRow;
-            
-            private global::System.Data.DataRowAction eventAction;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AnimalMarkerEntityRowChangeEvent(AnimalMarkerEntityRow row, global::System.Data.DataRowAction action) {
-                this.eventRow = row;
-                this.eventAction = action;
+            public void SetAgeNull() {
+                this[this.tableUsers.AgeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AnimalMarkerEntityRow Row {
-                get {
-                    return this.eventRow;
-                }
+            public bool IsEmailNull() {
+                return this.IsNull(this.tableUsers.EmailColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataRowAction Action {
-                get {
-                    return this.eventAction;
-                }
+            public void SetEmailNull() {
+                this[this.tableUsers.EmailColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -3232,22 +2550,22 @@ namespace Service.Animals.Desktop {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class AnimalUserEntityRowChangeEvent : global::System.EventArgs {
+        public class AnimalTypesRowChangeEvent : global::System.EventArgs {
             
-            private AnimalUserEntityRow eventRow;
+            private AnimalTypesRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AnimalUserEntityRowChangeEvent(AnimalUserEntityRow row, global::System.Data.DataRowAction action) {
+            public AnimalTypesRowChangeEvent(AnimalTypesRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AnimalUserEntityRow Row {
+            public AnimalTypesRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -3266,22 +2584,22 @@ namespace Service.Animals.Desktop {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class MarkersRowChangeEvent : global::System.EventArgs {
+        public class LocationsRowChangeEvent : global::System.EventArgs {
             
-            private MarkersRow eventRow;
+            private LocationsRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public MarkersRowChangeEvent(MarkersRow row, global::System.Data.DataRowAction action) {
+            public LocationsRowChangeEvent(LocationsRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public MarkersRow Row {
+            public LocationsRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -3300,56 +2618,22 @@ namespace Service.Animals.Desktop {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class RolesRowChangeEvent : global::System.EventArgs {
+        public class MovementPointsRowChangeEvent : global::System.EventArgs {
             
-            private RolesRow eventRow;
+            private MovementPointsRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public RolesRowChangeEvent(RolesRow row, global::System.Data.DataRowAction action) {
+            public MovementPointsRowChangeEvent(MovementPointsRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public RolesRow Row {
-                get {
-                    return this.eventRow;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataRowAction Action {
-                get {
-                    return this.eventAction;
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Row event argument class
-        ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class UserRoleEntityRowChangeEvent : global::System.EventArgs {
-            
-            private UserRoleEntityRow eventRow;
-            
-            private global::System.Data.DataRowAction eventAction;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public UserRoleEntityRowChangeEvent(UserRoleEntityRow row, global::System.Data.DataRowAction action) {
-                this.eventRow = row;
-                this.eventAction = action;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public UserRoleEntityRow Row {
+            public MovementPointsRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -3401,306 +2685,6 @@ namespace Service.Animals.Desktop {
 }
 namespace Service.Animals.Desktop.LostAnimalsDesktop_ServiceDataSetTableAdapters {
     
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class AnimalMarkerEntityTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public AnimalMarkerEntityTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "AnimalMarkerEntity";
-            tableMapping.ColumnMappings.Add("AnimalId", "AnimalId");
-            tableMapping.ColumnMappings.Add("MarkerId", "MarkerId");
-            this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[AnimalMarkerEntity] WHERE (([AnimalId] = @Original_AnimalId) A" +
-                "ND ([MarkerId] = @Original_MarkerId))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AnimalId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AnimalId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MarkerId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MarkerId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[AnimalMarkerEntity] ([AnimalId], [MarkerId]) VALUES (@AnimalId" +
-                ", @MarkerId);\r\nSELECT AnimalId, MarkerId FROM AnimalMarkerEntity WHERE (AnimalId" +
-                " = @AnimalId) AND (MarkerId = @MarkerId)";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AnimalId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AnimalId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MarkerId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MarkerId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[AnimalMarkerEntity] SET [AnimalId] = @AnimalId, [MarkerId] = @MarkerId WHERE (([AnimalId] = @Original_AnimalId) AND ([MarkerId] = @Original_MarkerId));
-SELECT AnimalId, MarkerId FROM AnimalMarkerEntity WHERE (AnimalId = @AnimalId) AND (MarkerId = @MarkerId)";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AnimalId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AnimalId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MarkerId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MarkerId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AnimalId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AnimalId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MarkerId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MarkerId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Service.Animals.Desktop.Properties.Settings.Default.LostAnimalsDesktop_ServiceConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT AnimalId, MarkerId FROM dbo.AnimalMarkerEntity";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(LostAnimalsDesktop_ServiceDataSet.AnimalMarkerEntityDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual LostAnimalsDesktop_ServiceDataSet.AnimalMarkerEntityDataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            LostAnimalsDesktop_ServiceDataSet.AnimalMarkerEntityDataTable dataTable = new LostAnimalsDesktop_ServiceDataSet.AnimalMarkerEntityDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(LostAnimalsDesktop_ServiceDataSet.AnimalMarkerEntityDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(LostAnimalsDesktop_ServiceDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "AnimalMarkerEntity");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_AnimalId, int Original_MarkerId) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_AnimalId));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_MarkerId));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int AnimalId, int MarkerId) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(AnimalId));
-            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(MarkerId));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int AnimalId, int MarkerId, int Original_AnimalId, int Original_MarkerId) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(AnimalId));
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(MarkerId));
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_AnimalId));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_MarkerId));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int Original_AnimalId, int Original_MarkerId) {
-            return this.Update(Original_AnimalId, Original_MarkerId, Original_AnimalId, Original_MarkerId);
-        }
-    }
     
     /// <summary>
     ///Represents the connection and commands used to retrieve and save data.
@@ -3823,46 +2807,44 @@ SELECT AnimalId, MarkerId FROM AnimalMarkerEntity WHERE (AnimalId = @AnimalId) A
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Animals";
-            tableMapping.ColumnMappings.Add("Id", "Id");
-            tableMapping.ColumnMappings.Add("Name", "Name");
-            tableMapping.ColumnMappings.Add("Description", "Description");
-            tableMapping.ColumnMappings.Add("DateOfBirth", "DateOfBirth");
-            tableMapping.ColumnMappings.Add("Status", "Status");
-            tableMapping.ColumnMappings.Add("Breed", "Breed");
-            tableMapping.ColumnMappings.Add("PhotoUrl", "PhotoUrl");
+            tableMapping.ColumnMappings.Add("AnimalId", "AnimalId");
+            tableMapping.ColumnMappings.Add("AnimalTypeId", "AnimalTypeId");
+            tableMapping.ColumnMappings.Add("AnimalName", "AnimalName");
+            tableMapping.ColumnMappings.Add("AnimalDescription", "AnimalDescription");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Animals] WHERE (([Id] = @Original_Id) AND ([DateOfBirth] = @Or" +
-                "iginal_DateOfBirth))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Animals] WHERE (([AnimalId] = @Original_AnimalId) AND ([AnimalTypeId] = @Original_AnimalTypeId) AND ([AnimalName] = @Original_AnimalName) AND ((@IsNull_AnimalDescription = 1 AND [AnimalDescription] IS NULL) OR ([AnimalDescription] = @Original_AnimalDescription)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DateOfBirth", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateOfBirth", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AnimalId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AnimalId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AnimalTypeId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AnimalTypeId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AnimalName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AnimalName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_AnimalDescription", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AnimalDescription", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AnimalDescription", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AnimalDescription", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Animals] ([Name], [Description], [DateOfBirth], [Status], [Breed], [PhotoUrl]) VALUES (@Name, @Description, @DateOfBirth, @Status, @Breed, @PhotoUrl);
-SELECT Id, Name, Description, DateOfBirth, Status, Breed, PhotoUrl FROM Animals WHERE (Id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Animals] ([AnimalTypeId], [AnimalName], [AnimalDescription]) V" +
+                "ALUES (@AnimalTypeId, @AnimalName, @AnimalDescription);\r\nSELECT AnimalId, Animal" +
+                "TypeId, AnimalName, AnimalDescription FROM Animals WHERE (AnimalId = SCOPE_IDENT" +
+                "ITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Description", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Description", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DateOfBirth", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateOfBirth", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Status", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Breed", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Breed", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PhotoUrl", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PhotoUrl", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AnimalTypeId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AnimalTypeId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AnimalName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AnimalName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AnimalDescription", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AnimalDescription", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Animals] SET [Name] = @Name, [Description] = @Description, [DateOfBirth] = @DateOfBirth, [Status] = @Status, [Breed] = @Breed, [PhotoUrl] = @PhotoUrl WHERE (([Id] = @Original_Id) AND ([DateOfBirth] = @Original_DateOfBirth));
-SELECT Id, Name, Description, DateOfBirth, Status, Breed, PhotoUrl FROM Animals WHERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Animals] SET [AnimalTypeId] = @AnimalTypeId, [AnimalName] = @AnimalName, [AnimalDescription] = @AnimalDescription WHERE (([AnimalId] = @Original_AnimalId) AND ([AnimalTypeId] = @Original_AnimalTypeId) AND ([AnimalName] = @Original_AnimalName) AND ((@IsNull_AnimalDescription = 1 AND [AnimalDescription] IS NULL) OR ([AnimalDescription] = @Original_AnimalDescription)));
+SELECT AnimalId, AnimalTypeId, AnimalName, AnimalDescription FROM Animals WHERE (AnimalId = @AnimalId)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Description", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Description", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DateOfBirth", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateOfBirth", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Status", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Breed", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Breed", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PhotoUrl", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PhotoUrl", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DateOfBirth", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateOfBirth", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AnimalTypeId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AnimalTypeId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AnimalName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AnimalName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AnimalDescription", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AnimalDescription", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AnimalId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AnimalId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AnimalTypeId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AnimalTypeId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AnimalName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AnimalName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_AnimalDescription", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AnimalDescription", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AnimalDescription", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AnimalDescription", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AnimalId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "AnimalId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3878,8 +2860,7 @@ SELECT Id, Name, Description, DateOfBirth, Status, Breed, PhotoUrl FROM Animals 
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, Name, Description, DateOfBirth, Status, Breed, PhotoUrl FROM dbo.Anima" +
-                "ls";
+            this._commandCollection[0].CommandText = "SELECT AnimalId, AnimalTypeId, AnimalName, AnimalDescription FROM dbo.Animals";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -3940,9 +2921,23 @@ SELECT Id, Name, Description, DateOfBirth, Status, Breed, PhotoUrl FROM Animals 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, System.DateTime Original_DateOfBirth) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((System.DateTime)(Original_DateOfBirth));
+        public virtual int Delete(int Original_AnimalId, int Original_AnimalTypeId, string Original_AnimalName, string Original_AnimalDescription) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_AnimalId));
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_AnimalTypeId));
+            if ((Original_AnimalName == null)) {
+                throw new global::System.ArgumentNullException("Original_AnimalName");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_AnimalName));
+            }
+            if ((Original_AnimalDescription == null)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_AnimalDescription));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3963,37 +2958,19 @@ SELECT Id, Name, Description, DateOfBirth, Status, Breed, PhotoUrl FROM Animals 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Name, string Description, System.DateTime DateOfBirth, string Status, string Breed, string PhotoUrl) {
-            if ((Name == null)) {
-                throw new global::System.ArgumentNullException("Name");
+        public virtual int Insert(int AnimalTypeId, string AnimalName, string AnimalDescription) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(AnimalTypeId));
+            if ((AnimalName == null)) {
+                throw new global::System.ArgumentNullException("AnimalName");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Name));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(AnimalName));
             }
-            if ((Description == null)) {
-                throw new global::System.ArgumentNullException("Description");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Description));
-            }
-            this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(DateOfBirth));
-            if ((Status == null)) {
-                throw new global::System.ArgumentNullException("Status");
+            if ((AnimalDescription == null)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Status));
-            }
-            if ((Breed == null)) {
-                throw new global::System.ArgumentNullException("Breed");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Breed));
-            }
-            if ((PhotoUrl == null)) {
-                throw new global::System.ArgumentNullException("PhotoUrl");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(PhotoUrl));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(AnimalDescription));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -4015,41 +2992,37 @@ SELECT Id, Name, Description, DateOfBirth, Status, Breed, PhotoUrl FROM Animals 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Name, string Description, System.DateTime DateOfBirth, string Status, string Breed, string PhotoUrl, int Original_Id, System.DateTime Original_DateOfBirth, int Id) {
-            if ((Name == null)) {
-                throw new global::System.ArgumentNullException("Name");
+        public virtual int Update(int AnimalTypeId, string AnimalName, string AnimalDescription, int Original_AnimalId, int Original_AnimalTypeId, string Original_AnimalName, string Original_AnimalDescription, int AnimalId) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(AnimalTypeId));
+            if ((AnimalName == null)) {
+                throw new global::System.ArgumentNullException("AnimalName");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Name));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(AnimalName));
             }
-            if ((Description == null)) {
-                throw new global::System.ArgumentNullException("Description");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Description));
-            }
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(DateOfBirth));
-            if ((Status == null)) {
-                throw new global::System.ArgumentNullException("Status");
+            if ((AnimalDescription == null)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Status));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(AnimalDescription));
             }
-            if ((Breed == null)) {
-                throw new global::System.ArgumentNullException("Breed");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Breed));
-            }
-            if ((PhotoUrl == null)) {
-                throw new global::System.ArgumentNullException("PhotoUrl");
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_AnimalId));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_AnimalTypeId));
+            if ((Original_AnimalName == null)) {
+                throw new global::System.ArgumentNullException("Original_AnimalName");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(PhotoUrl));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_AnimalName));
             }
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_Id));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((System.DateTime)(Original_DateOfBirth));
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Id));
+            if ((Original_AnimalDescription == null)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_AnimalDescription));
+            }
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(AnimalId));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4070,8 +3043,8 @@ SELECT Id, Name, Description, DateOfBirth, Status, Breed, PhotoUrl FROM Animals 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Name, string Description, System.DateTime DateOfBirth, string Status, string Breed, string PhotoUrl, int Original_Id, System.DateTime Original_DateOfBirth) {
-            return this.Update(Name, Description, DateOfBirth, Status, Breed, PhotoUrl, Original_Id, Original_DateOfBirth, Original_Id);
+        public virtual int Update(int AnimalTypeId, string AnimalName, string AnimalDescription, int Original_AnimalId, int Original_AnimalTypeId, string Original_AnimalName, string Original_AnimalDescription) {
+            return this.Update(AnimalTypeId, AnimalName, AnimalDescription, Original_AnimalId, Original_AnimalTypeId, Original_AnimalName, Original_AnimalDescription, Original_AnimalId);
         }
     }
     
@@ -4084,7 +3057,7 @@ SELECT Id, Name, Description, DateOfBirth, Status, Breed, PhotoUrl FROM Animals 
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class AnimalUserEntityTableAdapter : global::System.ComponentModel.Component {
+    public partial class AnimalTypesTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -4098,7 +3071,7 @@ SELECT Id, Name, Description, DateOfBirth, Status, Breed, PhotoUrl FROM Animals 
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public AnimalUserEntityTableAdapter() {
+        public AnimalTypesTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -4195,36 +3168,41 @@ SELECT Id, Name, Description, DateOfBirth, Status, Breed, PhotoUrl FROM Animals 
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "AnimalUserEntity";
-            tableMapping.ColumnMappings.Add("AnimalId", "AnimalId");
-            tableMapping.ColumnMappings.Add("UserId", "UserId");
+            tableMapping.DataSetTable = "AnimalTypes";
+            tableMapping.ColumnMappings.Add("AnimalTypeId", "AnimalTypeId");
+            tableMapping.ColumnMappings.Add("TypeName", "TypeName");
+            tableMapping.ColumnMappings.Add("TypeDescription", "TypeDescription");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[AnimalUserEntity] WHERE (([AnimalId] = @Original_AnimalId) AND" +
-                " ([UserId] = @Original_UserId))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[AnimalTypes] WHERE (([AnimalTypeId] = @Original_AnimalTypeId) " +
+                "AND ([TypeName] = @Original_TypeName) AND ((@IsNull_TypeDescription = 1 AND [Typ" +
+                "eDescription] IS NULL) OR ([TypeDescription] = @Original_TypeDescription)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AnimalId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AnimalId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UserId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AnimalTypeId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AnimalTypeId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TypeName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TypeName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_TypeDescription", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TypeDescription", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TypeDescription", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TypeDescription", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[AnimalUserEntity] ([AnimalId], [UserId]) VALUES (@AnimalId, @U" +
-                "serId);\r\nSELECT AnimalId, UserId FROM AnimalUserEntity WHERE (AnimalId = @Animal" +
-                "Id) AND (UserId = @UserId)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[AnimalTypes] ([TypeName], [TypeDescription]) VALUES (@TypeName" +
+                ", @TypeDescription);\r\nSELECT AnimalTypeId, TypeName, TypeDescription FROM Animal" +
+                "Types WHERE (AnimalTypeId = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AnimalId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AnimalId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UserId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TypeName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TypeName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TypeDescription", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TypeDescription", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[AnimalUserEntity] SET [AnimalId] = @AnimalId, [UserId] = @UserId WH" +
-                "ERE (([AnimalId] = @Original_AnimalId) AND ([UserId] = @Original_UserId));\r\nSELE" +
-                "CT AnimalId, UserId FROM AnimalUserEntity WHERE (AnimalId = @AnimalId) AND (User" +
-                "Id = @UserId)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[AnimalTypes] SET [TypeName] = @TypeName, [TypeDescription] = @TypeDescription WHERE (([AnimalTypeId] = @Original_AnimalTypeId) AND ([TypeName] = @Original_TypeName) AND ((@IsNull_TypeDescription = 1 AND [TypeDescription] IS NULL) OR ([TypeDescription] = @Original_TypeDescription)));
+SELECT AnimalTypeId, TypeName, TypeDescription FROM AnimalTypes WHERE (AnimalTypeId = @AnimalTypeId)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AnimalId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AnimalId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UserId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AnimalId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AnimalId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UserId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TypeName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TypeName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TypeDescription", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TypeDescription", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AnimalTypeId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AnimalTypeId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TypeName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TypeName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_TypeDescription", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TypeDescription", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TypeDescription", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TypeDescription", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AnimalTypeId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "AnimalTypeId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4240,7 +3218,7 @@ SELECT Id, Name, Description, DateOfBirth, Status, Breed, PhotoUrl FROM Animals 
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT AnimalId, UserId FROM dbo.AnimalUserEntity";
+            this._commandCollection[0].CommandText = "SELECT AnimalTypeId, TypeName, TypeDescription FROM dbo.AnimalTypes";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -4248,7 +3226,7 @@ SELECT Id, Name, Description, DateOfBirth, Status, Breed, PhotoUrl FROM Animals 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(LostAnimalsDesktop_ServiceDataSet.AnimalUserEntityDataTable dataTable) {
+        public virtual int Fill(LostAnimalsDesktop_ServiceDataSet.AnimalTypesDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4261,9 +3239,9 @@ SELECT Id, Name, Description, DateOfBirth, Status, Breed, PhotoUrl FROM Animals 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual LostAnimalsDesktop_ServiceDataSet.AnimalUserEntityDataTable GetData() {
+        public virtual LostAnimalsDesktop_ServiceDataSet.AnimalTypesDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            LostAnimalsDesktop_ServiceDataSet.AnimalUserEntityDataTable dataTable = new LostAnimalsDesktop_ServiceDataSet.AnimalUserEntityDataTable();
+            LostAnimalsDesktop_ServiceDataSet.AnimalTypesDataTable dataTable = new LostAnimalsDesktop_ServiceDataSet.AnimalTypesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4271,7 +3249,7 @@ SELECT Id, Name, Description, DateOfBirth, Status, Breed, PhotoUrl FROM Animals 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(LostAnimalsDesktop_ServiceDataSet.AnimalUserEntityDataTable dataTable) {
+        public virtual int Update(LostAnimalsDesktop_ServiceDataSet.AnimalTypesDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -4279,7 +3257,7 @@ SELECT Id, Name, Description, DateOfBirth, Status, Breed, PhotoUrl FROM Animals 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(LostAnimalsDesktop_ServiceDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "AnimalUserEntity");
+            return this.Adapter.Update(dataSet, "AnimalTypes");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4301,9 +3279,22 @@ SELECT Id, Name, Description, DateOfBirth, Status, Breed, PhotoUrl FROM Animals 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_AnimalId, int Original_UserId) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_AnimalId));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_UserId));
+        public virtual int Delete(int Original_AnimalTypeId, string Original_TypeName, string Original_TypeDescription) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_AnimalTypeId));
+            if ((Original_TypeName == null)) {
+                throw new global::System.ArgumentNullException("Original_TypeName");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_TypeName));
+            }
+            if ((Original_TypeDescription == null)) {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_TypeDescription));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4324,9 +3315,19 @@ SELECT Id, Name, Description, DateOfBirth, Status, Breed, PhotoUrl FROM Animals 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int AnimalId, int UserId) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(AnimalId));
-            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(UserId));
+        public virtual int Insert(string TypeName, string TypeDescription) {
+            if ((TypeName == null)) {
+                throw new global::System.ArgumentNullException("TypeName");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(TypeName));
+            }
+            if ((TypeDescription == null)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(TypeDescription));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4347,11 +3348,35 @@ SELECT Id, Name, Description, DateOfBirth, Status, Breed, PhotoUrl FROM Animals 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int AnimalId, int UserId, int Original_AnimalId, int Original_UserId) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(AnimalId));
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(UserId));
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_AnimalId));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_UserId));
+        public virtual int Update(string TypeName, string TypeDescription, int Original_AnimalTypeId, string Original_TypeName, string Original_TypeDescription, int AnimalTypeId) {
+            if ((TypeName == null)) {
+                throw new global::System.ArgumentNullException("TypeName");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(TypeName));
+            }
+            if ((TypeDescription == null)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(TypeDescription));
+            }
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_AnimalTypeId));
+            if ((Original_TypeName == null)) {
+                throw new global::System.ArgumentNullException("Original_TypeName");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_TypeName));
+            }
+            if ((Original_TypeDescription == null)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_TypeDescription));
+            }
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(AnimalTypeId));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4372,8 +3397,8 @@ SELECT Id, Name, Description, DateOfBirth, Status, Breed, PhotoUrl FROM Animals 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int Original_AnimalId, int Original_UserId) {
-            return this.Update(Original_AnimalId, Original_UserId, Original_AnimalId, Original_UserId);
+        public virtual int Update(string TypeName, string TypeDescription, int Original_AnimalTypeId, string Original_TypeName, string Original_TypeDescription) {
+            return this.Update(TypeName, TypeDescription, Original_AnimalTypeId, Original_TypeName, Original_TypeDescription, Original_AnimalTypeId);
         }
     }
     
@@ -4386,7 +3411,7 @@ SELECT Id, Name, Description, DateOfBirth, Status, Breed, PhotoUrl FROM Animals 
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class MarkersTableAdapter : global::System.ComponentModel.Component {
+    public partial class LocationsTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -4400,7 +3425,7 @@ SELECT Id, Name, Description, DateOfBirth, Status, Breed, PhotoUrl FROM Animals 
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public MarkersTableAdapter() {
+        public LocationsTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -4497,41 +3522,52 @@ SELECT Id, Name, Description, DateOfBirth, Status, Breed, PhotoUrl FROM Animals 
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Markers";
-            tableMapping.ColumnMappings.Add("Id", "Id");
+            tableMapping.DataSetTable = "Locations";
+            tableMapping.ColumnMappings.Add("LocationId", "LocationId");
+            tableMapping.ColumnMappings.Add("LocationName", "LocationName");
+            tableMapping.ColumnMappings.Add("LocationDescription", "LocationDescription");
             tableMapping.ColumnMappings.Add("Latitude", "Latitude");
             tableMapping.ColumnMappings.Add("Longitude", "Longitude");
-            tableMapping.ColumnMappings.Add("LocationName", "LocationName");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Markers] WHERE (([Id] = @Original_Id) AND ([Latitude] = @Origi" +
-                "nal_Latitude) AND ([Longitude] = @Original_Longitude))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Locations] WHERE (([LocationId] = @Original_LocationId) AND ([LocationName] = @Original_LocationName) AND ((@IsNull_LocationDescription = 1 AND [LocationDescription] IS NULL) OR ([LocationDescription] = @Original_LocationDescription)) AND ((@IsNull_Latitude = 1 AND [Latitude] IS NULL) OR ([Latitude] = @Original_Latitude)) AND ((@IsNull_Longitude = 1 AND [Longitude] IS NULL) OR ([Longitude] = @Original_Longitude)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Latitude", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Latitude", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Longitude", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Longitude", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LocationId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LocationId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LocationName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LocationName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_LocationDescription", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LocationDescription", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LocationDescription", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LocationDescription", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Latitude", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Latitude", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Latitude", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 9, 6, "Latitude", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Longitude", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Longitude", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Longitude", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 9, 6, "Longitude", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Markers] ([Latitude], [Longitude], [LocationName]) VALUES (@La" +
-                "titude, @Longitude, @LocationName);\r\nSELECT Id, Latitude, Longitude, LocationNam" +
-                "e FROM Markers WHERE (Id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Locations] ([LocationName], [LocationDescription], [Latitude], [Longitude]) VALUES (@LocationName, @LocationDescription, @Latitude, @Longitude);
+SELECT LocationId, LocationName, LocationDescription, Latitude, Longitude FROM Locations WHERE (LocationId = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Latitude", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Latitude", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Longitude", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Longitude", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LocationName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LocationName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LocationDescription", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LocationDescription", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Latitude", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 9, 6, "Latitude", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Longitude", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 9, 6, "Longitude", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Markers] SET [Latitude] = @Latitude, [Longitude] = @Longitude, [LocationName] = @LocationName WHERE (([Id] = @Original_Id) AND ([Latitude] = @Original_Latitude) AND ([Longitude] = @Original_Longitude));
-SELECT Id, Latitude, Longitude, LocationName FROM Markers WHERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Locations] SET [LocationName] = @LocationName, [LocationDescription] = @LocationDescription, [Latitude] = @Latitude, [Longitude] = @Longitude WHERE (([LocationId] = @Original_LocationId) AND ([LocationName] = @Original_LocationName) AND ((@IsNull_LocationDescription = 1 AND [LocationDescription] IS NULL) OR ([LocationDescription] = @Original_LocationDescription)) AND ((@IsNull_Latitude = 1 AND [Latitude] IS NULL) OR ([Latitude] = @Original_Latitude)) AND ((@IsNull_Longitude = 1 AND [Longitude] IS NULL) OR ([Longitude] = @Original_Longitude)));
+SELECT LocationId, LocationName, LocationDescription, Latitude, Longitude FROM Locations WHERE (LocationId = @LocationId)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Latitude", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Latitude", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Longitude", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Longitude", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LocationName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LocationName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Latitude", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Latitude", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Longitude", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Longitude", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LocationDescription", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LocationDescription", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Latitude", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 9, 6, "Latitude", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Longitude", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 9, 6, "Longitude", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LocationId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LocationId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LocationName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LocationName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_LocationDescription", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LocationDescription", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LocationDescription", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LocationDescription", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Latitude", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Latitude", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Latitude", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 9, 6, "Latitude", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Longitude", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Longitude", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Longitude", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 9, 6, "Longitude", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LocationId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "LocationId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4547,7 +3583,8 @@ SELECT Id, Latitude, Longitude, LocationName FROM Markers WHERE (Id = @Id)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, Latitude, Longitude, LocationName FROM dbo.Markers";
+            this._commandCollection[0].CommandText = "SELECT LocationId, LocationName, LocationDescription, Latitude, Longitude FROM db" +
+                "o.Locations";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -4555,7 +3592,7 @@ SELECT Id, Latitude, Longitude, LocationName FROM Markers WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(LostAnimalsDesktop_ServiceDataSet.MarkersDataTable dataTable) {
+        public virtual int Fill(LostAnimalsDesktop_ServiceDataSet.LocationsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4568,9 +3605,9 @@ SELECT Id, Latitude, Longitude, LocationName FROM Markers WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual LostAnimalsDesktop_ServiceDataSet.MarkersDataTable GetData() {
+        public virtual LostAnimalsDesktop_ServiceDataSet.LocationsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            LostAnimalsDesktop_ServiceDataSet.MarkersDataTable dataTable = new LostAnimalsDesktop_ServiceDataSet.MarkersDataTable();
+            LostAnimalsDesktop_ServiceDataSet.LocationsDataTable dataTable = new LostAnimalsDesktop_ServiceDataSet.LocationsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4578,7 +3615,7 @@ SELECT Id, Latitude, Longitude, LocationName FROM Markers WHERE (Id = @Id)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(LostAnimalsDesktop_ServiceDataSet.MarkersDataTable dataTable) {
+        public virtual int Update(LostAnimalsDesktop_ServiceDataSet.LocationsDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -4586,7 +3623,7 @@ SELECT Id, Latitude, Longitude, LocationName FROM Markers WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(LostAnimalsDesktop_ServiceDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Markers");
+            return this.Adapter.Update(dataSet, "Locations");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4608,10 +3645,38 @@ SELECT Id, Latitude, Longitude, LocationName FROM Markers WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, double Original_Latitude, double Original_Longitude) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((double)(Original_Latitude));
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((double)(Original_Longitude));
+        public virtual int Delete(int Original_LocationId, string Original_LocationName, string Original_LocationDescription, global::System.Nullable<decimal> Original_Latitude, global::System.Nullable<decimal> Original_Longitude) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_LocationId));
+            if ((Original_LocationName == null)) {
+                throw new global::System.ArgumentNullException("Original_LocationName");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_LocationName));
+            }
+            if ((Original_LocationDescription == null)) {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_LocationDescription));
+            }
+            if ((Original_Latitude.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((decimal)(Original_Latitude.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Longitude.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((decimal)(Original_Longitude.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4632,14 +3697,30 @@ SELECT Id, Latitude, Longitude, LocationName FROM Markers WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(double Latitude, double Longitude, string LocationName) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((double)(Latitude));
-            this.Adapter.InsertCommand.Parameters[1].Value = ((double)(Longitude));
+        public virtual int Insert(string LocationName, string LocationDescription, global::System.Nullable<decimal> Latitude, global::System.Nullable<decimal> Longitude) {
             if ((LocationName == null)) {
                 throw new global::System.ArgumentNullException("LocationName");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(LocationName));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(LocationName));
+            }
+            if ((LocationDescription == null)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(LocationDescription));
+            }
+            if ((Latitude.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((decimal)(Latitude.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Longitude.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((decimal)(Longitude.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -4661,19 +3742,63 @@ SELECT Id, Latitude, Longitude, LocationName FROM Markers WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(double Latitude, double Longitude, string LocationName, int Original_Id, double Original_Latitude, double Original_Longitude, int Id) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((double)(Latitude));
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((double)(Longitude));
+        public virtual int Update(string LocationName, string LocationDescription, global::System.Nullable<decimal> Latitude, global::System.Nullable<decimal> Longitude, int Original_LocationId, string Original_LocationName, string Original_LocationDescription, global::System.Nullable<decimal> Original_Latitude, global::System.Nullable<decimal> Original_Longitude, int LocationId) {
             if ((LocationName == null)) {
                 throw new global::System.ArgumentNullException("LocationName");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(LocationName));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(LocationName));
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_Id));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((double)(Original_Latitude));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((double)(Original_Longitude));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Id));
+            if ((LocationDescription == null)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(LocationDescription));
+            }
+            if ((Latitude.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((decimal)(Latitude.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Longitude.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((decimal)(Longitude.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_LocationId));
+            if ((Original_LocationName == null)) {
+                throw new global::System.ArgumentNullException("Original_LocationName");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_LocationName));
+            }
+            if ((Original_LocationDescription == null)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_LocationDescription));
+            }
+            if ((Original_Latitude.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((decimal)(Original_Latitude.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Longitude.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((decimal)(Original_Longitude.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(LocationId));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4694,8 +3819,8 @@ SELECT Id, Latitude, Longitude, LocationName FROM Markers WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(double Latitude, double Longitude, string LocationName, int Original_Id, double Original_Latitude, double Original_Longitude) {
-            return this.Update(Latitude, Longitude, LocationName, Original_Id, Original_Latitude, Original_Longitude, Original_Id);
+        public virtual int Update(string LocationName, string LocationDescription, global::System.Nullable<decimal> Latitude, global::System.Nullable<decimal> Longitude, int Original_LocationId, string Original_LocationName, string Original_LocationDescription, global::System.Nullable<decimal> Original_Latitude, global::System.Nullable<decimal> Original_Longitude) {
+            return this.Update(LocationName, LocationDescription, Latitude, Longitude, Original_LocationId, Original_LocationName, Original_LocationDescription, Original_Latitude, Original_Longitude, Original_LocationId);
         }
     }
     
@@ -4708,7 +3833,7 @@ SELECT Id, Latitude, Longitude, LocationName FROM Markers WHERE (Id = @Id)";
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class RolesTableAdapter : global::System.ComponentModel.Component {
+    public partial class MovementPointsTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -4722,7 +3847,7 @@ SELECT Id, Latitude, Longitude, LocationName FROM Markers WHERE (Id = @Id)";
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public RolesTableAdapter() {
+        public MovementPointsTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -4819,29 +3944,44 @@ SELECT Id, Latitude, Longitude, LocationName FROM Markers WHERE (Id = @Id)";
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Roles";
-            tableMapping.ColumnMappings.Add("Id", "Id");
-            tableMapping.ColumnMappings.Add("Name", "Name");
+            tableMapping.DataSetTable = "MovementPoints";
+            tableMapping.ColumnMappings.Add("MovementPointId", "MovementPointId");
+            tableMapping.ColumnMappings.Add("AnimalId", "AnimalId");
+            tableMapping.ColumnMappings.Add("LocationId", "LocationId");
+            tableMapping.ColumnMappings.Add("DateTime", "DateTime");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Roles] WHERE (([Id] = @Original_Id))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[MovementPoints] WHERE (([MovementPointId] = @Original_Movement" +
+                "PointId) AND ([AnimalId] = @Original_AnimalId) AND ([LocationId] = @Original_Loc" +
+                "ationId) AND ([DateTime] = @Original_DateTime))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MovementPointId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MovementPointId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AnimalId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AnimalId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LocationId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LocationId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DateTime", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateTime", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Roles] ([Name]) VALUES (@Name);\r\nSELECT Id, Name FROM Roles WH" +
-                "ERE (Id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[MovementPoints] ([AnimalId], [LocationId], [DateTime]) VALUES " +
+                "(@AnimalId, @LocationId, @DateTime);\r\nSELECT MovementPointId, AnimalId, Location" +
+                "Id, DateTime FROM MovementPoints WHERE (MovementPointId = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AnimalId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AnimalId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LocationId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LocationId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DateTime", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Roles] SET [Name] = @Name WHERE (([Id] = @Original_Id));\r\nSELECT Id" +
-                ", Name FROM Roles WHERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[MovementPoints] SET [AnimalId] = @AnimalId, [LocationId] = @LocationId, [DateTime] = @DateTime WHERE (([MovementPointId] = @Original_MovementPointId) AND ([AnimalId] = @Original_AnimalId) AND ([LocationId] = @Original_LocationId) AND ([DateTime] = @Original_DateTime));
+SELECT MovementPointId, AnimalId, LocationId, DateTime FROM MovementPoints WHERE (MovementPointId = @MovementPointId)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AnimalId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AnimalId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LocationId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LocationId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DateTime", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MovementPointId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MovementPointId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AnimalId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AnimalId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LocationId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LocationId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DateTime", global::System.Data.SqlDbType.DateTime2, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateTime", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MovementPointId", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "MovementPointId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4857,7 +3997,7 @@ SELECT Id, Latitude, Longitude, LocationName FROM Markers WHERE (Id = @Id)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, Name FROM dbo.Roles";
+            this._commandCollection[0].CommandText = "SELECT MovementPointId, AnimalId, LocationId, DateTime FROM dbo.MovementPoints";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -4865,7 +4005,7 @@ SELECT Id, Latitude, Longitude, LocationName FROM Markers WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(LostAnimalsDesktop_ServiceDataSet.RolesDataTable dataTable) {
+        public virtual int Fill(LostAnimalsDesktop_ServiceDataSet.MovementPointsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4878,9 +4018,9 @@ SELECT Id, Latitude, Longitude, LocationName FROM Markers WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual LostAnimalsDesktop_ServiceDataSet.RolesDataTable GetData() {
+        public virtual LostAnimalsDesktop_ServiceDataSet.MovementPointsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            LostAnimalsDesktop_ServiceDataSet.RolesDataTable dataTable = new LostAnimalsDesktop_ServiceDataSet.RolesDataTable();
+            LostAnimalsDesktop_ServiceDataSet.MovementPointsDataTable dataTable = new LostAnimalsDesktop_ServiceDataSet.MovementPointsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4888,7 +4028,7 @@ SELECT Id, Latitude, Longitude, LocationName FROM Markers WHERE (Id = @Id)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(LostAnimalsDesktop_ServiceDataSet.RolesDataTable dataTable) {
+        public virtual int Update(LostAnimalsDesktop_ServiceDataSet.MovementPointsDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -4896,7 +4036,7 @@ SELECT Id, Latitude, Longitude, LocationName FROM Markers WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(LostAnimalsDesktop_ServiceDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Roles");
+            return this.Adapter.Update(dataSet, "MovementPoints");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4918,8 +4058,11 @@ SELECT Id, Latitude, Longitude, LocationName FROM Markers WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
+        public virtual int Delete(int Original_MovementPointId, int Original_AnimalId, int Original_LocationId, System.DateTime Original_DateTime) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_MovementPointId));
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_AnimalId));
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_LocationId));
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((System.DateTime)(Original_DateTime));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4940,13 +4083,10 @@ SELECT Id, Latitude, Longitude, LocationName FROM Markers WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Name) {
-            if ((Name == null)) {
-                throw new global::System.ArgumentNullException("Name");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Name));
-            }
+        public virtual int Insert(int AnimalId, int LocationId, System.DateTime DateTime) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(AnimalId));
+            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(LocationId));
+            this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(DateTime));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4967,15 +4107,15 @@ SELECT Id, Latitude, Longitude, LocationName FROM Markers WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Name, int Original_Id, int Id) {
-            if ((Name == null)) {
-                throw new global::System.ArgumentNullException("Name");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Name));
-            }
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Original_Id));
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Id));
+        public virtual int Update(int AnimalId, int LocationId, System.DateTime DateTime, int Original_MovementPointId, int Original_AnimalId, int Original_LocationId, System.DateTime Original_DateTime, int MovementPointId) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(AnimalId));
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(LocationId));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(DateTime));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_MovementPointId));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_AnimalId));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_LocationId));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((System.DateTime)(Original_DateTime));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(MovementPointId));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4996,309 +4136,8 @@ SELECT Id, Latitude, Longitude, LocationName FROM Markers WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Name, int Original_Id) {
-            return this.Update(Name, Original_Id, Original_Id);
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class UserRoleEntityTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public UserRoleEntityTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "UserRoleEntity";
-            tableMapping.ColumnMappings.Add("UserId", "UserId");
-            tableMapping.ColumnMappings.Add("RoleId", "RoleId");
-            this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[UserRoleEntity] WHERE (([UserId] = @Original_UserId) AND ([Rol" +
-                "eId] = @Original_RoleId))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UserId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RoleId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RoleId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[UserRoleEntity] ([UserId], [RoleId]) VALUES (@UserId, @RoleId)" +
-                ";\r\nSELECT UserId, RoleId FROM UserRoleEntity WHERE (RoleId = @RoleId) AND (UserI" +
-                "d = @UserId)";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UserId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RoleId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RoleId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[UserRoleEntity] SET [UserId] = @UserId, [RoleId] = @RoleId WHERE ((" +
-                "[UserId] = @Original_UserId) AND ([RoleId] = @Original_RoleId));\r\nSELECT UserId," +
-                " RoleId FROM UserRoleEntity WHERE (RoleId = @RoleId) AND (UserId = @UserId)";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UserId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RoleId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RoleId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UserId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RoleId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RoleId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Service.Animals.Desktop.Properties.Settings.Default.LostAnimalsDesktop_ServiceConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT UserId, RoleId FROM dbo.UserRoleEntity";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(LostAnimalsDesktop_ServiceDataSet.UserRoleEntityDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual LostAnimalsDesktop_ServiceDataSet.UserRoleEntityDataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            LostAnimalsDesktop_ServiceDataSet.UserRoleEntityDataTable dataTable = new LostAnimalsDesktop_ServiceDataSet.UserRoleEntityDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(LostAnimalsDesktop_ServiceDataSet.UserRoleEntityDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(LostAnimalsDesktop_ServiceDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "UserRoleEntity");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_UserId, int Original_RoleId) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_UserId));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_RoleId));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int UserId, int RoleId) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(UserId));
-            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(RoleId));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int UserId, int RoleId, int Original_UserId, int Original_RoleId) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(UserId));
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(RoleId));
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_UserId));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_RoleId));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int Original_UserId, int Original_RoleId) {
-            return this.Update(Original_UserId, Original_RoleId, Original_UserId, Original_RoleId);
+        public virtual int Update(int AnimalId, int LocationId, System.DateTime DateTime, int Original_MovementPointId, int Original_AnimalId, int Original_LocationId, System.DateTime Original_DateTime) {
+            return this.Update(AnimalId, LocationId, DateTime, Original_MovementPointId, Original_AnimalId, Original_LocationId, Original_DateTime, Original_MovementPointId);
         }
     }
     
@@ -5432,10 +4271,11 @@ SELECT Id, Latitude, Longitude, LocationName FROM Markers WHERE (Id = @Id)";
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Users] WHERE (([Id] = @Original_Id) AND ([Age] = @Original_Age" +
-                "))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Users] WHERE (([Id] = @Original_Id) AND ((@IsNull_Age = 1 AND " +
+                "[Age] IS NULL) OR ([Age] = @Original_Age)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Age", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Age", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Age", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Age", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
@@ -5450,10 +4290,8 @@ SELECT Id, Latitude, Longitude, LocationName FROM Markers WHERE (Id = @Id)";
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Users] SET [Username] = @Username, [Password] = @Password, [Name] =" +
-                " @Name, [Age] = @Age, [Email] = @Email WHERE (([Id] = @Original_Id) AND ([Age] =" +
-                " @Original_Age));\r\nSELECT Id, Username, Password, Name, Age, Email FROM Users WH" +
-                "ERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Users] SET [Username] = @Username, [Password] = @Password, [Name] = @Name, [Age] = @Age, [Email] = @Email WHERE (([Id] = @Original_Id) AND ((@IsNull_Age = 1 AND [Age] IS NULL) OR ([Age] = @Original_Age)));
+SELECT Id, Username, Password, Name, Age, Email FROM Users WHERE (Id = @Id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Username", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Username", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Password", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Password", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -5461,6 +4299,7 @@ SELECT Id, Latitude, Longitude, LocationName FROM Markers WHERE (Id = @Id)";
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Age", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Age", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Age", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Age", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Age", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Age", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
@@ -5539,9 +4378,16 @@ SELECT Id, Latitude, Longitude, LocationName FROM Markers WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, int Original_Age) {
+        public virtual int Delete(int Original_Id, global::System.Nullable<int> Original_Age) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_Age));
+            if ((Original_Age.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_Age.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5562,7 +4408,7 @@ SELECT Id, Latitude, Longitude, LocationName FROM Markers WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Username, string Password, string Name, int Age, string Email) {
+        public virtual int Insert(string Username, string Password, string Name, global::System.Nullable<int> Age, string Email) {
             if ((Username == null)) {
                 throw new global::System.ArgumentNullException("Username");
             }
@@ -5581,9 +4427,14 @@ SELECT Id, Latitude, Longitude, LocationName FROM Markers WHERE (Id = @Id)";
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Name));
             }
-            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(Age));
+            if ((Age.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((int)(Age.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
             if ((Email == null)) {
-                throw new global::System.ArgumentNullException("Email");
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Email));
@@ -5608,7 +4459,7 @@ SELECT Id, Latitude, Longitude, LocationName FROM Markers WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Username, string Password, string Name, int Age, string Email, int Original_Id, int Original_Age, int Id) {
+        public virtual int Update(string Username, string Password, string Name, global::System.Nullable<int> Age, string Email, int Original_Id, global::System.Nullable<int> Original_Age, int Id) {
             if ((Username == null)) {
                 throw new global::System.ArgumentNullException("Username");
             }
@@ -5627,16 +4478,28 @@ SELECT Id, Latitude, Longitude, LocationName FROM Markers WHERE (Id = @Id)";
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Name));
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Age));
+            if ((Age.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Age.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
             if ((Email == null)) {
-                throw new global::System.ArgumentNullException("Email");
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Email));
             }
             this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_Id));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_Age));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Id));
+            if ((Original_Age.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_Age.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5657,7 +4520,7 @@ SELECT Id, Latitude, Longitude, LocationName FROM Markers WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Username, string Password, string Name, int Age, string Email, int Original_Id, int Original_Age) {
+        public virtual int Update(string Username, string Password, string Name, global::System.Nullable<int> Age, string Email, int Original_Id, global::System.Nullable<int> Original_Age) {
             return this.Update(Username, Password, Name, Age, Email, Original_Id, Original_Age, Original_Id);
         }
     }
@@ -5674,17 +4537,13 @@ SELECT Id, Latitude, Longitude, LocationName FROM Markers WHERE (Id = @Id)";
         
         private UpdateOrderOption _updateOrder;
         
-        private AnimalMarkerEntityTableAdapter _animalMarkerEntityTableAdapter;
-        
         private AnimalsTableAdapter _animalsTableAdapter;
         
-        private AnimalUserEntityTableAdapter _animalUserEntityTableAdapter;
+        private AnimalTypesTableAdapter _animalTypesTableAdapter;
         
-        private MarkersTableAdapter _markersTableAdapter;
+        private LocationsTableAdapter _locationsTableAdapter;
         
-        private RolesTableAdapter _rolesTableAdapter;
-        
-        private UserRoleEntityTableAdapter _userRoleEntityTableAdapter;
+        private MovementPointsTableAdapter _movementPointsTableAdapter;
         
         private UsersTableAdapter _usersTableAdapter;
         
@@ -5708,20 +4567,6 @@ SELECT Id, Latitude, Longitude, LocationName FROM Markers WHERE (Id = @Id)";
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public AnimalMarkerEntityTableAdapter AnimalMarkerEntityTableAdapter {
-            get {
-                return this._animalMarkerEntityTableAdapter;
-            }
-            set {
-                this._animalMarkerEntityTableAdapter = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
         public AnimalsTableAdapter AnimalsTableAdapter {
             get {
                 return this._animalsTableAdapter;
@@ -5736,12 +4581,12 @@ SELECT Id, Latitude, Longitude, LocationName FROM Markers WHERE (Id = @Id)";
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public AnimalUserEntityTableAdapter AnimalUserEntityTableAdapter {
+        public AnimalTypesTableAdapter AnimalTypesTableAdapter {
             get {
-                return this._animalUserEntityTableAdapter;
+                return this._animalTypesTableAdapter;
             }
             set {
-                this._animalUserEntityTableAdapter = value;
+                this._animalTypesTableAdapter = value;
             }
         }
         
@@ -5750,12 +4595,12 @@ SELECT Id, Latitude, Longitude, LocationName FROM Markers WHERE (Id = @Id)";
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public MarkersTableAdapter MarkersTableAdapter {
+        public LocationsTableAdapter LocationsTableAdapter {
             get {
-                return this._markersTableAdapter;
+                return this._locationsTableAdapter;
             }
             set {
-                this._markersTableAdapter = value;
+                this._locationsTableAdapter = value;
             }
         }
         
@@ -5764,26 +4609,12 @@ SELECT Id, Latitude, Longitude, LocationName FROM Markers WHERE (Id = @Id)";
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public RolesTableAdapter RolesTableAdapter {
+        public MovementPointsTableAdapter MovementPointsTableAdapter {
             get {
-                return this._rolesTableAdapter;
+                return this._movementPointsTableAdapter;
             }
             set {
-                this._rolesTableAdapter = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
-        public UserRoleEntityTableAdapter UserRoleEntityTableAdapter {
-            get {
-                return this._userRoleEntityTableAdapter;
-            }
-            set {
-                this._userRoleEntityTableAdapter = value;
+                this._movementPointsTableAdapter = value;
             }
         }
         
@@ -5820,29 +4651,21 @@ SELECT Id, Latitude, Longitude, LocationName FROM Markers WHERE (Id = @Id)";
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._animalMarkerEntityTableAdapter != null) 
-                            && (this._animalMarkerEntityTableAdapter.Connection != null))) {
-                    return this._animalMarkerEntityTableAdapter.Connection;
-                }
                 if (((this._animalsTableAdapter != null) 
                             && (this._animalsTableAdapter.Connection != null))) {
                     return this._animalsTableAdapter.Connection;
                 }
-                if (((this._animalUserEntityTableAdapter != null) 
-                            && (this._animalUserEntityTableAdapter.Connection != null))) {
-                    return this._animalUserEntityTableAdapter.Connection;
+                if (((this._animalTypesTableAdapter != null) 
+                            && (this._animalTypesTableAdapter.Connection != null))) {
+                    return this._animalTypesTableAdapter.Connection;
                 }
-                if (((this._markersTableAdapter != null) 
-                            && (this._markersTableAdapter.Connection != null))) {
-                    return this._markersTableAdapter.Connection;
+                if (((this._locationsTableAdapter != null) 
+                            && (this._locationsTableAdapter.Connection != null))) {
+                    return this._locationsTableAdapter.Connection;
                 }
-                if (((this._rolesTableAdapter != null) 
-                            && (this._rolesTableAdapter.Connection != null))) {
-                    return this._rolesTableAdapter.Connection;
-                }
-                if (((this._userRoleEntityTableAdapter != null) 
-                            && (this._userRoleEntityTableAdapter.Connection != null))) {
-                    return this._userRoleEntityTableAdapter.Connection;
+                if (((this._movementPointsTableAdapter != null) 
+                            && (this._movementPointsTableAdapter.Connection != null))) {
+                    return this._movementPointsTableAdapter.Connection;
                 }
                 if (((this._usersTableAdapter != null) 
                             && (this._usersTableAdapter.Connection != null))) {
@@ -5861,22 +4684,16 @@ SELECT Id, Latitude, Longitude, LocationName FROM Markers WHERE (Id = @Id)";
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._animalMarkerEntityTableAdapter != null)) {
-                    count = (count + 1);
-                }
                 if ((this._animalsTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._animalUserEntityTableAdapter != null)) {
+                if ((this._animalTypesTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._markersTableAdapter != null)) {
+                if ((this._locationsTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._rolesTableAdapter != null)) {
-                    count = (count + 1);
-                }
-                if ((this._userRoleEntityTableAdapter != null)) {
+                if ((this._movementPointsTableAdapter != null)) {
                     count = (count + 1);
                 }
                 if ((this._usersTableAdapter != null)) {
@@ -5893,6 +4710,15 @@ SELECT Id, Latitude, Longitude, LocationName FROM Markers WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateUpdatedRows(LostAnimalsDesktop_ServiceDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._animalTypesTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.AnimalTypes.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._animalTypesTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             if ((this._animalsTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Animals.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -5902,21 +4728,21 @@ SELECT Id, Latitude, Longitude, LocationName FROM Markers WHERE (Id = @Id)";
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._markersTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Markers.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._locationsTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Locations.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._markersTableAdapter.Update(updatedRows));
+                    result = (result + this._locationsTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._rolesTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Roles.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._movementPointsTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.MovementPoints.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._rolesTableAdapter.Update(updatedRows));
+                    result = (result + this._movementPointsTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -5926,33 +4752,6 @@ SELECT Id, Latitude, Longitude, LocationName FROM Markers WHERE (Id = @Id)";
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._usersTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._animalMarkerEntityTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.AnimalMarkerEntity.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._animalMarkerEntityTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._animalUserEntityTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.AnimalUserEntity.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._animalUserEntityTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._userRoleEntityTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.UserRoleEntity.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._userRoleEntityTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -5966,6 +4765,14 @@ SELECT Id, Latitude, Longitude, LocationName FROM Markers WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateInsertedRows(LostAnimalsDesktop_ServiceDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._animalTypesTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.AnimalTypes.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._animalTypesTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             if ((this._animalsTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Animals.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -5974,19 +4781,19 @@ SELECT Id, Latitude, Longitude, LocationName FROM Markers WHERE (Id = @Id)";
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._markersTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Markers.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._locationsTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Locations.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._markersTableAdapter.Update(addedRows));
+                    result = (result + this._locationsTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._rolesTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Roles.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._movementPointsTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.MovementPoints.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._rolesTableAdapter.Update(addedRows));
+                    result = (result + this._movementPointsTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -5995,30 +4802,6 @@ SELECT Id, Latitude, Longitude, LocationName FROM Markers WHERE (Id = @Id)";
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._usersTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._animalMarkerEntityTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.AnimalMarkerEntity.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._animalMarkerEntityTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._animalUserEntityTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.AnimalUserEntity.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._animalUserEntityTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._userRoleEntityTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.UserRoleEntity.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._userRoleEntityTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -6032,30 +4815,6 @@ SELECT Id, Latitude, Longitude, LocationName FROM Markers WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateDeletedRows(LostAnimalsDesktop_ServiceDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._userRoleEntityTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.UserRoleEntity.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._userRoleEntityTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._animalUserEntityTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.AnimalUserEntity.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._animalUserEntityTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._animalMarkerEntityTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.AnimalMarkerEntity.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._animalMarkerEntityTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._usersTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Users.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -6064,19 +4823,19 @@ SELECT Id, Latitude, Longitude, LocationName FROM Markers WHERE (Id = @Id)";
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._rolesTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Roles.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._movementPointsTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.MovementPoints.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._rolesTableAdapter.Update(deletedRows));
+                    result = (result + this._movementPointsTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._markersTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Markers.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._locationsTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Locations.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._markersTableAdapter.Update(deletedRows));
+                    result = (result + this._locationsTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -6085,6 +4844,14 @@ SELECT Id, Latitude, Longitude, LocationName FROM Markers WHERE (Id = @Id)";
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._animalsTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._animalTypesTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.AnimalTypes.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._animalTypesTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -6127,33 +4894,23 @@ SELECT Id, Latitude, Longitude, LocationName FROM Markers WHERE (Id = @Id)";
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._animalMarkerEntityTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._animalMarkerEntityTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("Все адаптеры таблицы, управляемые диспетчером адаптера таблицы TableAdapterManage" +
-                        "r, должны использовать одинаковую строку подключения.");
-            }
             if (((this._animalsTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._animalsTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("Все адаптеры таблицы, управляемые диспетчером адаптера таблицы TableAdapterManage" +
                         "r, должны использовать одинаковую строку подключения.");
             }
-            if (((this._animalUserEntityTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._animalUserEntityTableAdapter.Connection) == false))) {
+            if (((this._animalTypesTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._animalTypesTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("Все адаптеры таблицы, управляемые диспетчером адаптера таблицы TableAdapterManage" +
                         "r, должны использовать одинаковую строку подключения.");
             }
-            if (((this._markersTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._markersTableAdapter.Connection) == false))) {
+            if (((this._locationsTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._locationsTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("Все адаптеры таблицы, управляемые диспетчером адаптера таблицы TableAdapterManage" +
                         "r, должны использовать одинаковую строку подключения.");
             }
-            if (((this._rolesTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._rolesTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("Все адаптеры таблицы, управляемые диспетчером адаптера таблицы TableAdapterManage" +
-                        "r, должны использовать одинаковую строку подключения.");
-            }
-            if (((this._userRoleEntityTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._userRoleEntityTableAdapter.Connection) == false))) {
+            if (((this._movementPointsTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._movementPointsTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("Все адаптеры таблицы, управляемые диспетчером адаптера таблицы TableAdapterManage" +
                         "r, должны использовать одинаковую строку подключения.");
             }
@@ -6194,15 +4951,6 @@ SELECT Id, Latitude, Longitude, LocationName FROM Markers WHERE (Id = @Id)";
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._animalMarkerEntityTableAdapter != null)) {
-                    revertConnections.Add(this._animalMarkerEntityTableAdapter, this._animalMarkerEntityTableAdapter.Connection);
-                    this._animalMarkerEntityTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._animalMarkerEntityTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._animalMarkerEntityTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._animalMarkerEntityTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._animalMarkerEntityTableAdapter.Adapter);
-                    }
-                }
                 if ((this._animalsTableAdapter != null)) {
                     revertConnections.Add(this._animalsTableAdapter, this._animalsTableAdapter.Connection);
                     this._animalsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
@@ -6212,40 +4960,31 @@ SELECT Id, Latitude, Longitude, LocationName FROM Markers WHERE (Id = @Id)";
                         adaptersWithAcceptChangesDuringUpdate.Add(this._animalsTableAdapter.Adapter);
                     }
                 }
-                if ((this._animalUserEntityTableAdapter != null)) {
-                    revertConnections.Add(this._animalUserEntityTableAdapter, this._animalUserEntityTableAdapter.Connection);
-                    this._animalUserEntityTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._animalUserEntityTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._animalUserEntityTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._animalUserEntityTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._animalUserEntityTableAdapter.Adapter);
+                if ((this._animalTypesTableAdapter != null)) {
+                    revertConnections.Add(this._animalTypesTableAdapter, this._animalTypesTableAdapter.Connection);
+                    this._animalTypesTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._animalTypesTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._animalTypesTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._animalTypesTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._animalTypesTableAdapter.Adapter);
                     }
                 }
-                if ((this._markersTableAdapter != null)) {
-                    revertConnections.Add(this._markersTableAdapter, this._markersTableAdapter.Connection);
-                    this._markersTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._markersTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._markersTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._markersTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._markersTableAdapter.Adapter);
+                if ((this._locationsTableAdapter != null)) {
+                    revertConnections.Add(this._locationsTableAdapter, this._locationsTableAdapter.Connection);
+                    this._locationsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._locationsTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._locationsTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._locationsTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._locationsTableAdapter.Adapter);
                     }
                 }
-                if ((this._rolesTableAdapter != null)) {
-                    revertConnections.Add(this._rolesTableAdapter, this._rolesTableAdapter.Connection);
-                    this._rolesTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._rolesTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._rolesTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._rolesTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._rolesTableAdapter.Adapter);
-                    }
-                }
-                if ((this._userRoleEntityTableAdapter != null)) {
-                    revertConnections.Add(this._userRoleEntityTableAdapter, this._userRoleEntityTableAdapter.Connection);
-                    this._userRoleEntityTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._userRoleEntityTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._userRoleEntityTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._userRoleEntityTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._userRoleEntityTableAdapter.Adapter);
+                if ((this._movementPointsTableAdapter != null)) {
+                    revertConnections.Add(this._movementPointsTableAdapter, this._movementPointsTableAdapter.Connection);
+                    this._movementPointsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._movementPointsTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._movementPointsTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._movementPointsTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._movementPointsTableAdapter.Adapter);
                     }
                 }
                 if ((this._usersTableAdapter != null)) {
@@ -6315,29 +5054,21 @@ SELECT Id, Latitude, Longitude, LocationName FROM Markers WHERE (Id = @Id)";
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._animalMarkerEntityTableAdapter != null)) {
-                    this._animalMarkerEntityTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._animalMarkerEntityTableAdapter]));
-                    this._animalMarkerEntityTableAdapter.Transaction = null;
-                }
                 if ((this._animalsTableAdapter != null)) {
                     this._animalsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._animalsTableAdapter]));
                     this._animalsTableAdapter.Transaction = null;
                 }
-                if ((this._animalUserEntityTableAdapter != null)) {
-                    this._animalUserEntityTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._animalUserEntityTableAdapter]));
-                    this._animalUserEntityTableAdapter.Transaction = null;
+                if ((this._animalTypesTableAdapter != null)) {
+                    this._animalTypesTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._animalTypesTableAdapter]));
+                    this._animalTypesTableAdapter.Transaction = null;
                 }
-                if ((this._markersTableAdapter != null)) {
-                    this._markersTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._markersTableAdapter]));
-                    this._markersTableAdapter.Transaction = null;
+                if ((this._locationsTableAdapter != null)) {
+                    this._locationsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._locationsTableAdapter]));
+                    this._locationsTableAdapter.Transaction = null;
                 }
-                if ((this._rolesTableAdapter != null)) {
-                    this._rolesTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._rolesTableAdapter]));
-                    this._rolesTableAdapter.Transaction = null;
-                }
-                if ((this._userRoleEntityTableAdapter != null)) {
-                    this._userRoleEntityTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._userRoleEntityTableAdapter]));
-                    this._userRoleEntityTableAdapter.Transaction = null;
+                if ((this._movementPointsTableAdapter != null)) {
+                    this._movementPointsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._movementPointsTableAdapter]));
+                    this._movementPointsTableAdapter.Transaction = null;
                 }
                 if ((this._usersTableAdapter != null)) {
                     this._usersTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._usersTableAdapter]));

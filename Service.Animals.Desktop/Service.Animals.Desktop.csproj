@@ -128,11 +128,29 @@
     <Compile Include="Control\BasketControl.Designer.cs">
       <DependentUpon>BasketControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\Admin\RolesAdminForm.cs">
+    <Compile Include="Form\Admin\AnimalsAdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Admin\RolesAdminForm.Designer.cs">
-      <DependentUpon>RolesAdminForm.cs</DependentUpon>
+    <Compile Include="Form\Admin\AnimalsAdminForm.Designer.cs">
+      <DependentUpon>AnimalsAdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Admin\AnimalTypesAdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Admin\AnimalTypesAdminForm.Designer.cs">
+      <DependentUpon>AnimalTypesAdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Admin\LocationsAdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Admin\LocationsAdminForm.Designer.cs">
+      <DependentUpon>LocationsAdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Admin\MovementPointsAdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Admin\MovementPointsAdminForm.Designer.cs">
+      <DependentUpon>MovementPointsAdminForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\Admin\UsersAdminForm.cs">
       <SubType>Form</SubType>
@@ -287,8 +305,17 @@
     <EmbeddedResource Include="Control\BasketControl.resx">
       <DependentUpon>BasketControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Admin\RolesAdminForm.resx">
-      <DependentUpon>RolesAdminForm.cs</DependentUpon>
+    <EmbeddedResource Include="Form\Admin\AnimalsAdminForm.resx">
+      <DependentUpon>AnimalsAdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Admin\AnimalTypesAdminForm.resx">
+      <DependentUpon>AnimalTypesAdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Admin\LocationsAdminForm.resx">
+      <DependentUpon>LocationsAdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Admin\MovementPointsAdminForm.resx">
+      <DependentUpon>MovementPointsAdminForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Admin\UsersAdminForm.resx">
       <DependentUpon>UsersAdminForm.cs</DependentUpon>
@@ -386,7 +413,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="start.ico" />
     <None Include="Resources\checkmark_26px.png" />
   </ItemGroup>
   <ItemGroup>
@@ -409,6 +435,9 @@
     <PackageReference Include="Microsoft.SqlServer.Types">
       <Version>160.1000.6</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="start.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

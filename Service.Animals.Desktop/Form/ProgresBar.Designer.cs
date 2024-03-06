@@ -50,11 +50,12 @@ namespace Service.Animals.Desktop.Form
             this.Progress.ColorStyle = Guna.UI.WinForms.ColorStyle.Default;
             this.Progress.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.Progress.IdleColor = System.Drawing.Color.Gainsboro;
-            this.Progress.Location = new System.Drawing.Point(0, 239);
+            this.Progress.Location = new System.Drawing.Point(0, 368);
+            this.Progress.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Progress.Name = "Progress";
             this.Progress.ProgressMaxColor = System.Drawing.Color.Peru;
             this.Progress.ProgressMinColor = System.Drawing.Color.PeachPuff;
-            this.Progress.Size = new System.Drawing.Size(430, 13);
+            this.Progress.Size = new System.Drawing.Size(645, 20);
             this.Progress.TabIndex = 4;
             this.Progress.Click += new System.EventHandler(this.Progress_Click);
             // 
@@ -62,9 +63,10 @@ namespace Service.Animals.Desktop.Form
             // 
             this.logo.BaseColor = System.Drawing.Color.White;
             this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
-            this.logo.Location = new System.Drawing.Point(88, 12);
+            this.logo.Location = new System.Drawing.Point(132, 18);
+            this.logo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(266, 209);
+            this.logo.Size = new System.Drawing.Size(399, 322);
             this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.logo.TabIndex = 3;
             this.logo.TabStop = false;
@@ -77,14 +79,15 @@ namespace Service.Animals.Desktop.Form
             // 
             // ProgresBar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(430, 252);
+            this.ClientSize = new System.Drawing.Size(645, 388);
             this.Controls.Add(this.Progress);
             this.Controls.Add(this.logo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ProgresBar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Service.Animals.Desktop";

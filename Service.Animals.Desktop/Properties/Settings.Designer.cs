@@ -12,7 +12,7 @@ namespace Service.Animals.Desktop.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.8.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.9.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -26,8 +26,8 @@ namespace Service.Animals.Desktop.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost\\\\SNGLRTYCRVTUREO,1433;Initial Catalog=airlines;User Id=sa;p" +
-            "assword=TbAlu5ZE2Y8l;MultipleActiveResultSets=true;")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=SNGLRTYCRV;Initial Catalog=airlines;User Id=sa;password=TbAlu5ZE2Y8l;" +
+            "MultipleActiveResultSets=true;")]
         public string airlinesConnectionString {
             get {
                 return ((string)(this["airlinesConnectionString"]));
@@ -37,8 +37,8 @@ namespace Service.Animals.Desktop.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost\\\\SNGLRTYCRVTUREO,1433;Initial Catalog=LostAnimalsDesktop-Se" +
-            "rvice;Persist Security Info=True;User ID=sa;TrustServerCertificate=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=SNGLRTYCRV;Initial Catalog=LostAnimalsDesktop-Service;Persist Securit" +
+            "y Info=True;User ID=sa;password=TbAlu5ZE2Y8l;TrustServerCertificate=True")]
         public string LostAnimalsDesktop_ServiceConnectionString {
             get {
                 return ((string)(this["LostAnimalsDesktop_ServiceConnectionString"]));
