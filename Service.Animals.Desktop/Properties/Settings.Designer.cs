@@ -26,17 +26,6 @@ namespace Service.Animals.Desktop.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=SNGLRTYCRV;Initial Catalog=airlines;User Id=sa;password=TbAlu5ZE2Y8l;" +
-            "MultipleActiveResultSets=true;")]
-        public string airlinesConnectionString {
-            get {
-                return ((string)(this["airlinesConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=SNGLRTYCRV;Initial Catalog=LostAnimalsDesktop-Service;Persist Securit" +
             "y Info=True;User ID=sa;password=TbAlu5ZE2Y8l;TrustServerCertificate=True")]
         public string LostAnimalsDesktop_ServiceConnectionString {

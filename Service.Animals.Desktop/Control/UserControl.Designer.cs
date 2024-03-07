@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControl1));
             this.PanelLogReg = new Guna.UI.WinForms.GunaPanel();
-            this.BtnSignUP = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.BtnSignIN = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.BtnSignUp = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.BtnSignIn = new Guna.UI.WinForms.GunaAdvenceButton();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
             this.BtnExit = new Guna.UI.WinForms.GunaAdvenceButton();
@@ -43,8 +43,8 @@
             // PanelLogReg
             // 
             this.PanelLogReg.AutoSize = true;
-            this.PanelLogReg.Controls.Add(this.BtnSignUP);
-            this.PanelLogReg.Controls.Add(this.BtnSignIN);
+            this.PanelLogReg.Controls.Add(this.BtnSignUp);
+            this.PanelLogReg.Controls.Add(this.BtnSignIn);
             this.PanelLogReg.Controls.Add(this.gunaLabel1);
             this.PanelLogReg.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelLogReg.Location = new System.Drawing.Point(0, 0);
@@ -52,75 +52,75 @@
             this.PanelLogReg.Size = new System.Drawing.Size(134, 76);
             this.PanelLogReg.TabIndex = 7;
             // 
-            // BtnSignUP
+            // BtnSignUp
             // 
-            this.BtnSignUP.AnimationHoverSpeed = 0.07F;
-            this.BtnSignUP.AnimationSpeed = 0.03F;
-            this.BtnSignUP.BaseColor = System.Drawing.Color.White;
-            this.BtnSignUP.BorderColor = System.Drawing.Color.Black;
-            this.BtnSignUP.CheckedBaseColor = System.Drawing.Color.Gray;
-            this.BtnSignUP.CheckedBorderColor = System.Drawing.Color.Black;
-            this.BtnSignUP.CheckedForeColor = System.Drawing.Color.Black;
-            this.BtnSignUP.CheckedImage = ((System.Drawing.Image)(resources.GetObject("BtnSignUP.CheckedImage")));
-            this.BtnSignUP.CheckedLineColor = System.Drawing.Color.Gray;
-            this.BtnSignUP.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnSignUP.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.BtnSignUP.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnSignUP.FocusedColor = System.Drawing.Color.Empty;
-            this.BtnSignUP.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BtnSignUP.ForeColor = System.Drawing.Color.Black;
-            this.BtnSignUP.Image = ((System.Drawing.Image)(resources.GetObject("BtnSignUP.Image")));
-            this.BtnSignUP.ImageOffsetX = 5;
-            this.BtnSignUP.ImageSize = new System.Drawing.Size(18, 18);
-            this.BtnSignUP.LineColor = System.Drawing.SystemColors.Control;
-            this.BtnSignUP.Location = new System.Drawing.Point(0, 45);
-            this.BtnSignUP.Name = "BtnSignUP";
-            this.BtnSignUP.OnHoverBaseColor = System.Drawing.SystemColors.Control;
-            this.BtnSignUP.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.BtnSignUP.OnHoverForeColor = System.Drawing.Color.Black;
-            this.BtnSignUP.OnHoverImage = null;
-            this.BtnSignUP.OnHoverLineColor = System.Drawing.SystemColors.Control;
-            this.BtnSignUP.OnPressedColor = System.Drawing.Color.Black;
-            this.BtnSignUP.Size = new System.Drawing.Size(134, 31);
-            this.BtnSignUP.TabIndex = 8;
-            this.BtnSignUP.Text = "Регистрация";
-            this.BtnSignUP.TextOffsetX = 10;
-            this.BtnSignUP.Click += new System.EventHandler(this.BtnSignUP_Click);
+            this.BtnSignUp.AnimationHoverSpeed = 0.07F;
+            this.BtnSignUp.AnimationSpeed = 0.03F;
+            this.BtnSignUp.BaseColor = System.Drawing.Color.White;
+            this.BtnSignUp.BorderColor = System.Drawing.Color.Black;
+            this.BtnSignUp.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.BtnSignUp.CheckedBorderColor = System.Drawing.Color.Black;
+            this.BtnSignUp.CheckedForeColor = System.Drawing.Color.Black;
+            this.BtnSignUp.CheckedImage = ((System.Drawing.Image)(resources.GetObject("BtnSignUp.CheckedImage")));
+            this.BtnSignUp.CheckedLineColor = System.Drawing.Color.Gray;
+            this.BtnSignUp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnSignUp.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.BtnSignUp.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnSignUp.FocusedColor = System.Drawing.Color.Empty;
+            this.BtnSignUp.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.BtnSignUp.ForeColor = System.Drawing.Color.Black;
+            this.BtnSignUp.Image = ((System.Drawing.Image)(resources.GetObject("BtnSignUp.Image")));
+            this.BtnSignUp.ImageOffsetX = 5;
+            this.BtnSignUp.ImageSize = new System.Drawing.Size(18, 18);
+            this.BtnSignUp.LineColor = System.Drawing.SystemColors.Control;
+            this.BtnSignUp.Location = new System.Drawing.Point(0, 45);
+            this.BtnSignUp.Name = "BtnSignUp";
+            this.BtnSignUp.OnHoverBaseColor = System.Drawing.SystemColors.Control;
+            this.BtnSignUp.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.BtnSignUp.OnHoverForeColor = System.Drawing.Color.Black;
+            this.BtnSignUp.OnHoverImage = null;
+            this.BtnSignUp.OnHoverLineColor = System.Drawing.SystemColors.Control;
+            this.BtnSignUp.OnPressedColor = System.Drawing.Color.Black;
+            this.BtnSignUp.Size = new System.Drawing.Size(134, 31);
+            this.BtnSignUp.TabIndex = 8;
+            this.BtnSignUp.Text = "Регистрация";
+            this.BtnSignUp.TextOffsetX = 10;
+            this.BtnSignUp.Click += new System.EventHandler(this.BtnSignUp_Click);
             // 
-            // BtnSignIN
+            // BtnSignIn
             // 
-            this.BtnSignIN.AnimationHoverSpeed = 0.07F;
-            this.BtnSignIN.AnimationSpeed = 0.03F;
-            this.BtnSignIN.BaseColor = System.Drawing.Color.White;
-            this.BtnSignIN.BorderColor = System.Drawing.Color.Black;
-            this.BtnSignIN.CheckedBaseColor = System.Drawing.Color.Gray;
-            this.BtnSignIN.CheckedBorderColor = System.Drawing.Color.Black;
-            this.BtnSignIN.CheckedForeColor = System.Drawing.Color.Black;
-            this.BtnSignIN.CheckedImage = ((System.Drawing.Image)(resources.GetObject("BtnSignIN.CheckedImage")));
-            this.BtnSignIN.CheckedLineColor = System.Drawing.Color.Gray;
-            this.BtnSignIN.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnSignIN.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.BtnSignIN.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnSignIN.FocusedColor = System.Drawing.Color.Empty;
-            this.BtnSignIN.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BtnSignIN.ForeColor = System.Drawing.Color.Black;
-            this.BtnSignIN.Image = ((System.Drawing.Image)(resources.GetObject("BtnSignIN.Image")));
-            this.BtnSignIN.ImageOffsetX = 5;
-            this.BtnSignIN.ImageSize = new System.Drawing.Size(18, 18);
-            this.BtnSignIN.LineColor = System.Drawing.SystemColors.Control;
-            this.BtnSignIN.Location = new System.Drawing.Point(0, 14);
-            this.BtnSignIN.Name = "BtnSignIN";
-            this.BtnSignIN.OnHoverBaseColor = System.Drawing.SystemColors.Control;
-            this.BtnSignIN.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.BtnSignIN.OnHoverForeColor = System.Drawing.Color.Black;
-            this.BtnSignIN.OnHoverImage = null;
-            this.BtnSignIN.OnHoverLineColor = System.Drawing.SystemColors.Control;
-            this.BtnSignIN.OnPressedColor = System.Drawing.Color.Black;
-            this.BtnSignIN.Size = new System.Drawing.Size(134, 31);
-            this.BtnSignIN.TabIndex = 7;
-            this.BtnSignIN.Text = "Войти";
-            this.BtnSignIN.TextOffsetX = 10;
-            this.BtnSignIN.Click += new System.EventHandler(this.BtnSignIN_Click);
+            this.BtnSignIn.AnimationHoverSpeed = 0.07F;
+            this.BtnSignIn.AnimationSpeed = 0.03F;
+            this.BtnSignIn.BaseColor = System.Drawing.Color.White;
+            this.BtnSignIn.BorderColor = System.Drawing.Color.Black;
+            this.BtnSignIn.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.BtnSignIn.CheckedBorderColor = System.Drawing.Color.Black;
+            this.BtnSignIn.CheckedForeColor = System.Drawing.Color.Black;
+            this.BtnSignIn.CheckedImage = ((System.Drawing.Image)(resources.GetObject("BtnSignIn.CheckedImage")));
+            this.BtnSignIn.CheckedLineColor = System.Drawing.Color.Gray;
+            this.BtnSignIn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnSignIn.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.BtnSignIn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnSignIn.FocusedColor = System.Drawing.Color.Empty;
+            this.BtnSignIn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.BtnSignIn.ForeColor = System.Drawing.Color.Black;
+            this.BtnSignIn.Image = ((System.Drawing.Image)(resources.GetObject("BtnSignIn.Image")));
+            this.BtnSignIn.ImageOffsetX = 5;
+            this.BtnSignIn.ImageSize = new System.Drawing.Size(18, 18);
+            this.BtnSignIn.LineColor = System.Drawing.SystemColors.Control;
+            this.BtnSignIn.Location = new System.Drawing.Point(0, 14);
+            this.BtnSignIn.Name = "BtnSignIn";
+            this.BtnSignIn.OnHoverBaseColor = System.Drawing.SystemColors.Control;
+            this.BtnSignIn.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.BtnSignIn.OnHoverForeColor = System.Drawing.Color.Black;
+            this.BtnSignIn.OnHoverImage = null;
+            this.BtnSignIn.OnHoverLineColor = System.Drawing.SystemColors.Control;
+            this.BtnSignIn.OnPressedColor = System.Drawing.Color.Black;
+            this.BtnSignIn.Size = new System.Drawing.Size(134, 31);
+            this.BtnSignIn.TabIndex = 7;
+            this.BtnSignIn.Text = "Войти";
+            this.BtnSignIn.TextOffsetX = 10;
+            this.BtnSignIn.Click += new System.EventHandler(this.BtnSignIn_Click);
             // 
             // gunaLabel1
             // 
@@ -178,7 +178,7 @@
             this.BtnExit.TabIndex = 9;
             this.BtnExit.Text = "Выход";
             this.BtnExit.TextOffsetX = 10;
-            this.BtnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // gunaLabel3
             // 
@@ -210,8 +210,8 @@
         }
 
         #endregion
-        private Guna.UI.WinForms.GunaAdvenceButton BtnSignUP;
-        private Guna.UI.WinForms.GunaAdvenceButton BtnSignIN;
+        private Guna.UI.WinForms.GunaAdvenceButton BtnSignUp;
+        private Guna.UI.WinForms.GunaAdvenceButton BtnSignIn;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
         private Guna.UI.WinForms.GunaPanel gunaPanel1;
         private Guna.UI.WinForms.GunaAdvenceButton BtnExit;

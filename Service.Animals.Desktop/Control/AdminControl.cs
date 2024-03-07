@@ -1,6 +1,4 @@
-﻿using System;
-using System.Windows.Forms;
-using Service.Animals.Desktop.Form;
+﻿using System.Windows.Forms;
 
 namespace Service.Animals.Desktop.Control
 {
@@ -9,12 +7,6 @@ namespace Service.Animals.Desktop.Control
         public AdminControl()
         {
             InitializeComponent();
-        }
-
-        private void btnAddBook_Click(object sender, EventArgs e)
-        {
-            AddProduct addProduct = new AddProduct();
-            addProduct.ShowDialog();
         }
     }
 }

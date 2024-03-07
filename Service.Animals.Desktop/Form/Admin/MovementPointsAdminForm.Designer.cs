@@ -60,10 +60,10 @@
             this.DeleteButton = new System.Windows.Forms.Button();
             this.AddButton = new System.Windows.Forms.Button();
             this.animalIdComboBox = new System.Windows.Forms.ComboBox();
-            this.locationIdComboBox = new System.Windows.Forms.ComboBox();
             this.animalsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.animalsTableAdapter = new Service.Animals.Desktop.LostAnimalsDesktop_ServiceDataSetTableAdapters.AnimalsTableAdapter();
+            this.locationIdComboBox = new System.Windows.Forms.ComboBox();
             this.locationsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.animalsTableAdapter = new Service.Animals.Desktop.LostAnimalsDesktop_ServiceDataSetTableAdapters.AnimalsTableAdapter();
             this.locationsTableAdapter = new Service.Animals.Desktop.LostAnimalsDesktop_ServiceDataSetTableAdapters.LocationsTableAdapter();
             animalIdLabel = new System.Windows.Forms.Label();
             locationIdLabel = new System.Windows.Forms.Label();
@@ -81,9 +81,10 @@
             // 
             animalIdLabel.AutoSize = true;
             animalIdLabel.Font = new System.Drawing.Font("Verdana", 12F);
-            animalIdLabel.Location = new System.Drawing.Point(12, 271);
+            animalIdLabel.Location = new System.Drawing.Point(8, 176);
+            animalIdLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             animalIdLabel.Name = "animalIdLabel";
-            animalIdLabel.Size = new System.Drawing.Size(188, 29);
+            animalIdLabel.Size = new System.Drawing.Size(126, 18);
             animalIdLabel.TabIndex = 4;
             animalIdLabel.Text = "Id животного:";
             // 
@@ -91,9 +92,10 @@
             // 
             locationIdLabel.AutoSize = true;
             locationIdLabel.Font = new System.Drawing.Font("Verdana", 12F);
-            locationIdLabel.Location = new System.Drawing.Point(12, 303);
+            locationIdLabel.Location = new System.Drawing.Point(8, 197);
+            locationIdLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             locationIdLabel.Name = "locationIdLabel";
-            locationIdLabel.Size = new System.Drawing.Size(160, 29);
+            locationIdLabel.Size = new System.Drawing.Size(107, 18);
             locationIdLabel.TabIndex = 6;
             locationIdLabel.Text = "Id локации:";
             // 
@@ -101,9 +103,10 @@
             // 
             dateTimeLabel.AutoSize = true;
             dateTimeLabel.Font = new System.Drawing.Font("Verdana", 12F);
-            dateTimeLabel.Location = new System.Drawing.Point(12, 336);
+            dateTimeLabel.Location = new System.Drawing.Point(8, 218);
+            dateTimeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             dateTimeLabel.Name = "dateTimeLabel";
-            dateTimeLabel.Size = new System.Drawing.Size(82, 29);
+            dateTimeLabel.Size = new System.Drawing.Size(54, 18);
             dateTimeLabel.TabIndex = 8;
             dateTimeLabel.Text = "Дата:";
             // 
@@ -158,7 +161,7 @@
             this.movementPointsBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.movementPointsBindingNavigator.Name = "movementPointsBindingNavigator";
             this.movementPointsBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.movementPointsBindingNavigator.Size = new System.Drawing.Size(697, 33);
+            this.movementPointsBindingNavigator.Size = new System.Drawing.Size(428, 31);
             this.movementPointsBindingNavigator.TabIndex = 0;
             this.movementPointsBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -168,13 +171,13 @@
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(28, 28);
             this.bindingNavigatorAddNewItem.Text = "Добавить";
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(65, 33);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 28);
             this.bindingNavigatorCountItem.Text = "для {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
             // 
@@ -184,7 +187,7 @@
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(28, 28);
             this.bindingNavigatorDeleteItem.Text = "Удалить";
             // 
             // bindingNavigatorMoveFirstItem
@@ -193,7 +196,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(28, 28);
             this.bindingNavigatorMoveFirstItem.Text = "Переместить в начало";
             // 
             // bindingNavigatorMovePreviousItem
@@ -202,13 +205,13 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(28, 28);
             this.bindingNavigatorMovePreviousItem.Text = "Переместить назад";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 38);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -216,14 +219,14 @@
             this.bindingNavigatorPositionItem.AutoSize = false;
             this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 31);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(35, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Текущее положение";
             // 
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 38);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -231,7 +234,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(28, 28);
             this.bindingNavigatorMoveNextItem.Text = "Переместить вперед";
             // 
             // bindingNavigatorMoveLastItem
@@ -240,26 +243,27 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(28, 28);
             this.bindingNavigatorMoveLastItem.Text = "Переместить в конец";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 38);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 31);
             // 
             // movementPointsBindingNavigatorSaveItem
             // 
             this.movementPointsBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.movementPointsBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("movementPointsBindingNavigatorSaveItem.Image")));
             this.movementPointsBindingNavigatorSaveItem.Name = "movementPointsBindingNavigatorSaveItem";
-            this.movementPointsBindingNavigatorSaveItem.Size = new System.Drawing.Size(34, 33);
+            this.movementPointsBindingNavigatorSaveItem.Size = new System.Drawing.Size(28, 28);
             this.movementPointsBindingNavigatorSaveItem.Text = "Сохранить данные";
             this.movementPointsBindingNavigatorSaveItem.Click += new System.EventHandler(this.movementPointsBindingNavigatorSaveItem_Click);
             // 
             // movementPointsDataGridView
             // 
             this.movementPointsDataGridView.AutoGenerateColumns = false;
+            this.movementPointsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.movementPointsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.movementPointsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -267,11 +271,12 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
             this.movementPointsDataGridView.DataSource = this.movementPointsBindingSource;
-            this.movementPointsDataGridView.Location = new System.Drawing.Point(12, 38);
+            this.movementPointsDataGridView.Location = new System.Drawing.Point(8, 25);
+            this.movementPointsDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.movementPointsDataGridView.Name = "movementPointsDataGridView";
             this.movementPointsDataGridView.RowHeadersWidth = 62;
             this.movementPointsDataGridView.RowTemplate.Height = 28;
-            this.movementPointsDataGridView.Size = new System.Drawing.Size(664, 220);
+            this.movementPointsDataGridView.Size = new System.Drawing.Size(411, 143);
             this.movementPointsDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -281,7 +286,7 @@
             this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 150;
+            this.dataGridViewTextBoxColumn1.Width = 115;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -289,7 +294,7 @@
             this.dataGridViewTextBoxColumn2.HeaderText = "AnimalId";
             this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 150;
+            this.dataGridViewTextBoxColumn2.Width = 72;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -297,7 +302,7 @@
             this.dataGridViewTextBoxColumn3.HeaderText = "LocationId";
             this.dataGridViewTextBoxColumn3.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 150;
+            this.dataGridViewTextBoxColumn3.Width = 82;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -305,23 +310,23 @@
             this.dataGridViewTextBoxColumn4.HeaderText = "DateTime";
             this.dataGridViewTextBoxColumn4.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 150;
+            this.dataGridViewTextBoxColumn4.Width = 78;
             // 
             // dateTimeDateTimePicker
             // 
             this.dateTimeDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.movementPointsBindingSource, "DateTime", true));
-            this.dateTimeDateTimePicker.Location = new System.Drawing.Point(202, 342);
+            this.dateTimeDateTimePicker.Location = new System.Drawing.Point(135, 222);
+            this.dateTimeDateTimePicker.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimeDateTimePicker.Name = "dateTimeDateTimePicker";
-            this.dateTimeDateTimePicker.Size = new System.Drawing.Size(200, 26);
+            this.dateTimeDateTimePicker.Size = new System.Drawing.Size(122, 20);
             this.dateTimeDateTimePicker.TabIndex = 9;
             // 
             // SaveButton
             // 
             this.SaveButton.Font = new System.Drawing.Font("Courier New", 9.75F);
-            this.SaveButton.Location = new System.Drawing.Point(410, 331);
-            this.SaveButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.SaveButton.Location = new System.Drawing.Point(262, 213);
             this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(267, 37);
+            this.SaveButton.Size = new System.Drawing.Size(157, 29);
             this.SaveButton.TabIndex = 58;
             this.SaveButton.Text = "Сохранить";
             this.SaveButton.UseVisualStyleBackColor = true;
@@ -330,10 +335,9 @@
             // DeleteButton
             // 
             this.DeleteButton.Font = new System.Drawing.Font("Courier New", 9.75F);
-            this.DeleteButton.Location = new System.Drawing.Point(547, 271);
-            this.DeleteButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.DeleteButton.Location = new System.Drawing.Point(347, 176);
             this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(130, 50);
+            this.DeleteButton.Size = new System.Drawing.Size(72, 31);
             this.DeleteButton.TabIndex = 57;
             this.DeleteButton.Text = "Удалить";
             this.DeleteButton.UseVisualStyleBackColor = true;
@@ -342,10 +346,9 @@
             // AddButton
             // 
             this.AddButton.Font = new System.Drawing.Font("Courier New", 9.75F);
-            this.AddButton.Location = new System.Drawing.Point(409, 271);
-            this.AddButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.AddButton.Location = new System.Drawing.Point(262, 175);
             this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(130, 50);
+            this.AddButton.Size = new System.Drawing.Size(79, 32);
             this.AddButton.TabIndex = 56;
             this.AddButton.Text = "Добавить";
             this.AddButton.UseVisualStyleBackColor = true;
@@ -357,11 +360,17 @@
             this.animalIdComboBox.DataSource = this.animalsBindingSource;
             this.animalIdComboBox.DisplayMember = "AnimalId";
             this.animalIdComboBox.FormattingEnabled = true;
-            this.animalIdComboBox.Location = new System.Drawing.Point(202, 274);
+            this.animalIdComboBox.Location = new System.Drawing.Point(135, 175);
+            this.animalIdComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.animalIdComboBox.Name = "animalIdComboBox";
-            this.animalIdComboBox.Size = new System.Drawing.Size(200, 28);
+            this.animalIdComboBox.Size = new System.Drawing.Size(122, 21);
             this.animalIdComboBox.TabIndex = 59;
             this.animalIdComboBox.ValueMember = "AnimalId";
+            // 
+            // animalsBindingSource
+            // 
+            this.animalsBindingSource.DataMember = "Animals";
+            this.animalsBindingSource.DataSource = this.lostAnimalsDesktop_ServiceDataSet;
             // 
             // locationIdComboBox
             // 
@@ -369,25 +378,21 @@
             this.locationIdComboBox.DataSource = this.locationsBindingSource;
             this.locationIdComboBox.DisplayMember = "LocationId";
             this.locationIdComboBox.FormattingEnabled = true;
-            this.locationIdComboBox.Location = new System.Drawing.Point(202, 308);
+            this.locationIdComboBox.Location = new System.Drawing.Point(135, 198);
+            this.locationIdComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.locationIdComboBox.Name = "locationIdComboBox";
-            this.locationIdComboBox.Size = new System.Drawing.Size(200, 28);
+            this.locationIdComboBox.Size = new System.Drawing.Size(122, 21);
             this.locationIdComboBox.TabIndex = 60;
             this.locationIdComboBox.ValueMember = "LocationId";
-            // 
-            // animalsBindingSource
-            // 
-            this.animalsBindingSource.DataMember = "Animals";
-            this.animalsBindingSource.DataSource = this.lostAnimalsDesktop_ServiceDataSet;
-            // 
-            // animalsTableAdapter
-            // 
-            this.animalsTableAdapter.ClearBeforeFill = true;
             // 
             // locationsBindingSource
             // 
             this.locationsBindingSource.DataMember = "Locations";
             this.locationsBindingSource.DataSource = this.lostAnimalsDesktop_ServiceDataSet;
+            // 
+            // animalsTableAdapter
+            // 
+            this.animalsTableAdapter.ClearBeforeFill = true;
             // 
             // locationsTableAdapter
             // 
@@ -395,9 +400,9 @@
             // 
             // MovementPointsAdminForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(697, 385);
+            this.ClientSize = new System.Drawing.Size(428, 250);
             this.Controls.Add(this.locationIdComboBox);
             this.Controls.Add(this.animalIdComboBox);
             this.Controls.Add(this.SaveButton);
@@ -410,6 +415,7 @@
             this.Controls.Add(this.movementPointsDataGridView);
             this.Controls.Add(this.movementPointsBindingNavigator);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MovementPointsAdminForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Точки перемещения";

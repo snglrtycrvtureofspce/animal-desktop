@@ -79,9 +79,10 @@
             // 
             animalTypeIdLabel.AutoSize = true;
             animalTypeIdLabel.Font = new System.Drawing.Font("Verdana", 12F);
-            animalTypeIdLabel.Location = new System.Drawing.Point(12, 270);
+            animalTypeIdLabel.Location = new System.Drawing.Point(8, 176);
+            animalTypeIdLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             animalTypeIdLabel.Name = "animalTypeIdLabel";
-            animalTypeIdLabel.Size = new System.Drawing.Size(201, 29);
+            animalTypeIdLabel.Size = new System.Drawing.Size(137, 18);
             animalTypeIdLabel.TabIndex = 4;
             animalTypeIdLabel.Text = "Animal Type Id:";
             // 
@@ -89,9 +90,10 @@
             // 
             animalNameLabel.AutoSize = true;
             animalNameLabel.Font = new System.Drawing.Font("Verdana", 12F);
-            animalNameLabel.Location = new System.Drawing.Point(12, 302);
+            animalNameLabel.Location = new System.Drawing.Point(8, 196);
+            animalNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             animalNameLabel.Name = "animalNameLabel";
-            animalNameLabel.Size = new System.Drawing.Size(181, 29);
+            animalNameLabel.Size = new System.Drawing.Size(124, 18);
             animalNameLabel.TabIndex = 6;
             animalNameLabel.Text = "Animal Name:";
             // 
@@ -99,9 +101,10 @@
             // 
             animalDescriptionLabel.AutoSize = true;
             animalDescriptionLabel.Font = new System.Drawing.Font("Verdana", 12F);
-            animalDescriptionLabel.Location = new System.Drawing.Point(12, 334);
+            animalDescriptionLabel.Location = new System.Drawing.Point(8, 217);
+            animalDescriptionLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             animalDescriptionLabel.Name = "animalDescriptionLabel";
-            animalDescriptionLabel.Size = new System.Drawing.Size(247, 29);
+            animalDescriptionLabel.Size = new System.Drawing.Size(169, 18);
             animalDescriptionLabel.TabIndex = 8;
             animalDescriptionLabel.Text = "Animal Description:";
             // 
@@ -160,7 +163,7 @@
             this.animalsBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.animalsBindingNavigator.Name = "animalsBindingNavigator";
             this.animalsBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.animalsBindingNavigator.Size = new System.Drawing.Size(689, 33);
+            this.animalsBindingNavigator.Size = new System.Drawing.Size(457, 31);
             this.animalsBindingNavigator.TabIndex = 0;
             this.animalsBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -170,13 +173,13 @@
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(28, 28);
             this.bindingNavigatorAddNewItem.Text = "Добавить";
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(65, 28);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 28);
             this.bindingNavigatorCountItem.Text = "для {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
             // 
@@ -186,7 +189,7 @@
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(28, 28);
             this.bindingNavigatorDeleteItem.Text = "Удалить";
             // 
             // bindingNavigatorMoveFirstItem
@@ -195,7 +198,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(28, 28);
             this.bindingNavigatorMoveFirstItem.Text = "Переместить в начало";
             // 
             // bindingNavigatorMovePreviousItem
@@ -204,13 +207,13 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(28, 28);
             this.bindingNavigatorMovePreviousItem.Text = "Переместить назад";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 33);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -218,14 +221,14 @@
             this.bindingNavigatorPositionItem.AutoSize = false;
             this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 31);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(35, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Текущее положение";
             // 
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 33);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -233,7 +236,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(28, 28);
             this.bindingNavigatorMoveNextItem.Text = "Переместить вперед";
             // 
             // bindingNavigatorMoveLastItem
@@ -242,26 +245,27 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(28, 28);
             this.bindingNavigatorMoveLastItem.Text = "Переместить в конец";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 33);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 31);
             // 
             // animalsBindingNavigatorSaveItem
             // 
             this.animalsBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.animalsBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("animalsBindingNavigatorSaveItem.Image")));
             this.animalsBindingNavigatorSaveItem.Name = "animalsBindingNavigatorSaveItem";
-            this.animalsBindingNavigatorSaveItem.Size = new System.Drawing.Size(34, 28);
+            this.animalsBindingNavigatorSaveItem.Size = new System.Drawing.Size(28, 28);
             this.animalsBindingNavigatorSaveItem.Text = "Сохранить данные";
             this.animalsBindingNavigatorSaveItem.Click += new System.EventHandler(this.animalsBindingNavigatorSaveItem_Click);
             // 
             // animalsDataGridView
             // 
             this.animalsDataGridView.AutoGenerateColumns = false;
+            this.animalsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.animalsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.animalsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -269,11 +273,12 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
             this.animalsDataGridView.DataSource = this.animalsBindingSource;
-            this.animalsDataGridView.Location = new System.Drawing.Point(12, 38);
+            this.animalsDataGridView.Location = new System.Drawing.Point(8, 25);
+            this.animalsDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.animalsDataGridView.Name = "animalsDataGridView";
             this.animalsDataGridView.RowHeadersWidth = 62;
             this.animalsDataGridView.RowTemplate.Height = 28;
-            this.animalsDataGridView.Size = new System.Drawing.Size(664, 220);
+            this.animalsDataGridView.Size = new System.Drawing.Size(439, 143);
             this.animalsDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -283,7 +288,7 @@
             this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 150;
+            this.dataGridViewTextBoxColumn1.Width = 72;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -291,7 +296,7 @@
             this.dataGridViewTextBoxColumn2.HeaderText = "AnimalTypeId";
             this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 150;
+            this.dataGridViewTextBoxColumn2.Width = 96;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -299,7 +304,7 @@
             this.dataGridViewTextBoxColumn3.HeaderText = "AnimalName";
             this.dataGridViewTextBoxColumn3.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 150;
+            this.dataGridViewTextBoxColumn3.Width = 91;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -307,22 +312,24 @@
             this.dataGridViewTextBoxColumn4.HeaderText = "AnimalDescription";
             this.dataGridViewTextBoxColumn4.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 150;
+            this.dataGridViewTextBoxColumn4.Width = 116;
             // 
             // animalNameTextBox
             // 
             this.animalNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animalsBindingSource, "AnimalName", true));
-            this.animalNameTextBox.Location = new System.Drawing.Point(264, 302);
+            this.animalNameTextBox.Location = new System.Drawing.Point(176, 196);
+            this.animalNameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.animalNameTextBox.Name = "animalNameTextBox";
-            this.animalNameTextBox.Size = new System.Drawing.Size(171, 26);
+            this.animalNameTextBox.Size = new System.Drawing.Size(115, 20);
             this.animalNameTextBox.TabIndex = 7;
             // 
             // animalDescriptionTextBox
             // 
             this.animalDescriptionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.animalsBindingSource, "AnimalDescription", true));
-            this.animalDescriptionTextBox.Location = new System.Drawing.Point(264, 334);
+            this.animalDescriptionTextBox.Location = new System.Drawing.Point(176, 217);
+            this.animalDescriptionTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.animalDescriptionTextBox.Name = "animalDescriptionTextBox";
-            this.animalDescriptionTextBox.Size = new System.Drawing.Size(171, 26);
+            this.animalDescriptionTextBox.Size = new System.Drawing.Size(115, 20);
             this.animalDescriptionTextBox.TabIndex = 9;
             // 
             // animalTypeIdComboBox
@@ -331,9 +338,10 @@
             this.animalTypeIdComboBox.DataSource = this.animalTypesBindingSource;
             this.animalTypeIdComboBox.DisplayMember = "AnimalTypeId";
             this.animalTypeIdComboBox.FormattingEnabled = true;
-            this.animalTypeIdComboBox.Location = new System.Drawing.Point(264, 268);
+            this.animalTypeIdComboBox.Location = new System.Drawing.Point(176, 174);
+            this.animalTypeIdComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.animalTypeIdComboBox.Name = "animalTypeIdComboBox";
-            this.animalTypeIdComboBox.Size = new System.Drawing.Size(171, 28);
+            this.animalTypeIdComboBox.Size = new System.Drawing.Size(115, 21);
             this.animalTypeIdComboBox.TabIndex = 10;
             this.animalTypeIdComboBox.ValueMember = "AnimalTypeId";
             // 
@@ -345,10 +353,9 @@
             // SaveButton
             // 
             this.SaveButton.Font = new System.Drawing.Font("Courier New", 9.75F);
-            this.SaveButton.Location = new System.Drawing.Point(442, 302);
-            this.SaveButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.SaveButton.Location = new System.Drawing.Point(294, 196);
             this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(234, 58);
+            this.SaveButton.Size = new System.Drawing.Size(156, 44);
             this.SaveButton.TabIndex = 55;
             this.SaveButton.Text = "Сохранить";
             this.SaveButton.UseVisualStyleBackColor = true;
@@ -357,10 +364,9 @@
             // DeleteButton
             // 
             this.DeleteButton.Font = new System.Drawing.Font("Courier New", 9.75F);
-            this.DeleteButton.Location = new System.Drawing.Point(560, 267);
-            this.DeleteButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.DeleteButton.Location = new System.Drawing.Point(372, 175);
             this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(116, 32);
+            this.DeleteButton.Size = new System.Drawing.Size(77, 21);
             this.DeleteButton.TabIndex = 54;
             this.DeleteButton.Text = "Удалить";
             this.DeleteButton.UseVisualStyleBackColor = true;
@@ -369,10 +375,9 @@
             // AddButton
             // 
             this.AddButton.Font = new System.Drawing.Font("Courier New", 9.75F);
-            this.AddButton.Location = new System.Drawing.Point(442, 266);
-            this.AddButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.AddButton.Location = new System.Drawing.Point(294, 174);
             this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(116, 33);
+            this.AddButton.Size = new System.Drawing.Size(77, 22);
             this.AddButton.TabIndex = 53;
             this.AddButton.Text = "Добавить";
             this.AddButton.UseVisualStyleBackColor = true;
@@ -384,9 +389,9 @@
             // 
             // AnimalsAdminForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(689, 373);
+            this.ClientSize = new System.Drawing.Size(457, 245);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.AddButton);
@@ -399,6 +404,7 @@
             this.Controls.Add(this.animalsDataGridView);
             this.Controls.Add(this.animalsBindingNavigator);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "AnimalsAdminForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Животные";

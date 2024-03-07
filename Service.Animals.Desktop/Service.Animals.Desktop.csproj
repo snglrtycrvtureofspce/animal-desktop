@@ -51,6 +51,9 @@
   <PropertyGroup>
     <ApplicationIcon>start.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Guna.UI">
       <HintPath>packages\Guna.UI.dll</HintPath>
@@ -75,58 +78,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="airlinesDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>airlinesDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Control\ElControls\ElOrderList.cs">
+    <Compile Include="Control\ElControls\ElUsersList.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Control\ElControls\ElOrderList.Designer.cs">
-      <DependentUpon>ElOrderList.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Control\ElControls\ElUserList.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Control\ElControls\ElUserList.Designer.cs">
-      <DependentUpon>ElUserList.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Control\ElControls\ElProductList.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Control\ElControls\ElProductList.Designer.cs">
-      <DependentUpon>ElProductList.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Control\ElControls\ElProduct.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Control\ElControls\ElProduct.Designer.cs">
-      <DependentUpon>ElProduct.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Control\ElControls\ElBasketList.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Control\ElControls\ElBasketList.Designer.cs">
-      <DependentUpon>ElBasketList.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form\AddProduct.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\AddProduct.Designer.cs">
-      <DependentUpon>AddProduct.cs</DependentUpon>
+    <Compile Include="Control\ElControls\ElUsersList.Designer.cs">
+      <DependentUpon>ElUsersList.cs</DependentUpon>
     </Compile>
     <Compile Include="Control\AdminControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Control\AdminControl.Designer.cs">
       <DependentUpon>AdminControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Control\BasketControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Control\BasketControl.Designer.cs">
-      <DependentUpon>BasketControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\Admin\AnimalsAdminForm.cs">
       <SubType>Form</SubType>
@@ -158,76 +120,40 @@
     <Compile Include="Form\Admin\UsersAdminForm.Designer.cs">
       <DependentUpon>UsersAdminForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\AirplanesForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\AirplanesForm.Designer.cs">
-      <DependentUpon>AirplanesForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form\crewAdminForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\crewAdminForm.Designer.cs">
-      <DependentUpon>crewAdminForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form\CrewForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\CrewForm.Designer.cs">
-      <DependentUpon>CrewForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form\CrewMemberForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\CrewMemberForm.Designer.cs">
-      <DependentUpon>CrewMemberForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form\flightsAdminForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\flightsAdminForm.Designer.cs">
-      <DependentUpon>flightsAdminForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form\FlightsForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\FlightsForm.Designer.cs">
-      <DependentUpon>FlightsForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form\PassengersForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form\PassengersForm.Designer.cs">
-      <DependentUpon>PassengersForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form\QueryForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\QueryForm.Designer.cs">
       <DependentUpon>QueryForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\ticketsAdminForm.cs">
+    <Compile Include="Form\User\AnimalsUserForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\ticketsAdminForm.Designer.cs">
-      <DependentUpon>ticketsAdminForm.cs</DependentUpon>
+    <Compile Include="Form\User\AnimalsUserForm.Designer.cs">
+      <DependentUpon>AnimalsUserForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\TicketsForm.cs">
+    <Compile Include="Form\User\AnimalTypesUserForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\TicketsForm.Designer.cs">
-      <DependentUpon>TicketsForm.cs</DependentUpon>
+    <Compile Include="Form\User\AnimalTypesUserForm.Designer.cs">
+      <DependentUpon>AnimalTypesUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\User\LocationsUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\User\LocationsUserForm.Designer.cs">
+      <DependentUpon>LocationsUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\User\MovementPointsUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\User\MovementPointsUserForm.Designer.cs">
+      <DependentUpon>MovementPointsUserForm.cs</DependentUpon>
     </Compile>
     <Compile Include="LostAnimalsDesktop_ServiceDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>LostAnimalsDesktop_ServiceDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="ProductControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ProductControl.Designer.cs">
-      <DependentUpon>ProductControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\Home.cs">
       <SubType>Form</SubType>
@@ -235,23 +161,11 @@
     <Compile Include="Form\Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
-    <Compile Include="Control\OrderControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Control\OrderControl.Designer.cs">
-      <DependentUpon>OrderControl.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form\ProgresBar.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\ProgresBar.Designer.cs">
       <DependentUpon>ProgresBar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Control\InfoProductControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Control\InfoProductControl.Designer.cs">
-      <DependentUpon>InfoProductControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -266,44 +180,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="SIGNin.cs">
+    <Compile Include="Form\SIGNin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SIGNin.Designer.cs">
+    <Compile Include="Form\SIGNin.Designer.cs">
       <DependentUpon>SIGNin.cs</DependentUpon>
     </Compile>
-    <Compile Include="SIGNup.cs">
+    <Compile Include="Form\SIGNup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SIGNup.Designer.cs">
+    <Compile Include="Form\SIGNup.Designer.cs">
       <DependentUpon>SIGNup.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Control\ElControls\ElOrderList.resx">
-      <DependentUpon>ElOrderList.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Control\ElControls\ElUserList.resx">
-      <DependentUpon>ElUserList.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Control\ElControls\ElProductList.resx">
-      <DependentUpon>ElProductList.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Control\ElControls\ElProduct.resx">
-      <DependentUpon>ElProduct.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Control\InfoProductControl.resx">
-      <DependentUpon>InfoProductControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Control\ElControls\ElBasketList.resx">
-      <DependentUpon>ElBasketList.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\AddProduct.resx">
-      <DependentUpon>AddProduct.cs</DependentUpon>
+    <EmbeddedResource Include="Control\ElControls\ElUsersList.resx">
+      <DependentUpon>ElUsersList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Control\AdminControl.resx">
       <DependentUpon>AdminControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Control\BasketControl.resx">
-      <DependentUpon>BasketControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Admin\AnimalsAdminForm.resx">
       <DependentUpon>AnimalsAdminForm.cs</DependentUpon>
@@ -320,45 +213,24 @@
     <EmbeddedResource Include="Form\Admin\UsersAdminForm.resx">
       <DependentUpon>UsersAdminForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\AirplanesForm.resx">
-      <DependentUpon>AirplanesForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\crewAdminForm.resx">
-      <DependentUpon>crewAdminForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\CrewForm.resx">
-      <DependentUpon>CrewForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\CrewMemberForm.resx">
-      <DependentUpon>CrewMemberForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\flightsAdminForm.resx">
-      <DependentUpon>flightsAdminForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\FlightsForm.resx">
-      <DependentUpon>FlightsForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\PassengersForm.resx">
-      <DependentUpon>PassengersForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form\QueryForm.resx">
       <DependentUpon>QueryForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\ticketsAdminForm.resx">
-      <DependentUpon>ticketsAdminForm.cs</DependentUpon>
+    <EmbeddedResource Include="Form\User\AnimalsUserForm.resx">
+      <DependentUpon>AnimalsUserForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\TicketsForm.resx">
-      <DependentUpon>TicketsForm.cs</DependentUpon>
+    <EmbeddedResource Include="Form\User\AnimalTypesUserForm.resx">
+      <DependentUpon>AnimalTypesUserForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProductControl.resx">
-      <DependentUpon>ProductControl.cs</DependentUpon>
+    <EmbeddedResource Include="Form\User\LocationsUserForm.resx">
+      <DependentUpon>LocationsUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\User\MovementPointsUserForm.resx">
+      <DependentUpon>MovementPointsUserForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Control\OrderControl.resx">
-      <DependentUpon>OrderControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\ProgresBar.resx">
       <DependentUpon>ProgresBar.cs</DependentUpon>
@@ -371,23 +243,12 @@
     <EmbeddedResource Include="Control\UserControl.resx">
       <DependentUpon>UserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SIGNin.resx">
+    <EmbeddedResource Include="Form\SIGNin.resx">
       <DependentUpon>SIGNin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SIGNup.resx">
+    <EmbeddedResource Include="Form\SIGNup.resx">
       <DependentUpon>SIGNup.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="airlinesDataSet.xsc">
-      <DependentUpon>airlinesDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="airlinesDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>airlinesDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="airlinesDataSet.xss">
-      <DependentUpon>airlinesDataSet.xsd</DependentUpon>
-    </None>
     <None Include="LostAnimalsDesktop_ServiceDataSet.xsc">
       <DependentUpon>LostAnimalsDesktop_ServiceDataSet.xsd</DependentUpon>
     </None>
@@ -411,9 +272,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\checkmark_26px.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

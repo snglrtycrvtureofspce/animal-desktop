@@ -146,7 +146,10 @@
             // tableAdapterManager
             // 
             this.tableAdapterManager.AnimalsTableAdapter = null;
+            this.tableAdapterManager.AnimalTypesTableAdapter = null;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.LocationsTableAdapter = null;
+            this.tableAdapterManager.MovementPointsTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Service.Animals.Desktop.LostAnimalsDesktop_ServiceDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsersTableAdapter = this.usersTableAdapter;
             // 

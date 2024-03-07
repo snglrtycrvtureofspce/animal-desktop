@@ -6,15 +6,12 @@ namespace Service.Animals.Desktop
 {
     internal static class Program
     {
-        /// <summary>
-        /// Главная точка входа для приложения.
-        /// </summary>
         [STAThread]
-        private static void Main() // точка входа
+        private static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ProgresBar()); // запуск логотипа
+            Application.Run(new ProgresBar());
         }
     }
 }

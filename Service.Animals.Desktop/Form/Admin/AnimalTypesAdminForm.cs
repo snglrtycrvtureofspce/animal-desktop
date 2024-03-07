@@ -10,12 +10,12 @@ namespace Service.Animals.Desktop.Form.Admin
             InitializeComponent();
         }
 
-        private void AddButton_Click(object sender, System.EventArgs e)
+        private void AddButton_Click(object sender, EventArgs e)
         {
             animalTypesBindingSource.AddNew();
         }
 
-        private void DeleteButton_Click(object sender, System.EventArgs e)
+        private void DeleteButton_Click(object sender, EventArgs e)
         {
             if (DialogResult.Yes == MessageBox.Show("Вы уверены что хотите удалить?", "Подтверждение", MessageBoxButtons.YesNo))
             {
@@ -23,7 +23,7 @@ namespace Service.Animals.Desktop.Form.Admin
             }
         }
 
-        private void SaveButton_Click(object sender, System.EventArgs e)
+        private void SaveButton_Click(object sender, EventArgs e)
         {
             try
             {
@@ -38,14 +38,14 @@ namespace Service.Animals.Desktop.Form.Admin
             }
         }
 
-        private void animalTypesBindingNavigatorSaveItem_Click(object sender, System.EventArgs e)
+        private void animalTypesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
             this.animalTypesBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.lostAnimalsDesktop_ServiceDataSet);
         }
 
-        private void AnimalTypesAdminForm_Load(object sender, System.EventArgs e)
+        private void AnimalTypesAdminForm_Load(object sender, EventArgs e)
         {
             this.animalTypesTableAdapter.Fill(this.lostAnimalsDesktop_ServiceDataSet.AnimalTypes);
         }

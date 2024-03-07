@@ -306,6 +306,77 @@ SELECT Id, Username, Password, Name, Age, Email FROM Users WHERE (Id = @Id)</Com
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="V1TableAdapter" GeneratorDataComponentClassName="V1TableAdapter" Name="V1" UserDataComponentName="V1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="LostAnimalsDesktop_ServiceConnectionString (Settings)" DbObjectName="[LostAnimalsDesktop-Service].dbo.V1" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT НаименованиеТипа, ОписаниеТипа FROM dbo.V1</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="НаименованиеТипа" DataSetColumn="НаименованиеТипа" />
+              <Mapping SourceColumn="ОписаниеТипа" DataSetColumn="ОписаниеТипа" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="V2TableAdapter" GeneratorDataComponentClassName="V2TableAdapter" Name="V2" UserDataComponentName="V2TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="LostAnimalsDesktop_ServiceConnectionString (Settings)" DbObjectName="[LostAnimalsDesktop-Service].dbo.V2" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT IdТипаЖивотного, НаименованиеЖивотного, ОписаниеЖивотного FROM dbo.V2</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IdТипаЖивотного" DataSetColumn="IdТипаЖивотного" />
+              <Mapping SourceColumn="НаименованиеЖивотного" DataSetColumn="НаименованиеЖивотного" />
+              <Mapping SourceColumn="ОписаниеЖивотного" DataSetColumn="ОписаниеЖивотного" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="V3TableAdapter" GeneratorDataComponentClassName="V3TableAdapter" Name="V3" UserDataComponentName="V3TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="LostAnimalsDesktop_ServiceConnectionString (Settings)" DbObjectName="[LostAnimalsDesktop-Service].dbo.V3" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT НаименованиеЛокации, ОписаниеЛокации, Широта, Долгота FROM dbo.V3</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="НаименованиеЛокации" DataSetColumn="НаименованиеЛокации" />
+              <Mapping SourceColumn="ОписаниеЛокации" DataSetColumn="ОписаниеЛокации" />
+              <Mapping SourceColumn="Широта" DataSetColumn="Широта" />
+              <Mapping SourceColumn="Долгота" DataSetColumn="Долгота" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="V4TableAdapter" GeneratorDataComponentClassName="V4TableAdapter" Name="V4" UserDataComponentName="V4TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="LostAnimalsDesktop_ServiceConnectionString (Settings)" DbObjectName="[LostAnimalsDesktop-Service].dbo.V4" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT IdЖивотного, IdЛокации FROM dbo.V4</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IdЖивотного" DataSetColumn="IdЖивотного" />
+              <Mapping SourceColumn="IdЛокации" DataSetColumn="IdЛокации" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -423,6 +494,77 @@ SELECT Id, Username, Password, Name, Age, Email FROM Users WHERE (Id = @Id)</Com
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="V1" msprop:Generator_RowEvHandlerName="V1RowChangeEventHandler" msprop:Generator_RowDeletedName="V1RowDeleted" msprop:Generator_RowDeletingName="V1RowDeleting" msprop:Generator_RowEvArgName="V1RowChangeEvent" msprop:Generator_TablePropName="V1" msprop:Generator_RowChangedName="V1RowChanged" msprop:Generator_RowChangingName="V1RowChanging" msprop:Generator_TableClassName="V1DataTable" msprop:Generator_RowClassName="V1Row" msprop:Generator_TableVarName="tableV1" msprop:Generator_UserTableName="V1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="НаименованиеТипа" msprop:Generator_ColumnPropNameInRow="НаименованиеТипа" msprop:Generator_ColumnPropNameInTable="НаименованиеТипаColumn" msprop:Generator_ColumnVarNameInTable="columnНаименованиеТипа" msprop:Generator_UserColumnName="НаименованиеТипа">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ОписаниеТипа" msprop:Generator_ColumnPropNameInRow="ОписаниеТипа" msprop:Generator_ColumnPropNameInTable="ОписаниеТипаColumn" msprop:Generator_ColumnVarNameInTable="columnОписаниеТипа" msprop:Generator_UserColumnName="ОписаниеТипа" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="V2" msprop:Generator_RowEvHandlerName="V2RowChangeEventHandler" msprop:Generator_RowDeletedName="V2RowDeleted" msprop:Generator_RowDeletingName="V2RowDeleting" msprop:Generator_RowEvArgName="V2RowChangeEvent" msprop:Generator_TablePropName="V2" msprop:Generator_RowChangedName="V2RowChanged" msprop:Generator_RowChangingName="V2RowChanging" msprop:Generator_TableClassName="V2DataTable" msprop:Generator_RowClassName="V2Row" msprop:Generator_TableVarName="tableV2" msprop:Generator_UserTableName="V2">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdТипаЖивотного" msprop:Generator_ColumnPropNameInRow="IdТипаЖивотного" msprop:Generator_ColumnPropNameInTable="IdТипаЖивотногоColumn" msprop:Generator_ColumnVarNameInTable="columnIdТипаЖивотного" msprop:Generator_UserColumnName="IdТипаЖивотного" type="xs:int" />
+              <xs:element name="НаименованиеЖивотного" msprop:Generator_ColumnPropNameInRow="НаименованиеЖивотного" msprop:Generator_ColumnPropNameInTable="НаименованиеЖивотногоColumn" msprop:Generator_ColumnVarNameInTable="columnНаименованиеЖивотного" msprop:Generator_UserColumnName="НаименованиеЖивотного">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ОписаниеЖивотного" msprop:Generator_ColumnPropNameInRow="ОписаниеЖивотного" msprop:Generator_ColumnPropNameInTable="ОписаниеЖивотногоColumn" msprop:Generator_ColumnVarNameInTable="columnОписаниеЖивотного" msprop:Generator_UserColumnName="ОписаниеЖивотного" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="V3" msprop:Generator_RowEvHandlerName="V3RowChangeEventHandler" msprop:Generator_RowDeletedName="V3RowDeleted" msprop:Generator_RowDeletingName="V3RowDeleting" msprop:Generator_RowEvArgName="V3RowChangeEvent" msprop:Generator_TablePropName="V3" msprop:Generator_RowChangedName="V3RowChanged" msprop:Generator_RowChangingName="V3RowChanging" msprop:Generator_TableClassName="V3DataTable" msprop:Generator_RowClassName="V3Row" msprop:Generator_TableVarName="tableV3" msprop:Generator_UserTableName="V3">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="НаименованиеЛокации" msprop:Generator_ColumnPropNameInRow="НаименованиеЛокации" msprop:Generator_ColumnPropNameInTable="НаименованиеЛокацииColumn" msprop:Generator_ColumnVarNameInTable="columnНаименованиеЛокации" msprop:Generator_UserColumnName="НаименованиеЛокации">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ОписаниеЛокации" msprop:Generator_ColumnPropNameInRow="ОписаниеЛокации" msprop:Generator_ColumnPropNameInTable="ОписаниеЛокацииColumn" msprop:Generator_ColumnVarNameInTable="columnОписаниеЛокации" msprop:Generator_UserColumnName="ОписаниеЛокации" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Широта" msprop:Generator_ColumnPropNameInRow="Широта" msprop:Generator_ColumnPropNameInTable="ШиротаColumn" msprop:Generator_ColumnVarNameInTable="columnШирота" msprop:Generator_UserColumnName="Широта" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Долгота" msprop:Generator_ColumnPropNameInRow="Долгота" msprop:Generator_ColumnPropNameInTable="ДолготаColumn" msprop:Generator_ColumnVarNameInTable="columnДолгота" msprop:Generator_UserColumnName="Долгота" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="V4" msprop:Generator_RowEvHandlerName="V4RowChangeEventHandler" msprop:Generator_RowDeletedName="V4RowDeleted" msprop:Generator_RowDeletingName="V4RowDeleting" msprop:Generator_RowEvArgName="V4RowChangeEvent" msprop:Generator_TablePropName="V4" msprop:Generator_RowChangedName="V4RowChanged" msprop:Generator_RowChangingName="V4RowChanging" msprop:Generator_TableClassName="V4DataTable" msprop:Generator_RowClassName="V4Row" msprop:Generator_TableVarName="tableV4" msprop:Generator_UserTableName="V4">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdЖивотного" msprop:Generator_ColumnPropNameInRow="IdЖивотного" msprop:Generator_ColumnPropNameInTable="IdЖивотногоColumn" msprop:Generator_ColumnVarNameInTable="columnIdЖивотного" msprop:Generator_UserColumnName="IdЖивотного" type="xs:int" />
+              <xs:element name="IdЛокации" msprop:Generator_ColumnPropNameInRow="IdЛокации" msprop:Generator_ColumnPropNameInTable="IdЛокацииColumn" msprop:Generator_ColumnVarNameInTable="columnIdЛокации" msprop:Generator_UserColumnName="IdЛокации" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

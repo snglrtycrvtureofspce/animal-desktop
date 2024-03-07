@@ -10,12 +10,12 @@ namespace Service.Animals.Desktop.Form.Admin
             InitializeComponent();
         }
 
-        private void AddButton_Click(object sender, System.EventArgs e)
+        private void AddButton_Click(object sender, EventArgs e)
         {
             movementPointsBindingSource.AddNew();
         }
 
-        private void DeleteButton_Click(object sender, System.EventArgs e)
+        private void DeleteButton_Click(object sender, EventArgs e)
         {
             if (DialogResult.Yes == MessageBox.Show("Вы уверены что хотите удалить?", "Подтверждение", MessageBoxButtons.YesNo))
             {
@@ -23,7 +23,7 @@ namespace Service.Animals.Desktop.Form.Admin
             }
         }
 
-        private void SaveButton_Click(object sender, System.EventArgs e)
+        private void SaveButton_Click(object sender, EventArgs e)
         {
             try
             {
@@ -38,14 +38,14 @@ namespace Service.Animals.Desktop.Form.Admin
             }
         }
 
-        private void movementPointsBindingNavigatorSaveItem_Click(object sender, System.EventArgs e)
+        private void movementPointsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
             this.movementPointsBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.lostAnimalsDesktop_ServiceDataSet);
         }
 
-        private void MovementPointsAdminForm_Load(object sender, System.EventArgs e)
+        private void MovementPointsAdminForm_Load(object sender, EventArgs e)
         {
             this.locationsTableAdapter.Fill(this.lostAnimalsDesktop_ServiceDataSet.Locations);
             this.animalsTableAdapter.Fill(this.lostAnimalsDesktop_ServiceDataSet.Animals);
