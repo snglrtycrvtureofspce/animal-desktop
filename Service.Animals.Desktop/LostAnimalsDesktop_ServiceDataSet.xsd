@@ -306,6 +306,41 @@ SELECT Id, Username, Password, Name, Age, Email FROM Users WHERE (Id = @Id)</Com
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AnimalLocationViewTableAdapter" GeneratorDataComponentClassName="AnimalLocationViewTableAdapter" Name="AnimalLocationView" UserDataComponentName="AnimalLocationViewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="LostAnimalsDesktop_ServiceConnectionString (Settings)" DbObjectName="[LostAnimalsDesktop-Service].dbo.AnimalLocationView" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT НаименованиеЖивотного, НаименованиеЛокации FROM dbo.AnimalLocationView</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="НаименованиеЖивотного" DataSetColumn="НаименованиеЖивотного" />
+              <Mapping SourceColumn="НаименованиеЛокации" DataSetColumn="НаименованиеЛокации" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AnimalVisitViewTableAdapter" GeneratorDataComponentClassName="AnimalVisitViewTableAdapter" Name="AnimalVisitView" UserDataComponentName="AnimalVisitViewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="LostAnimalsDesktop_ServiceConnectionString (Settings)" DbObjectName="[LostAnimalsDesktop-Service].dbo.AnimalVisitView" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT НаименованиеЛокации, НаименованиеЖивотного, ДатаПосещения FROM dbo.AnimalVisitView</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="НаименованиеЛокации" DataSetColumn="НаименованиеЛокации" />
+              <Mapping SourceColumn="НаименованиеЖивотного" DataSetColumn="НаименованиеЖивотного" />
+              <Mapping SourceColumn="ДатаПосещения" DataSetColumn="ДатаПосещения" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="V1TableAdapter" GeneratorDataComponentClassName="V1TableAdapter" Name="V1" UserDataComponentName="V1TableAdapter">
             <MainSource>
               <DbSource ConnectionRef="LostAnimalsDesktop_ServiceConnectionString (Settings)" DbObjectName="[LostAnimalsDesktop-Service].dbo.V1" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
@@ -494,6 +529,47 @@ SELECT Id, Username, Password, Name, Age, Email FROM Users WHERE (Id = @Id)</Com
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AnimalLocationView" msprop:Generator_RowEvHandlerName="AnimalLocationViewRowChangeEventHandler" msprop:Generator_RowDeletedName="AnimalLocationViewRowDeleted" msprop:Generator_RowDeletingName="AnimalLocationViewRowDeleting" msprop:Generator_RowEvArgName="AnimalLocationViewRowChangeEvent" msprop:Generator_TablePropName="AnimalLocationView" msprop:Generator_RowChangedName="AnimalLocationViewRowChanged" msprop:Generator_RowChangingName="AnimalLocationViewRowChanging" msprop:Generator_TableClassName="AnimalLocationViewDataTable" msprop:Generator_RowClassName="AnimalLocationViewRow" msprop:Generator_TableVarName="tableAnimalLocationView" msprop:Generator_UserTableName="AnimalLocationView">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="НаименованиеЖивотного" msprop:Generator_ColumnPropNameInRow="НаименованиеЖивотного" msprop:Generator_ColumnPropNameInTable="НаименованиеЖивотногоColumn" msprop:Generator_ColumnVarNameInTable="columnНаименованиеЖивотного" msprop:Generator_UserColumnName="НаименованиеЖивотного">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="НаименованиеЛокации" msprop:Generator_ColumnPropNameInRow="НаименованиеЛокации" msprop:Generator_ColumnPropNameInTable="НаименованиеЛокацииColumn" msprop:Generator_ColumnVarNameInTable="columnНаименованиеЛокации" msprop:Generator_UserColumnName="НаименованиеЛокации">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AnimalVisitView" msprop:Generator_RowEvHandlerName="AnimalVisitViewRowChangeEventHandler" msprop:Generator_RowDeletedName="AnimalVisitViewRowDeleted" msprop:Generator_RowDeletingName="AnimalVisitViewRowDeleting" msprop:Generator_RowEvArgName="AnimalVisitViewRowChangeEvent" msprop:Generator_TablePropName="AnimalVisitView" msprop:Generator_RowChangedName="AnimalVisitViewRowChanged" msprop:Generator_RowChangingName="AnimalVisitViewRowChanging" msprop:Generator_TableClassName="AnimalVisitViewDataTable" msprop:Generator_RowClassName="AnimalVisitViewRow" msprop:Generator_TableVarName="tableAnimalVisitView" msprop:Generator_UserTableName="AnimalVisitView">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="НаименованиеЛокации" msprop:Generator_ColumnPropNameInRow="НаименованиеЛокации" msprop:Generator_ColumnPropNameInTable="НаименованиеЛокацииColumn" msprop:Generator_ColumnVarNameInTable="columnНаименованиеЛокации" msprop:Generator_UserColumnName="НаименованиеЛокации">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="НаименованиеЖивотного" msprop:Generator_ColumnPropNameInRow="НаименованиеЖивотного" msprop:Generator_ColumnPropNameInTable="НаименованиеЖивотногоColumn" msprop:Generator_ColumnVarNameInTable="columnНаименованиеЖивотного" msprop:Generator_UserColumnName="НаименованиеЖивотного">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ДатаПосещения" msprop:Generator_ColumnPropNameInRow="ДатаПосещения" msprop:Generator_ColumnPropNameInTable="ДатаПосещенияColumn" msprop:Generator_ColumnVarNameInTable="columnДатаПосещения" msprop:Generator_UserColumnName="ДатаПосещения" type="xs:dateTime" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

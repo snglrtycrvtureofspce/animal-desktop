@@ -150,10 +150,11 @@
     <Compile Include="Form\User\MovementPointsUserForm.Designer.cs">
       <DependentUpon>MovementPointsUserForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="LostAnimalsDesktop_ServiceDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>LostAnimalsDesktop_ServiceDataSet.xsd</DependentUpon>
+    <Compile Include="Form\User\SearchUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\User\SearchUserForm.Designer.cs">
+      <DependentUpon>SearchUserForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\Home.cs">
       <SubType>Form</SubType>
@@ -166,6 +167,11 @@
     </Compile>
     <Compile Include="Form\ProgresBar.Designer.cs">
       <DependentUpon>ProgresBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LostAnimalsDesktop_ServiceDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LostAnimalsDesktop_ServiceDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -234,6 +240,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\ProgresBar.resx">
       <DependentUpon>ProgresBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\User\SearchUserForm.resx">
+      <DependentUpon>SearchUserForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -207,3 +207,17 @@ FROM Locations;
 CREATE VIEW V4 AS
 SELECT AnimalId AS IdЖивотного, LocationId AS IdЛокации
 FROM MovementPoints;
+
+CREATE VIEW AnimalLocationView AS
+SELECT A.AnimalName AS НаименованиеЖивотного, L.LocationName AS НаименованиеЛокации
+FROM Animals A
+JOIN MovementPoints M ON A.AnimalId = M.AnimalId
+JOIN Locations L ON M.LocationId = L.LocationId;
+
+CREATE VIEW AnimalVisitView AS
+SELECT L.LocationName AS НаименованиеЛокации,
+       A.AnimalName AS НаименованиеЖивотного,
+       M.DateTime AS ДатаПосещения
+FROM Animals A
+JOIN MovementPoints M ON A.AnimalId = M.AnimalId
+JOIN Locations L ON M.LocationId = L.LocationId;

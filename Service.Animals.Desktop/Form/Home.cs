@@ -147,6 +147,13 @@ namespace Service.Animals.Desktop.Form
             movementPointsUserForm.Show();
         }
 
+        private void SearchUserButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SearchUserForm searchUserForm = new SearchUserForm();
+            searchUserForm.Show();
+        }
+
         // Administrative Part
 
         private void BtnAdmin_Click(object sender, EventArgs e)
