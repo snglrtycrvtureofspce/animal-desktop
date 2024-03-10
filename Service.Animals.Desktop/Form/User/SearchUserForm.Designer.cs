@@ -32,10 +32,10 @@
             System.Windows.Forms.Label SearchByLocationLabel;
             System.Windows.Forms.Label label2;
             System.Windows.Forms.Label label1;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchUserForm));
             System.Windows.Forms.Label label3;
             System.Windows.Forms.Label label4;
             System.Windows.Forms.Label label5;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchUserForm));
             this.lostAnimalsDesktop_ServiceDataSet = new Service.Animals.Desktop.LostAnimalsDesktop_ServiceDataSet();
             this.animalLocationViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.animalLocationViewTableAdapter = new Service.Animals.Desktop.LostAnimalsDesktop_ServiceDataSetTableAdapters.AnimalLocationViewTableAdapter();
@@ -107,6 +107,36 @@
             label1.Size = new System.Drawing.Size(95, 16);
             label1.TabIndex = 73;
             label1.Text = "Фильтрация:";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            label3.Location = new System.Drawing.Point(543, 25);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(406, 16);
+            label3.TabIndex = 76;
+            label3.Text = "Поиск по локации (по животному и дате посещения):";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new System.Drawing.Font("Verdana", 9.75F);
+            label4.Location = new System.Drawing.Point(497, 304);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(76, 16);
+            label4.TabIndex = 80;
+            label4.Text = "Критерий:";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new System.Drawing.Font("Verdana", 9.75F);
+            label5.Location = new System.Drawing.Point(497, 274);
+            label5.Name = "label5";
+            label5.Size = new System.Drawing.Size(95, 16);
+            label5.TabIndex = 78;
+            label5.Text = "Фильтрация:";
             // 
             // lostAnimalsDesktop_ServiceDataSet
             // 
@@ -321,26 +351,6 @@
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.Width = 117;
             // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            label3.Location = new System.Drawing.Point(543, 25);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(406, 16);
-            label3.TabIndex = 76;
-            label3.Text = "Поиск по локации (по животному и дате посещения):";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new System.Drawing.Font("Verdana", 9.75F);
-            label4.Location = new System.Drawing.Point(497, 304);
-            label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(76, 16);
-            label4.TabIndex = 80;
-            label4.Text = "Критерий:";
-            // 
             // tbFilterSearchLocationByAnimalsAndDate
             // 
             this.tbFilterSearchLocationByAnimalsAndDate.Location = new System.Drawing.Point(599, 275);
@@ -348,16 +358,6 @@
             this.tbFilterSearchLocationByAnimalsAndDate.Size = new System.Drawing.Size(378, 20);
             this.tbFilterSearchLocationByAnimalsAndDate.TabIndex = 79;
             this.tbFilterSearchLocationByAnimalsAndDate.TextChanged += new System.EventHandler(this.tbFilterSearchLocationByAnimalsAndDate_TextChanged);
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new System.Drawing.Font("Verdana", 9.75F);
-            label5.Location = new System.Drawing.Point(497, 274);
-            label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(95, 16);
-            label5.TabIndex = 78;
-            label5.Text = "Фильтрация:";
             // 
             // cbFilterSearchLocationByAnimalsAndDate
             // 
@@ -390,6 +390,7 @@
             this.Controls.Add(SearchByLocationLabel);
             this.Controls.Add(this.animalLocationViewDataGridView);
             this.Controls.Add(this.animalLocationViewBindingNavigator);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SearchUserForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Поиск";
