@@ -5,13 +5,11 @@ namespace snglrtycrvtureofspce.Animal.Data.Entities;
 public class UserEntity : IEntity
 {
     #region IEntity
-
     public Guid Id { get; set; }
 
     public DateTime CreatedDate { get; set; }
 
     public DateTime ModificationDate { get; set; }
-
     #endregion
 
     public string Username { get; set; }
@@ -25,6 +23,4 @@ public class UserEntity : IEntity
     public string Email { get; set; }
 
     public virtual List<RoleEntity> Roles { get; set; }
-
-    public virtual List<AnimalEntity> Animals { get; set; }
 }

@@ -6,14 +6,12 @@ using Microsoft.EntityFrameworkCore;
 using snglrtycrvtureofspce.Animal.Data;
 using snglrtycrvtureofspce.Animal.ViewModels;
 
-namespace snglrtycrvtureofspce.Animal.Handlers.AnimalController.UpdateAnimal;
+namespace snglrtycrvtureofspce.Animal.Handlers.AnimalTypeController.UpdateAnimalType;
 
-public class UpdateAnimalHandler(
-    AnimalsDbContext context,
-    IMapperBase mapper,
-    IValidator<UpdateAnimalRequest> validator) : IRequestHandler<UpdateAnimalRequest, UpdateAnimalResponse>
+public class UpdateAnimalTypeHandler(AnimalsDbContext context, IMapperBase mapper, 
+    IValidator<UpdateAnimalTypeRequest> validator) : IRequestHandler<UpdateAnimalTypeRequest, UpdateAnimalTypeResponse>
 {
-    public async Task<UpdateAnimalResponse> Handle(UpdateAnimalRequest request,
+    public async Task<UpdateAnimalTypeResponse> Handle(UpdateAnimalTypeRequest request, 
         CancellationToken cancellationToken)
     {
         var validationResult = await validator.ValidateAsync(request, cancellationToken);
@@ -23,34 +21,33 @@ public class UpdateAnimalHandler(
             throw new ValidationException(validationResult.Errors);
         }
 
-        var animal = await context.Animals.FirstOrDefaultAsync(i => i.Id == request.Id,
+        var animalType = await context.AnimalTypes.FirstOrDefaultAsync(i => i.Id == request.Id, 
             cancellationToken: cancellationToken);
 
-        if (animal == null)
+        if (animalType == null)
         {
-            throw new ValidationException("Animal not found",
+            throw new ValidationException("Animal type not found",
                 new List<ValidationFailure>
                 {
                     new()
                     {
                         PropertyName = nameof(request.Id),
-                        ErrorMessage = "Animal not found",
+                        ErrorMessage = "Animal type not found",
                         ErrorCode = StatusCodes.Status404NotFound.ToString()
                     }
                 });
         }
 
-        animal.Name = request.Name;
-        animal.Description = request.Description;
-        animal.AnimalTypeId = request.AnimalTypeId;
+        animalType.Name = request.Name;
+        animalType.Description = request.Description;
 
         await context.SaveChangesAsync(cancellationToken);
 
-        var model = mapper.Map<AnimalViewModel>(animal);
+        var model = mapper.Map<AnimalTypeViewModel>(animalType);
 
-        var response = new UpdateAnimalResponse
+        var response = new UpdateAnimalTypeResponse
         {
-            Message = "Animal have been successfully updated",
+            Message = "Animal type have been successfully updated",
             StatusCode = StatusCodes.Status200OK,
             Item = model
         };

@@ -2,7 +2,7 @@
 
 namespace snglrtycrvtureofspce.Animal.Data.Entities;
 
-public class AnimalEntity : IEntity
+public class MovementPointEntity : IEntity
 {
     #region IEntity
     public Guid Id { get; set; }
@@ -11,12 +11,12 @@ public class AnimalEntity : IEntity
 
     public DateTime ModificationDate { get; set; }
     #endregion
-
-    public string Name { get; set; }
-
-    public string Description { get; set; }
     
-    public Guid AnimalTypeId { get; set; }
+    public Guid AnimalId { get; set; }
     
-    public virtual AnimalTypeEntity AnimalType { get; set; }
+    public virtual AnimalEntity Animal { get; set; }
+    
+    public Guid LocationId { get; set; }
+    
+    public virtual LocationEntity Location { get; set; }
 }

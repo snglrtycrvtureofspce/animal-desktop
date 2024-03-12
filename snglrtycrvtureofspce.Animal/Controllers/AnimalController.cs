@@ -15,16 +15,6 @@ namespace snglrtycrvtureofspce.Animal.Controllers;
 public class AnimalController(ISender sender) : ControllerBase
 {
     /// <summary>
-    /// The method provider possibility to get a animal by id
-    /// </summary>
-    /// <param name="id">Identifier of the animal to be received</param>
-    /// <returns></returns>
-    [HttpGet("{id:guid}", Name = "GetAnimal")]
-    [SwaggerResponse(statusCode: StatusCodes.Status200OK, type: typeof(GetAnimalResponse))]
-    public async Task<IActionResult> GetAnimal(Guid id) =>
-        Ok(await sender.Send(new GetAnimalRequest { Id = id }));
-
-    /// <summary>
     /// The method provider possibility to create a animal
     /// </summary>
     /// <param name="request"></param>
@@ -33,6 +23,15 @@ public class AnimalController(ISender sender) : ControllerBase
     [SwaggerResponse(statusCode: StatusCodes.Status201Created, type: typeof(CreateAnimalResponse))]
     public async Task<IActionResult> CreateAnimal([FromBody] CreateAnimalRequest request) =>
         Ok(await sender.Send(request));
+    
+    /// <summary>
+    /// The method provider possibility to get a animal by id
+    /// </summary>
+    /// <param name="id">Identifier of the animal to be received</param>
+    /// <returns></returns>
+    [HttpGet("{id:guid}", Name = "GetAnimal")]
+    [SwaggerResponse(statusCode: StatusCodes.Status200OK, type: typeof(GetAnimalResponse))]
+    public async Task<IActionResult> GetAnimal(Guid id) => Ok(await sender.Send(new GetAnimalRequest { Id = id }));
 
     /// <summary>
     /// The method provider possibility to update a animal by id

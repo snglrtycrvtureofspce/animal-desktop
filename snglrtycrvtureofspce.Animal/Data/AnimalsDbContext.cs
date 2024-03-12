@@ -7,9 +7,16 @@ namespace snglrtycrvtureofspce.Animal.Data;
 public class AnimalsDbContext : DbContext
 {
     public virtual DbSet<UserEntity> Users { get; set; }
+    
     public virtual DbSet<RoleEntity> Roles { get; set; }
+    
+    public virtual DbSet<AnimalTypeEntity> AnimalTypes { get; set; }
+    
     public virtual DbSet<AnimalEntity> Animals { get; set; }
-    public virtual DbSet<MarkerEntity> Markers { get; set; }
+    
+    public virtual DbSet<LocationEntity> Locations { get; set; }
+    
+    public virtual DbSet<MovementPointEntity> MovementPoints { get; set; }
 
     public AnimalsDbContext(DbContextOptions<AnimalsDbContext> opt) : base(opt) { }
 
@@ -62,8 +69,10 @@ public class AnimalsDbContext : DbContext
     {
         modelBuilder.Entity<UserEntity>().HasKey(u => u.Id);
         modelBuilder.Entity<RoleEntity>().HasKey(r => r.Id);
+        modelBuilder.Entity<AnimalTypeEntity>().HasKey(a => a.Id);
         modelBuilder.Entity<AnimalEntity>().HasKey(a => a.Id);
-        modelBuilder.Entity<MarkerEntity>().HasKey(m => m.Id);
+        modelBuilder.Entity<LocationEntity>().HasKey(m => m.Id);
+        modelBuilder.Entity<MovementPointEntity>().HasKey(a => a.Id);
 
         modelBuilder.Entity<UserEntity>()
             .HasMany(u => u.Roles)
@@ -77,34 +86,6 @@ public class AnimalsDbContext : DbContext
                     .HasOne(ur => ur.User)
                     .WithMany()
                     .HasForeignKey(ur => ur.UserId)
-            );
-
-        modelBuilder.Entity<AnimalEntity>()
-            .HasMany(u => u.Markers)
-            .WithMany(r => r.Animals)
-            .UsingEntity<AnimalMarkerEntity>(
-                j => j
-                    .HasOne(ur => ur.Marker)
-                    .WithMany()
-                    .HasForeignKey(ur => ur.MarkerId),
-                j => j
-                    .HasOne(ur => ur.Animal)
-                    .WithMany()
-                    .HasForeignKey(ur => ur.AnimalId)
-            );
-
-        modelBuilder.Entity<AnimalEntity>()
-            .HasMany(u => u.Users)
-            .WithMany(r => r.Animals)
-            .UsingEntity<AnimalUserEntity>(
-                j => j
-                    .HasOne(ur => ur.User)
-                    .WithMany()
-                    .HasForeignKey(ur => ur.UserId),
-                j => j
-                    .HasOne(ur => ur.Animal)
-                    .WithMany()
-                    .HasForeignKey(ur => ur.AnimalId)
             );
 
         base.OnModelCreating(modelBuilder);

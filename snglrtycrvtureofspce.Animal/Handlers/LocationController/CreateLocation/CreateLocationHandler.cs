@@ -5,12 +5,13 @@ using snglrtycrvtureofspce.Animal.Data;
 using snglrtycrvtureofspce.Animal.Data.Entities;
 using snglrtycrvtureofspce.Animal.ViewModels;
 
-namespace snglrtycrvtureofspce.Animal.Handlers.AnimalController.CreateAnimal;
+namespace snglrtycrvtureofspce.Animal.Handlers.LocationController.CreateLocation;
 
-public class CreateAnimalHandler(AnimalsDbContext context, IMapperBase mapper, 
-    IValidator<CreateAnimalRequest> validator) : IRequestHandler<CreateAnimalRequest, CreateAnimalResponse>
+public class CreateLocationHandler(AnimalsDbContext context, IMapperBase mapper, 
+    IValidator<CreateLocationRequest> validator) : IRequestHandler<CreateLocationRequest, CreateLocationResponse>
 {
-    public async Task<CreateAnimalResponse> Handle(CreateAnimalRequest request, CancellationToken cancellationToken)
+    public async Task<CreateLocationResponse> Handle(CreateLocationRequest request, 
+        CancellationToken cancellationToken)
     {
         var validationResult = await validator.ValidateAsync(request, cancellationToken);
 
@@ -19,22 +20,23 @@ public class CreateAnimalHandler(AnimalsDbContext context, IMapperBase mapper,
             throw new ValidationException(validationResult.Errors);
         }
 
-        var animal = new AnimalEntity
+        var location = new LocationEntity
         {
             Id = Guid.NewGuid(),
             Name = request.Name,
             Description = request.Description,
-            AnimalTypeId = request.AnimalTypeId
+            Latitude = request.Latitude,
+            Longitude = request.Longitude
         };
 
-        context.Animals.Add(animal);
+        context.Locations.Add(location);
         await context.SaveChangesAsync(cancellationToken);
 
-        var model = mapper.Map<AnimalViewModel>(animal);
+        var model = mapper.Map<LocationViewModel>(location);
 
-        var response = new CreateAnimalResponse
+        var response = new CreateLocationResponse
         {
-            Message = "Animal have been successfully created",
+            Message = "Location have been successfully created",
             StatusCode = StatusCodes.Status201Created,
             Item = model
         };

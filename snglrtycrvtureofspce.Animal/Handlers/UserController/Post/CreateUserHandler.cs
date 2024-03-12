@@ -28,8 +28,7 @@ public class CreateUserHandler(AnimalsDbContext context, IValidator<CreateUserCo
             Name = request.Name,
             Age = request.Age,
             Email = request.Email,
-            Roles = new List<RoleEntity>(),
-            Animals = new List<AnimalEntity>()
+            Roles = new List<RoleEntity>()
         };
 
         context.Users.Add(newUser);
