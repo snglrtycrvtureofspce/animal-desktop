@@ -377,3 +377,10 @@ C:\Users\asp1r\OneDrive\Документы\snglrtycrvtureofspce\Git\animal-servi
 C:\Users\asp1r\OneDrive\Документы\snglrtycrvtureofspce\Git\animal-service\snglrtycrvtureofspce.Animal.Tests\obj\Debug\net8.0\snglrtycrvtureofspce.Animal.Tests.pdb
 C:\Users\asp1r\OneDrive\Документы\snglrtycrvtureofspce\Git\animal-service\snglrtycrvtureofspce.Animal.Tests\obj\Debug\net8.0\snglrtycrvtureofspce.Animal.Tests.genruntimeconfig.cache
 C:\Users\asp1r\OneDrive\Документы\snglrtycrvtureofspce\Git\animal-service\snglrtycrvtureofspce.Animal.Tests\obj\Debug\net8.0\ref\snglrtycrvtureofspce.Animal.Tests.dll
+C:\Users\asp1r\OneDrive\Документы\snglrtycrvtureofspce\Git\animal-service\snglrtycrvtureofspce.Animal.Tests\bin\Debug\net8.0\ClientApp\angular.json
+C:\Users\asp1r\OneDrive\Документы\snglrtycrvtureofspce\Git\animal-service\snglrtycrvtureofspce.Animal.Tests\bin\Debug\net8.0\ClientApp\package-lock.json
+C:\Users\asp1r\OneDrive\Документы\snglrtycrvtureofspce\Git\animal-service\snglrtycrvtureofspce.Animal.Tests\bin\Debug\net8.0\ClientApp\package.json
+C:\Users\asp1r\OneDrive\Документы\snglrtycrvtureofspce\Git\animal-service\snglrtycrvtureofspce.Animal.Tests\bin\Debug\net8.0\ClientApp\tsconfig.app.json
+C:\Users\asp1r\OneDrive\Документы\snglrtycrvtureofspce\Git\animal-service\snglrtycrvtureofspce.Animal.Tests\bin\Debug\net8.0\ClientApp\tsconfig.json
+C:\Users\asp1r\OneDrive\Документы\snglrtycrvtureofspce\Git\animal-service\snglrtycrvtureofspce.Animal.Tests\bin\Debug\net8.0\ClientApp\tsconfig.spec.json
+C:\Users\asp1r\OneDrive\Документы\snglrtycrvtureofspce\Git\animal-service\snglrtycrvtureofspce.Animal.Tests\bin\Debug\net8.0\snglrtycrvtureofspce.Animal.xml

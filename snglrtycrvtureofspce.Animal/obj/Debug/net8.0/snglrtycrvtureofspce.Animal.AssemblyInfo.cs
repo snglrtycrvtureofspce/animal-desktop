@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("snglrtycrvtureofspce")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b0ee22ab3e93fa5ec21da6e816a159adabbee39a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9a8ca49d4d13f558d7b00fc766cc5fe650c4a33b")]
 [assembly: System.Reflection.AssemblyProductAttribute("snglrtycrvtureofspce.Animal")]
 [assembly: System.Reflection.AssemblyTitleAttribute("snglrtycrvtureofspce.Animal")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
