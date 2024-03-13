@@ -1,4 +1,5 @@
 {
+  "$schema": "https://json.schemastore.org/launchsettings.json",
   "profiles": {
     "snglrtycrvtureofspce.Animal: Web": {
       "commandName": "Project",
@@ -20,7 +21,6 @@
       "applicationUrl": "https://localhost:7255;http://localhost:5276"
     }
   },
-  "$schema": "https://json.schemastore.org/launchsettings.json",
   "iisSettings": {
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
