@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>snglrtycrvtureofspce.Api.Animal</id>
+    <version>1.0.0</version>
+    <authors>snglrtycrvtureofspce</authors>
+    <description>Package Description</description>
+    <repository type="git" commit="958b4d6f2d3211b7d6af060afd183e71466f62bb" />
+    <dependencies>
+      <group targetFramework="net8.0">
+        <dependency id="MediatR" version="12.2.0" exclude="Build,Analyzers" />
+        <dependency id="Newtonsoft.Json" version="12.0.3" exclude="Build,Analyzers" />
+        <dependency id="Refit" version="7.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\asp1r\OneDrive\Документы\snglrtycrvtureofspce\Git\animal-service\snglrtycrvtureofspce.Api.Animal\bin\Debug\net8.0\snglrtycrvtureofspce.Api.Animal.dll" target="lib\net8.0\snglrtycrvtureofspce.Api.Animal.dll" />
+  </files>
+</package>

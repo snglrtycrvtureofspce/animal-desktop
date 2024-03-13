@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "/IatpqM2bfvAQ0xBu1sTsHjU1CzKgzn5O8XVH9FHaLw=",
+  "Source": "snglrtycrvtureofspce.Animal",
+  "BasePath": "_content/snglrtycrvtureofspce.Animal",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "snglrtycrvtureofspce.Animal\\wwwroot",
+      "Source": "snglrtycrvtureofspce.Animal",
+      "ContentRoot": "C:\\Users\\asp1r\\OneDrive\\Документы\\snglrtycrvtureofspce\\Git\\animal-service\\snglrtycrvtureofspce.Animal\\wwwroot\\",
+      "BasePath": "_content/snglrtycrvtureofspce.Animal",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\asp1r\\OneDrive\\Документы\\snglrtycrvtureofspce\\Git\\animal-service\\snglrtycrvtureofspce.Animal\\wwwroot\\favicon.ico",
+      "SourceId": "snglrtycrvtureofspce.Animal",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\asp1r\\OneDrive\\Документы\\snglrtycrvtureofspce\\Git\\animal-service\\snglrtycrvtureofspce.Animal\\wwwroot\\",
+      "BasePath": "_content/snglrtycrvtureofspce.Animal",
+      "RelativePath": "favicon.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\favicon.ico"
+    }
+  ]
+}

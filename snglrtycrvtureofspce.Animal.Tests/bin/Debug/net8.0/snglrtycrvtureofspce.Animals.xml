@@ -1,0 +1,222 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>snglrtycrvtureofspce.Animals</name>
+    </assembly>
+    <members>
+        <member name="M:snglrtycrvtureofspce.Animals.Controllers.AnimalController.GetAnimal(System.Guid)">
+            <summary>
+            The method provider possibility to get a animal by id
+            </summary>
+            <param name="id">Identifier of the animal to be received</param>
+            <returns></returns>
+        </member>
+        <member name="M:snglrtycrvtureofspce.Animals.Controllers.AnimalController.CreateAnimal(snglrtycrvtureofspce.Animals.Handlers.AnimalController.CreateAnimal.CreateAnimalRequest)">
+            <summary>
+            The method provider possibility to create a animal
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:snglrtycrvtureofspce.Animals.Controllers.AnimalController.UpdateAnimal(System.Guid,snglrtycrvtureofspce.Animals.Handlers.AnimalController.UpdateAnimal.UpdateAnimalRequest)">
+            <summary>
+            The method provider possibility to update a animal by id
+            </summary>
+            <param name="id">Identifier of the animal to be received</param>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:snglrtycrvtureofspce.Animals.Controllers.AnimalController.DeleteAnimal(System.Guid)">
+            <summary>
+            The method provider possibility to delete a animal by id
+            </summary>
+            <param name="id">Identifier of the animal to be received</param>
+            <returns></returns>
+        </member>
+        <member name="M:snglrtycrvtureofspce.Animals.Controllers.MarkerController.GetMarker(System.Guid)">
+            <summary>
+            The method provider possibility to get a marker by id
+            </summary>
+            <param name="id">Identifier of the marker to be received</param>
+            <returns></returns>
+        </member>
+        <member name="M:snglrtycrvtureofspce.Animals.Controllers.MarkerController.CreateMarker(snglrtycrvtureofspce.Animals.Handlers.MarkerController.CreateMarker.CreateMarkerRequest)">
+            <summary>
+            The method provider possibility to create a marker
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:snglrtycrvtureofspce.Animals.Controllers.MarkerController.UpdateMarker(System.Guid,snglrtycrvtureofspce.Animals.Handlers.MarkerController.UpdateMarker.UpdateMarkerRequest)">
+            <summary>
+            The method provider possibility to update a marker by id
+            </summary>
+            <param name="id">Identifier of the marker to be received</param>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:snglrtycrvtureofspce.Animals.Controllers.MarkerController.DeleteMarker(System.Guid)">
+            <summary>
+            The method provider possibility to delete a marker by id
+            </summary>
+            <param name="id">Identifier of the marker to be received</param>
+            <returns></returns>
+        </member>
+        <member name="T:snglrtycrvtureofspce.Animals.Controllers.RolesController">
+            <summary>
+            Controller for interaction with the roles
+            </summary>
+        </member>
+        <member name="M:snglrtycrvtureofspce.Animals.Controllers.RolesController.#ctor(MediatR.IMediator)">
+            <inheritdoc />
+        </member>
+        <member name="M:snglrtycrvtureofspce.Animals.Controllers.RolesController.AddUserRole(System.Guid,System.Guid)">
+            <summary>
+            The method provider possibility to add a role to user
+            </summary>
+        </member>
+        <member name="M:snglrtycrvtureofspce.Animals.Controllers.RolesController.GetRoleById(System.Guid)">
+            <summary>
+            The method provider possibility to get a role by id 
+            </summary>
+        </member>
+        <member name="M:snglrtycrvtureofspce.Animals.Controllers.RolesController.CreateRole(snglrtycrvtureofspce.Animals.Handlers.RoleController.Post.Command.CreateRoleCommand)">
+            <summary>
+            The method provider possibility to create a role
+            </summary>
+        </member>
+        <member name="M:snglrtycrvtureofspce.Animals.Controllers.RolesController.UpdateRole(System.Guid,snglrtycrvtureofspce.Animals.Handlers.RoleController.Put.UpdateRoleCommand)">
+            <summary>
+            The method provider possibility to update a role
+            </summary>
+        </member>
+        <member name="M:snglrtycrvtureofspce.Animals.Controllers.RolesController.DeleteRole(System.Guid)">
+            <summary>
+            The method provider possibility to delete a role
+            </summary>
+        </member>
+        <member name="T:snglrtycrvtureofspce.Animals.Controllers.UsersController">
+            <summary>
+            Controller for interaction with the users
+            </summary>
+        </member>
+        <member name="M:snglrtycrvtureofspce.Animals.Controllers.UsersController.#ctor(MediatR.IMediator)">
+            <inheritdoc />
+        </member>
+        <member name="M:snglrtycrvtureofspce.Animals.Controllers.UsersController.GetUsers(snglrtycrvtureofspce.Animals.Handlers.UserController.Get.Query.GetAllUsersQuery)">
+            <summary>
+            The method provider possibility to get all users
+            </summary>
+        </member>
+        <member name="M:snglrtycrvtureofspce.Animals.Controllers.UsersController.GetUserById(System.Guid)">
+            <summary>
+            The method provider possibility to get a user by id 
+            </summary>
+        </member>
+        <member name="M:snglrtycrvtureofspce.Animals.Controllers.UsersController.CreateUser(snglrtycrvtureofspce.Animals.Handlers.UserController.Post.CreateUserCommand)">
+            <summary>
+            The method provider possibility to create a user
+            </summary>
+        </member>
+        <member name="M:snglrtycrvtureofspce.Animals.Controllers.UsersController.UpdateUser(System.Guid,snglrtycrvtureofspce.Animals.Handlers.UserController.Put.UpdateUserCommand)">
+            <summary>
+            The method provider possibility to update a user
+            </summary>
+        </member>
+        <member name="M:snglrtycrvtureofspce.Animals.Controllers.UsersController.DeleteUser(System.Guid)">
+            <summary>
+            The method provider possibility to delete a user
+            </summary>
+        </member>
+        <member name="T:snglrtycrvtureofspce.Animals.Filters.SwaggerDefaultValues">
+            <summary>
+            Represents the OpenAPI/Swashbuckle operation filter used to document information provided, but not used.
+            </summary>
+            <remarks>This <see cref="T:Swashbuckle.AspNetCore.SwaggerGen.IOperationFilter"/> is only required due to bugs in the <see cref="T:Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator"/>.
+            Once they are fixed and published, this class can be removed.</remarks>
+        </member>
+        <member name="M:snglrtycrvtureofspce.Animals.Filters.SwaggerDefaultValues.Apply(Microsoft.OpenApi.Models.OpenApiOperation,Swashbuckle.AspNetCore.SwaggerGen.OperationFilterContext)">
+            <inheritdoc />
+        </member>
+        <member name="T:snglrtycrvtureofspce.Animals.Handlers.RoleController.Delete.DeleteRoleCommand">
+            <inheritdoc />
+        </member>
+        <member name="T:snglrtycrvtureofspce.Animals.Handlers.RoleController.Delete.DeleteRoleHandler">
+            <summary>
+            Handler for the DeleteRole method
+            </summary>
+        </member>
+        <member name="M:snglrtycrvtureofspce.Animals.Handlers.RoleController.Delete.DeleteRoleHandler.#ctor(snglrtycrvtureofspce.Animals.Data.AnimalsDbContext)">
+            <summary>
+            Constructor with params for DeleteRoleHandler
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:snglrtycrvtureofspce.Animals.Handlers.RoleController.Delete.DeleteRoleHandler.Handle(snglrtycrvtureofspce.Animals.Handlers.RoleController.Delete.DeleteRoleCommand,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:snglrtycrvtureofspce.Animals.Handlers.RoleController.Get.GetRoleByIdQuery">
+            <inheritdoc />
+        </member>
+        <member name="T:snglrtycrvtureofspce.Animals.Handlers.RoleController.Post.Command.AddUserRoleCommand">
+            <inheritdoc />
+        </member>
+        <member name="T:snglrtycrvtureofspce.Animals.Handlers.RoleController.Post.Command.CreateRoleCommand">
+            <inheritdoc />
+        </member>
+        <member name="T:snglrtycrvtureofspce.Animals.Handlers.RoleController.Post.Handler.AddUserRoleHandler">
+            <summary>
+            Handler for the AddUserRole method
+            </summary>
+        </member>
+        <member name="M:snglrtycrvtureofspce.Animals.Handlers.RoleController.Post.Handler.AddUserRoleHandler.#ctor(snglrtycrvtureofspce.Animals.Data.AnimalsDbContext)">
+            <summary>
+            Constructor with params for AddUserRoleHandler
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:snglrtycrvtureofspce.Animals.Handlers.RoleController.Post.Handler.AddUserRoleHandler.Handle(snglrtycrvtureofspce.Animals.Handlers.RoleController.Post.Command.AddUserRoleCommand,System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="T:snglrtycrvtureofspce.Animals.Handlers.RoleController.Put.UpdateRoleCommand">
+            <inheritdoc />
+        </member>
+        <member name="T:snglrtycrvtureofspce.Animals.Handlers.RoleController.Validator.CreateRoleCommandValidator">
+            <summary>
+            Data validator for the role creation method
+            </summary>
+        </member>
+        <member name="M:snglrtycrvtureofspce.Animals.Handlers.RoleController.Validator.CreateRoleCommandValidator.#ctor">
+            <inheritdoc />
+        </member>
+        <member name="T:snglrtycrvtureofspce.Animals.Handlers.RoleController.Validator.UpdateRoleCommandValidator">
+            <summary>
+            Data validator for the role update method
+            </summary>
+        </member>
+        <member name="M:snglrtycrvtureofspce.Animals.Handlers.RoleController.Validator.UpdateRoleCommandValidator.#ctor">
+            <inheritdoc />
+        </member>
+        <member name="T:snglrtycrvtureofspce.Animals.Handlers.UserController.Get.Query.GetAllUsersQuery">
+            <inheritdoc />
+        </member>
+        <member name="T:snglrtycrvtureofspce.Animals.Handlers.UserController.Post.CreateUserCommand">
+            <inheritdoc />
+        </member>
+        <member name="T:snglrtycrvtureofspce.Animals.Handlers.UserController.Put.UpdateUserCommand">
+            <inheritdoc />
+        </member>
+        <member name="T:snglrtycrvtureofspce.Animals.Migrations.InitialDatabase">
+            <inheritdoc />
+        </member>
+        <member name="M:snglrtycrvtureofspce.Animals.Migrations.InitialDatabase.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:snglrtycrvtureofspce.Animals.Migrations.InitialDatabase.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:snglrtycrvtureofspce.Animals.Migrations.InitialDatabase.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
