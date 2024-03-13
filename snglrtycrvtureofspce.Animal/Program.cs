@@ -81,7 +81,7 @@ builder.Services.AddSwaggerGen(
         var fileName = typeof(SwaggerDefaultValues).Assembly.GetName().Name + ".xml";
         var filePath = Path.Combine(AppContext.BaseDirectory, fileName);
 
-        options.IncludeXmlComments(filePath);
+        //options.IncludeXmlComments(filePath);
 
         options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
         {
