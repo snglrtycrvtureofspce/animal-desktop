@@ -44,6 +44,7 @@
             this.gunaPanel4 = new Guna.UI.WinForms.GunaPanel();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.UserPanel = new Guna.UI.WinForms.GunaPanel();
+            this.SearchUserButton = new Guna.UI.WinForms.GunaAdvenceButton();
             this.MovementPointsUserButton = new Guna.UI.WinForms.GunaAdvenceButton();
             this.LocationsUserButton = new Guna.UI.WinForms.GunaAdvenceButton();
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
@@ -60,7 +61,6 @@
             this.UserPicture = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.TopPanel = new Guna.UI.WinForms.GunaShadowPanel();
             this.UserName = new Guna.UI.WinForms.GunaLabel();
-            this.SearchUserButton = new Guna.UI.WinForms.GunaAdvenceButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.AdminPanel.SuspendLayout();
@@ -370,6 +370,41 @@
             this.UserPanel.Size = new System.Drawing.Size(170, 272);
             this.UserPanel.TabIndex = 7;
             // 
+            // SearchUserButton
+            // 
+            this.SearchUserButton.AnimationHoverSpeed = 0.07F;
+            this.SearchUserButton.AnimationSpeed = 0.03F;
+            this.SearchUserButton.BaseColor = System.Drawing.Color.White;
+            this.SearchUserButton.BorderColor = System.Drawing.Color.Black;
+            this.SearchUserButton.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.SearchUserButton.CheckedBorderColor = System.Drawing.Color.Black;
+            this.SearchUserButton.CheckedForeColor = System.Drawing.Color.Black;
+            this.SearchUserButton.CheckedImage = null;
+            this.SearchUserButton.CheckedLineColor = System.Drawing.Color.Gray;
+            this.SearchUserButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SearchUserButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.SearchUserButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.SearchUserButton.FocusedColor = System.Drawing.Color.Empty;
+            this.SearchUserButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.SearchUserButton.ForeColor = System.Drawing.Color.Black;
+            this.SearchUserButton.Image = null;
+            this.SearchUserButton.ImageOffsetX = 5;
+            this.SearchUserButton.ImageSize = new System.Drawing.Size(20, 20);
+            this.SearchUserButton.LineColor = System.Drawing.SystemColors.Control;
+            this.SearchUserButton.Location = new System.Drawing.Point(0, 191);
+            this.SearchUserButton.Name = "SearchUserButton";
+            this.SearchUserButton.OnHoverBaseColor = System.Drawing.SystemColors.Control;
+            this.SearchUserButton.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.SearchUserButton.OnHoverForeColor = System.Drawing.Color.Black;
+            this.SearchUserButton.OnHoverImage = null;
+            this.SearchUserButton.OnHoverLineColor = System.Drawing.SystemColors.Control;
+            this.SearchUserButton.OnPressedColor = System.Drawing.Color.Black;
+            this.SearchUserButton.Size = new System.Drawing.Size(170, 30);
+            this.SearchUserButton.TabIndex = 11;
+            this.SearchUserButton.Text = "Поиск";
+            this.SearchUserButton.TextOffsetX = 10;
+            this.SearchUserButton.Click += new System.EventHandler(this.SearchUserButton_Click);
+            // 
             // MovementPointsUserButton
             // 
             this.MovementPointsUserButton.AnimationHoverSpeed = 0.07F;
@@ -572,9 +607,9 @@
             this.gunaLabel4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.gunaLabel4.Location = new System.Drawing.Point(58, 22);
             this.gunaLabel4.Name = "gunaLabel4";
-            this.gunaLabel4.Size = new System.Drawing.Size(53, 13);
+            this.gunaLabel4.Size = new System.Drawing.Size(49, 13);
             this.gunaLabel4.TabIndex = 1;
-            this.gunaLabel4.Text = "таблицы";
+            this.gunaLabel4.Text = "и поиск";
             // 
             // gunaLabel1
             // 
@@ -583,9 +618,9 @@
             this.gunaLabel1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.gunaLabel1.Location = new System.Drawing.Point(12, 5);
             this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(156, 13);
+            this.gunaLabel1.Size = new System.Drawing.Size(145, 13);
             this.gunaLabel1.TabIndex = 0;
-            this.gunaLabel1.Text = "Запросы и результирующие";
+            this.gunaLabel1.Text = "Результирующие таблицы";
             // 
             // MenuPanel
             // 
@@ -688,41 +723,6 @@
             this.UserName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.UserName.UseMnemonic = false;
             this.UserName.Visible = false;
-            // 
-            // SearchUserButton
-            // 
-            this.SearchUserButton.AnimationHoverSpeed = 0.07F;
-            this.SearchUserButton.AnimationSpeed = 0.03F;
-            this.SearchUserButton.BaseColor = System.Drawing.Color.White;
-            this.SearchUserButton.BorderColor = System.Drawing.Color.Black;
-            this.SearchUserButton.CheckedBaseColor = System.Drawing.Color.Gray;
-            this.SearchUserButton.CheckedBorderColor = System.Drawing.Color.Black;
-            this.SearchUserButton.CheckedForeColor = System.Drawing.Color.Black;
-            this.SearchUserButton.CheckedImage = null;
-            this.SearchUserButton.CheckedLineColor = System.Drawing.Color.Gray;
-            this.SearchUserButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SearchUserButton.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.SearchUserButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.SearchUserButton.FocusedColor = System.Drawing.Color.Empty;
-            this.SearchUserButton.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.SearchUserButton.ForeColor = System.Drawing.Color.Black;
-            this.SearchUserButton.Image = null;
-            this.SearchUserButton.ImageOffsetX = 5;
-            this.SearchUserButton.ImageSize = new System.Drawing.Size(20, 20);
-            this.SearchUserButton.LineColor = System.Drawing.SystemColors.Control;
-            this.SearchUserButton.Location = new System.Drawing.Point(0, 191);
-            this.SearchUserButton.Name = "SearchUserButton";
-            this.SearchUserButton.OnHoverBaseColor = System.Drawing.SystemColors.Control;
-            this.SearchUserButton.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.SearchUserButton.OnHoverForeColor = System.Drawing.Color.Black;
-            this.SearchUserButton.OnHoverImage = null;
-            this.SearchUserButton.OnHoverLineColor = System.Drawing.SystemColors.Control;
-            this.SearchUserButton.OnPressedColor = System.Drawing.Color.Black;
-            this.SearchUserButton.Size = new System.Drawing.Size(170, 30);
-            this.SearchUserButton.TabIndex = 11;
-            this.SearchUserButton.Text = "Поиск";
-            this.SearchUserButton.TextOffsetX = 10;
-            this.SearchUserButton.Click += new System.EventHandler(this.SearchUserButton_Click);
             // 
             // Home
             // 

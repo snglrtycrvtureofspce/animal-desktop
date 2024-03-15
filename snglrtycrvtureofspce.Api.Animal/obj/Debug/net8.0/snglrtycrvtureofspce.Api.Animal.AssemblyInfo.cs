@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("snglrtycrvtureofspce")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ab533518299d973cba9f1dd9d1439434463421ca")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+54d7b7ad2fbaab9ed1179322b56218cd20f670d7")]
 [assembly: System.Reflection.AssemblyProductAttribute("snglrtycrvtureofspce.Api.Animal")]
 [assembly: System.Reflection.AssemblyTitleAttribute("snglrtycrvtureofspce.Api.Animal")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

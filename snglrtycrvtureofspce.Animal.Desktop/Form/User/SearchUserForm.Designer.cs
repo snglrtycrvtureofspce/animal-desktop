@@ -186,7 +186,7 @@
             this.animalLocationViewBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.animalLocationViewBindingNavigator.Name = "animalLocationViewBindingNavigator";
             this.animalLocationViewBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.animalLocationViewBindingNavigator.Size = new System.Drawing.Size(1088, 25);
+            this.animalLocationViewBindingNavigator.Size = new System.Drawing.Size(989, 25);
             this.animalLocationViewBindingNavigator.TabIndex = 0;
             this.animalLocationViewBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -376,7 +376,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1088, 450);
+            this.ClientSize = new System.Drawing.Size(989, 339);
             this.Controls.Add(label4);
             this.Controls.Add(this.tbFilterSearchLocationByAnimalsAndDate);
             this.Controls.Add(label5);
