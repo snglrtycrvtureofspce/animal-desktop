@@ -16,63 +16,27 @@ namespace snglrtycrvtureofspce.Animal.Desktop.Form
         }
 
         private void query1Button_Click(object sender, EventArgs e)
-            // Определить расчётное время полета по всем маршрутам
+        // Процедура для выборки всех животных определенного типа
         {
-            string query = "SELECT FlightID, Distance, Speed " +
-                           "FROM Flights " +
-                           "INNER JOIN Airplanes " +
-                           "ON Flights.AirplaneID = Airplanes.AirplaneID";
+            string query = "EXEC GetAnimalsByType @TypeName";
             DataTable dt = new DataTable();
 
             using (SqlConnection conn = new SqlConnection(_connectionString))
             using (SqlCommand cmd = new SqlCommand(query, conn))
             using (SqlDataAdapter da = new SqlDataAdapter(cmd))
             {
+                cmd.Parameters.AddWithValue("@TypeName", "Млекопитающие");
                 conn.Open();
                 da.Fill(dt);
             }
 
-            DataTable result = new DataTable();
-            result.Columns.Add("FlightID", typeof(int));
-            result.Columns.Add("FlightTime", typeof(double));
-
-            foreach (DataRow row in dt.Rows)
-            {
-                var flightTime2 = Convert.ToDouble(row["Distance"]) / Convert.ToDouble(row["Speed"]);
-                result.Rows.Add(row["FlightID"], flightTime2);
-            }
-
-            queryDataGridView.DataSource = result;
+            queryDataGridView.DataSource = dt;
         }
 
         private void query2Button_Click(object sender, EventArgs e)
-            // Определить расход топлива по всем маршрутам
+        // Процедура для выборки последних точек движения для конкретного животного
         {
-            string query = "SELECT FlightID, Distance, Airplanes.FuelConsumption " +
-                           "FROM Flights " +
-                           "INNER JOIN Airplanes " +
-                           "ON Flights.AirplaneID = Airplanes.AirplaneID";
-            DataTable dt = new DataTable();
-
-            using (SqlConnection conn = new SqlConnection(_connectionString))
-            using (SqlCommand cmd = new SqlCommand(query, conn))
-            using (SqlDataAdapter da = new SqlDataAdapter(cmd))
-            {
-                conn.Open();
-                da.Fill(dt);
-            }
-
-            DataTable result = new DataTable();
-            result.Columns.Add("FlightID", typeof(int));
-            result.Columns.Add("FuelConsumption", typeof(double));
-
-            foreach (DataRow row in dt.Rows)
-            {
-                var fuelConsumption = Convert.ToDouble(row["Distance"]) * Convert.ToDouble(row["FuelConsumption"]);
-                result.Rows.Add(row["FlightID"], fuelConsumption);
-            }
-
-            queryDataGridView.DataSource = result;
+            
         }
 
         private void query3Button_Click(object sender, EventArgs e)

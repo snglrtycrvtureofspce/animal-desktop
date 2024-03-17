@@ -57,5 +57,31 @@ namespace snglrtycrvtureofspce.Animal.Desktop.Form.Admin
             this.Hide();
             Home.Instance.Show();
         }
+
+        private void fillByToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.movementPointsTableAdapter.FillBy(this.lostAnimalsDesktop_ServiceDataSet.MovementPoints);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void fillBy1ToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.movementPointsTableAdapter.FillBy1(this.lostAnimalsDesktop_ServiceDataSet.MovementPoints);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
     }
 }

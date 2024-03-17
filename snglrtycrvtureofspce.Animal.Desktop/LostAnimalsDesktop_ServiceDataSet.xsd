@@ -243,7 +243,16 @@ SELECT MovementPointId, AnimalId, LocationId, DateTime FROM MovementPoints WHERE
               <Mapping SourceColumn="LocationId" DataSetColumn="LocationId" />
               <Mapping SourceColumn="DateTime" DataSetColumn="DateTime" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="LostAnimalsDesktop_ServiceConnectionString (Settings)" DbObjectName="[LostAnimalsDesktop-Service].dbo.MovementPoints" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT MovementPointId, AnimalId, LocationId, DateTime FROM dbo.MovementPoints</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="UsersTableAdapter" GeneratorDataComponentClassName="UsersTableAdapter" Name="Users" UserDataComponentName="UsersTableAdapter">
             <MainSource>
@@ -669,9 +678,9 @@ SELECT Id, Username, Password, Name, Age, Email FROM Users WHERE (Id = @Id)</Com
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK__Animals__AnimalT__398D8EEE" msdata:parent="AnimalTypes" msdata:child="Animals" msdata:parentkey="AnimalTypeId" msdata:childkey="AnimalTypeId" msprop:Generator_UserParentTable="AnimalTypes" msprop:Generator_UserChildTable="Animals" msprop:Generator_RelationVarName="relationFK__Animals__AnimalT__398D8EEE" msprop:Generator_ChildPropName="GetAnimalsRows" msprop:Generator_UserRelationName="FK__Animals__AnimalT__398D8EEE" msprop:Generator_ParentPropName="AnimalTypesRow" />
-      <msdata:Relationship name="FK__MovementP__Anima__3E52440B" msdata:parent="Animals" msdata:child="MovementPoints" msdata:parentkey="AnimalId" msdata:childkey="AnimalId" msprop:Generator_UserParentTable="Animals" msprop:Generator_UserChildTable="MovementPoints" msprop:Generator_RelationVarName="relationFK__MovementP__Anima__3E52440B" msprop:Generator_ChildPropName="GetMovementPointsRows" msprop:Generator_ParentPropName="AnimalsRow" msprop:Generator_UserRelationName="FK__MovementP__Anima__3E52440B" />
-      <msdata:Relationship name="FK__MovementP__Locat__3F466844" msdata:parent="Locations" msdata:child="MovementPoints" msdata:parentkey="LocationId" msdata:childkey="LocationId" msprop:Generator_UserParentTable="Locations" msprop:Generator_UserChildTable="MovementPoints" msprop:Generator_RelationVarName="relationFK__MovementP__Locat__3F466844" msprop:Generator_ChildPropName="GetMovementPointsRows" msprop:Generator_ParentPropName="LocationsRow" msprop:Generator_UserRelationName="FK__MovementP__Locat__3F466844" />
+      <msdata:Relationship name="FK__Animals__AnimalT__398D8EEE" msdata:parent="AnimalTypes" msdata:child="Animals" msdata:parentkey="AnimalTypeId" msdata:childkey="AnimalTypeId" msprop:Generator_UserParentTable="AnimalTypes" msprop:Generator_UserChildTable="Animals" msprop:Generator_RelationVarName="relationFK__Animals__AnimalT__398D8EEE" msprop:Generator_ChildPropName="GetAnimalsRows" msprop:Generator_ParentPropName="AnimalTypesRow" msprop:Generator_UserRelationName="FK__Animals__AnimalT__398D8EEE" />
+      <msdata:Relationship name="FK__MovementP__Anima__3E52440B" msdata:parent="Animals" msdata:child="MovementPoints" msdata:parentkey="AnimalId" msdata:childkey="AnimalId" msprop:Generator_UserParentTable="Animals" msprop:Generator_UserChildTable="MovementPoints" msprop:Generator_RelationVarName="relationFK__MovementP__Anima__3E52440B" msprop:Generator_ChildPropName="GetMovementPointsRows" msprop:Generator_UserRelationName="FK__MovementP__Anima__3E52440B" msprop:Generator_ParentPropName="AnimalsRow" />
+      <msdata:Relationship name="FK__MovementP__Locat__3F466844" msdata:parent="Locations" msdata:child="MovementPoints" msdata:parentkey="LocationId" msdata:childkey="LocationId" msprop:Generator_UserParentTable="Locations" msprop:Generator_UserChildTable="MovementPoints" msprop:Generator_RelationVarName="relationFK__MovementP__Locat__3F466844" msprop:Generator_ChildPropName="GetMovementPointsRows" msprop:Generator_UserRelationName="FK__MovementP__Locat__3F466844" msprop:Generator_ParentPropName="LocationsRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

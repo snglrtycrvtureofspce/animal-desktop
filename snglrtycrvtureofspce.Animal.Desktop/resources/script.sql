@@ -221,3 +221,41 @@ SELECT L.LocationName AS НаименованиеЛокации,
 FROM Animals A
 JOIN MovementPoints M ON A.AnimalId = M.AnimalId
 JOIN Locations L ON M.LocationId = L.LocationId;
+
+//////////// Procedures and Triggers ////////////
+
+// Процедура для выборки всех животных определенного типа
+CREATE PROCEDURE GetAnimalsByType
+    @TypeName NVARCHAR(50)
+AS
+BEGIN
+    SELECT Animals.AnimalId, Animals.AnimalName, Animals.AnimalDescription
+    FROM Animals
+    INNER JOIN AnimalTypes ON Animals.AnimalTypeId = AnimalTypes.AnimalTypeId
+    WHERE AnimalTypes.TypeName = @TypeName;
+END;
+
+// Триггер для автоматического добавления точки движения при изменении местоположения животного
+CREATE TRIGGER AddMovementPoint
+ON MovementPoints
+AFTER INSERT
+AS
+BEGIN
+    DECLARE @AnimalId INT, @LocationId INT, @DateTime DATETIME2;
+    SELECT @AnimalId = AnimalId, @LocationId = LocationId, @DateTime = DateTime FROM inserted;
+
+    INSERT INTO MovementPoints (AnimalId, LocationId, DateTime)
+    VALUES (@AnimalId, @LocationId, @DateTime);
+END;
+
+// Процедура для выборки последних точек движения для конкретного животного
+CREATE PROCEDURE GetLatestMovementPoints
+    @AnimalId INT
+AS
+BEGIN
+    SELECT TOP 10 MovementPoints.MovementPointId, Locations.LocationName, MovementPoints.DateTime
+    FROM MovementPoints
+    INNER JOIN Locations ON MovementPoints.LocationId = Locations.LocationId
+    WHERE MovementPoints.AnimalId = @AnimalId
+    ORDER BY MovementPoints.DateTime DESC;
+END;

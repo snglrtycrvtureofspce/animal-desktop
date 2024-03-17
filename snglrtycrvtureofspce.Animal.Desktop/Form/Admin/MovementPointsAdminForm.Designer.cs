@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label animalIdLabel;
-            System.Windows.Forms.Label locationIdLabel;
-            System.Windows.Forms.Label dateTimeLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MovementPointsAdminForm));
+            this.animalIdLabel = new System.Windows.Forms.Label();
+            this.locationIdLabel = new System.Windows.Forms.Label();
+            this.dateTimeLabel = new System.Windows.Forms.Label();
             this.lostAnimalsDesktop_ServiceDataSet = new snglrtycrvtureofspce.Animal.Desktop.LostAnimalsDesktop_ServiceDataSet();
             this.movementPointsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.movementPointsTableAdapter = new snglrtycrvtureofspce.Animal.Desktop.LostAnimalsDesktop_ServiceDataSetTableAdapters.MovementPointsTableAdapter();
@@ -59,15 +59,12 @@
             this.SaveButton = new System.Windows.Forms.Button();
             this.DeleteButton = new System.Windows.Forms.Button();
             this.AddButton = new System.Windows.Forms.Button();
-            this.animalIdComboBox = new System.Windows.Forms.ComboBox();
             this.animalsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.locationIdComboBox = new System.Windows.Forms.ComboBox();
             this.locationsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.animalsTableAdapter = new snglrtycrvtureofspce.Animal.Desktop.LostAnimalsDesktop_ServiceDataSetTableAdapters.AnimalsTableAdapter();
             this.locationsTableAdapter = new snglrtycrvtureofspce.Animal.Desktop.LostAnimalsDesktop_ServiceDataSetTableAdapters.LocationsTableAdapter();
-            animalIdLabel = new System.Windows.Forms.Label();
-            locationIdLabel = new System.Windows.Forms.Label();
-            dateTimeLabel = new System.Windows.Forms.Label();
+            this.animalIdComboBox = new System.Windows.Forms.ComboBox();
+            this.locationIdComboBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.lostAnimalsDesktop_ServiceDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.movementPointsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.movementPointsBindingNavigator)).BeginInit();
@@ -79,36 +76,36 @@
             // 
             // animalIdLabel
             // 
-            animalIdLabel.AutoSize = true;
-            animalIdLabel.Font = new System.Drawing.Font("Verdana", 12F);
-            animalIdLabel.Location = new System.Drawing.Point(8, 176);
-            animalIdLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            animalIdLabel.Name = "animalIdLabel";
-            animalIdLabel.Size = new System.Drawing.Size(126, 18);
-            animalIdLabel.TabIndex = 4;
-            animalIdLabel.Text = "Id животного:";
+            this.animalIdLabel.AutoSize = true;
+            this.animalIdLabel.Font = new System.Drawing.Font("Verdana", 12F);
+            this.animalIdLabel.Location = new System.Drawing.Point(8, 176);
+            this.animalIdLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.animalIdLabel.Name = "animalIdLabel";
+            this.animalIdLabel.Size = new System.Drawing.Size(126, 18);
+            this.animalIdLabel.TabIndex = 4;
+            this.animalIdLabel.Text = "Id животного:";
             // 
             // locationIdLabel
             // 
-            locationIdLabel.AutoSize = true;
-            locationIdLabel.Font = new System.Drawing.Font("Verdana", 12F);
-            locationIdLabel.Location = new System.Drawing.Point(8, 197);
-            locationIdLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            locationIdLabel.Name = "locationIdLabel";
-            locationIdLabel.Size = new System.Drawing.Size(107, 18);
-            locationIdLabel.TabIndex = 6;
-            locationIdLabel.Text = "Id локации:";
+            this.locationIdLabel.AutoSize = true;
+            this.locationIdLabel.Font = new System.Drawing.Font("Verdana", 12F);
+            this.locationIdLabel.Location = new System.Drawing.Point(8, 197);
+            this.locationIdLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.locationIdLabel.Name = "locationIdLabel";
+            this.locationIdLabel.Size = new System.Drawing.Size(107, 18);
+            this.locationIdLabel.TabIndex = 6;
+            this.locationIdLabel.Text = "Id локации:";
             // 
             // dateTimeLabel
             // 
-            dateTimeLabel.AutoSize = true;
-            dateTimeLabel.Font = new System.Drawing.Font("Verdana", 12F);
-            dateTimeLabel.Location = new System.Drawing.Point(8, 218);
-            dateTimeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            dateTimeLabel.Name = "dateTimeLabel";
-            dateTimeLabel.Size = new System.Drawing.Size(54, 18);
-            dateTimeLabel.TabIndex = 8;
-            dateTimeLabel.Text = "Дата:";
+            this.dateTimeLabel.AutoSize = true;
+            this.dateTimeLabel.Font = new System.Drawing.Font("Verdana", 12F);
+            this.dateTimeLabel.Location = new System.Drawing.Point(8, 218);
+            this.dateTimeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.dateTimeLabel.Name = "dateTimeLabel";
+            this.dateTimeLabel.Size = new System.Drawing.Size(54, 18);
+            this.dateTimeLabel.TabIndex = 8;
+            this.dateTimeLabel.Text = "Дата:";
             // 
             // lostAnimalsDesktop_ServiceDataSet
             // 
@@ -161,7 +158,7 @@
             this.movementPointsBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.movementPointsBindingNavigator.Name = "movementPointsBindingNavigator";
             this.movementPointsBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.movementPointsBindingNavigator.Size = new System.Drawing.Size(428, 31);
+            this.movementPointsBindingNavigator.Size = new System.Drawing.Size(740, 31);
             this.movementPointsBindingNavigator.TabIndex = 0;
             this.movementPointsBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -254,9 +251,8 @@
             // movementPointsBindingNavigatorSaveItem
             // 
             this.movementPointsBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.movementPointsBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("movementPointsBindingNavigatorSaveItem.Image")));
             this.movementPointsBindingNavigatorSaveItem.Name = "movementPointsBindingNavigatorSaveItem";
-            this.movementPointsBindingNavigatorSaveItem.Size = new System.Drawing.Size(28, 28);
+            this.movementPointsBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 28);
             this.movementPointsBindingNavigatorSaveItem.Text = "Сохранить данные";
             this.movementPointsBindingNavigatorSaveItem.Click += new System.EventHandler(this.movementPointsBindingNavigatorSaveItem_Click);
             // 
@@ -354,36 +350,10 @@
             this.AddButton.UseVisualStyleBackColor = true;
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
-            // animalIdComboBox
-            // 
-            this.animalIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.movementPointsBindingSource, "AnimalId", true));
-            this.animalIdComboBox.DataSource = this.animalsBindingSource;
-            this.animalIdComboBox.DisplayMember = "AnimalId";
-            this.animalIdComboBox.FormattingEnabled = true;
-            this.animalIdComboBox.Location = new System.Drawing.Point(135, 175);
-            this.animalIdComboBox.Margin = new System.Windows.Forms.Padding(2);
-            this.animalIdComboBox.Name = "animalIdComboBox";
-            this.animalIdComboBox.Size = new System.Drawing.Size(122, 21);
-            this.animalIdComboBox.TabIndex = 59;
-            this.animalIdComboBox.ValueMember = "AnimalId";
-            // 
             // animalsBindingSource
             // 
             this.animalsBindingSource.DataMember = "Animals";
             this.animalsBindingSource.DataSource = this.lostAnimalsDesktop_ServiceDataSet;
-            // 
-            // locationIdComboBox
-            // 
-            this.locationIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.movementPointsBindingSource, "LocationId", true));
-            this.locationIdComboBox.DataSource = this.locationsBindingSource;
-            this.locationIdComboBox.DisplayMember = "LocationId";
-            this.locationIdComboBox.FormattingEnabled = true;
-            this.locationIdComboBox.Location = new System.Drawing.Point(135, 198);
-            this.locationIdComboBox.Margin = new System.Windows.Forms.Padding(2);
-            this.locationIdComboBox.Name = "locationIdComboBox";
-            this.locationIdComboBox.Size = new System.Drawing.Size(122, 21);
-            this.locationIdComboBox.TabIndex = 60;
-            this.locationIdComboBox.ValueMember = "LocationId";
             // 
             // locationsBindingSource
             // 
@@ -398,19 +368,43 @@
             // 
             this.locationsTableAdapter.ClearBeforeFill = true;
             // 
+            // animalIdComboBox
+            // 
+            this.animalIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.movementPointsBindingSource, "AnimalId", true));
+            this.animalIdComboBox.DataSource = this.animalsBindingSource;
+            this.animalIdComboBox.DisplayMember = "AnimalId";
+            this.animalIdComboBox.FormattingEnabled = true;
+            this.animalIdComboBox.Location = new System.Drawing.Point(135, 175);
+            this.animalIdComboBox.Name = "animalIdComboBox";
+            this.animalIdComboBox.Size = new System.Drawing.Size(121, 21);
+            this.animalIdComboBox.TabIndex = 61;
+            this.animalIdComboBox.ValueMember = "AnimalId";
+            // 
+            // locationIdComboBox
+            // 
+            this.locationIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.movementPointsBindingSource, "LocationId", true));
+            this.locationIdComboBox.DataSource = this.locationsBindingSource;
+            this.locationIdComboBox.DisplayMember = "LocationId";
+            this.locationIdComboBox.FormattingEnabled = true;
+            this.locationIdComboBox.Location = new System.Drawing.Point(135, 198);
+            this.locationIdComboBox.Name = "locationIdComboBox";
+            this.locationIdComboBox.Size = new System.Drawing.Size(121, 21);
+            this.locationIdComboBox.TabIndex = 62;
+            this.locationIdComboBox.ValueMember = "LocationId";
+            // 
             // MovementPointsAdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(428, 250);
+            this.ClientSize = new System.Drawing.Size(740, 435);
             this.Controls.Add(this.locationIdComboBox);
             this.Controls.Add(this.animalIdComboBox);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.AddButton);
-            this.Controls.Add(animalIdLabel);
-            this.Controls.Add(locationIdLabel);
-            this.Controls.Add(dateTimeLabel);
+            this.Controls.Add(this.animalIdLabel);
+            this.Controls.Add(this.locationIdLabel);
+            this.Controls.Add(this.dateTimeLabel);
             this.Controls.Add(this.dateTimeDateTimePicker);
             this.Controls.Add(this.movementPointsDataGridView);
             this.Controls.Add(this.movementPointsBindingNavigator);
@@ -462,11 +456,14 @@
         private System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.Button DeleteButton;
         private System.Windows.Forms.Button AddButton;
-        private System.Windows.Forms.ComboBox animalIdComboBox;
-        private System.Windows.Forms.ComboBox locationIdComboBox;
         private System.Windows.Forms.BindingSource animalsBindingSource;
         private LostAnimalsDesktop_ServiceDataSetTableAdapters.AnimalsTableAdapter animalsTableAdapter;
         private System.Windows.Forms.BindingSource locationsBindingSource;
         private LostAnimalsDesktop_ServiceDataSetTableAdapters.LocationsTableAdapter locationsTableAdapter;
+        private System.Windows.Forms.Label animalIdLabel;
+        private System.Windows.Forms.Label locationIdLabel;
+        private System.Windows.Forms.Label dateTimeLabel;
+        private System.Windows.Forms.ComboBox animalIdComboBox;
+        private System.Windows.Forms.ComboBox locationIdComboBox;
     }
 }
