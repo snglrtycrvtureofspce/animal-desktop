@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VSiCrh2R8PtodGJaEm5NlguyXRGJGnmh/Kv2V2jeCO1Xma2L/xumo/0UcSOZNUxsMWcNnbv7LGh9ZvXnopdBpg==",
+  "dgSpecHash": "F2KhPXn0IjxqRXy1+k45jNnkOQA4XKjfmUck1FQWCbDELX7BpU9tBmcqNMOFNrRe0iP1cSYJF/3G0h8P+PL2mw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\asp1r\\OneDrive\\Документы\\snglrtycrvtureofspce\\Git\\animal-service\\snglrtycrvtureofspce.Animal.Tests\\snglrtycrvtureofspce.Animal.Tests.csproj",
+  "projectFilePath": "C:\\Users\\asp1r\\OneDrive\\Документы\\snglrtycrvtureofspce\\Git\\GitHub\\animal-service\\snglrtycrvtureofspce.Animal.Tests\\snglrtycrvtureofspce.Animal.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\asp1r\\.nuget\\packages\\asp.versioning.abstractions\\8.0.0\\asp.versioning.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\asp1r\\.nuget\\packages\\asp.versioning.http\\8.0.0\\asp.versioning.http.8.0.0.nupkg.sha512",

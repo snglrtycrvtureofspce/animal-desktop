@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\asp1r\\OneDrive\\Документы\\snglrtycrvtureofspce\\Git\\animal-service\\snglrtycrvtureofspce.Api.Animal\\snglrtycrvtureofspce.Api.Animal.csproj": {}
+    "C:\\Users\\asp1r\\OneDrive\\Документы\\snglrtycrvtureofspce\\Git\\GitHub\\animal-service\\snglrtycrvtureofspce.Api.Animal\\snglrtycrvtureofspce.Api.Animal.csproj": {}
   },
   "projects": {
-    "C:\\Users\\asp1r\\OneDrive\\Документы\\snglrtycrvtureofspce\\Git\\animal-service\\snglrtycrvtureofspce.Api.Animal\\snglrtycrvtureofspce.Api.Animal.csproj": {
+    "C:\\Users\\asp1r\\OneDrive\\Документы\\snglrtycrvtureofspce\\Git\\GitHub\\animal-service\\snglrtycrvtureofspce.Api.Animal\\snglrtycrvtureofspce.Api.Animal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\asp1r\\OneDrive\\Документы\\snglrtycrvtureofspce\\Git\\animal-service\\snglrtycrvtureofspce.Api.Animal\\snglrtycrvtureofspce.Api.Animal.csproj",
+        "projectUniqueName": "C:\\Users\\asp1r\\OneDrive\\Документы\\snglrtycrvtureofspce\\Git\\GitHub\\animal-service\\snglrtycrvtureofspce.Api.Animal\\snglrtycrvtureofspce.Api.Animal.csproj",
         "projectName": "snglrtycrvtureofspce.Api.Animal",
-        "projectPath": "C:\\Users\\asp1r\\OneDrive\\Документы\\snglrtycrvtureofspce\\Git\\animal-service\\snglrtycrvtureofspce.Api.Animal\\snglrtycrvtureofspce.Api.Animal.csproj",
+        "projectPath": "C:\\Users\\asp1r\\OneDrive\\Документы\\snglrtycrvtureofspce\\Git\\GitHub\\animal-service\\snglrtycrvtureofspce.Api.Animal\\snglrtycrvtureofspce.Api.Animal.csproj",
         "packagesPath": "C:\\Users\\asp1r\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\asp1r\\OneDrive\\Документы\\snglrtycrvtureofspce\\Git\\animal-service\\snglrtycrvtureofspce.Api.Animal\\obj\\",
+        "outputPath": "C:\\Users\\asp1r\\OneDrive\\Документы\\snglrtycrvtureofspce\\Git\\GitHub\\animal-service\\snglrtycrvtureofspce.Api.Animal\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -39,11 +39,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -79,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
