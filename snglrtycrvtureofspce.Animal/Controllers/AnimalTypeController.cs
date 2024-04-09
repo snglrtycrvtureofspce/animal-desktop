@@ -1,4 +1,6 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using snglrtycrvtureofspce.Animal.Handlers.AnimalTypeController.CreateAnimalType;
 using snglrtycrvtureofspce.Animal.Handlers.AnimalTypeController.DeleteAnimalType;
@@ -10,7 +12,7 @@ namespace snglrtycrvtureofspce.Animal.Controllers;
 
 [Route("[controller]")]
 [ApiController]
-// [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
 [Produces("application/json")]
 public class AnimalTypeController(ISender sender) : ControllerBase
 {

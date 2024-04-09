@@ -3,7 +3,7 @@
 "ServerUrl": "https://localhost:44459",
 "RedirectUrl": "",
 "LaunchCommand": "npm start",
-"WorkingDirectory": "C:\\Users\\asp1r\\OneDrive\\Документы\\snglrtycrvtureofspce\\Git\\animal-service\\snglrtycrvtureofspce.Animal\\ClientApp\\",
+"WorkingDirectory": "C:\\Users\\asp1r\\OneDrive\\Документы\\snglrtycrvtureofspce\\Git\\GitHub\\animal-service\\snglrtycrvtureofspce.Animal\\ClientApp\\",
 "MaxTimeoutInSeconds": "120",
 "KeepRunning": "false"
 }

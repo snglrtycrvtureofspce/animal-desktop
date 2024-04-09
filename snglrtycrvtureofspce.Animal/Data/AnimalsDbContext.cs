@@ -6,10 +6,6 @@ namespace snglrtycrvtureofspce.Animal.Data;
 
 public class AnimalsDbContext : DbContext
 {
-    public virtual DbSet<UserEntity> Users { get; set; }
-    
-    public virtual DbSet<RoleEntity> Roles { get; set; }
-    
     public virtual DbSet<AnimalTypeEntity> AnimalTypes { get; set; }
     
     public virtual DbSet<AnimalEntity> Animals { get; set; }
@@ -67,26 +63,10 @@ public class AnimalsDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<UserEntity>().HasKey(u => u.Id);
-        modelBuilder.Entity<RoleEntity>().HasKey(r => r.Id);
         modelBuilder.Entity<AnimalTypeEntity>().HasKey(a => a.Id);
         modelBuilder.Entity<AnimalEntity>().HasKey(a => a.Id);
         modelBuilder.Entity<LocationEntity>().HasKey(m => m.Id);
         modelBuilder.Entity<MovementPointEntity>().HasKey(a => a.Id);
-
-        modelBuilder.Entity<UserEntity>()
-            .HasMany(u => u.Roles)
-            .WithMany(r => r.Users)
-            .UsingEntity<UserRoleEntity>(
-                j => j
-                    .HasOne(ur => ur.Role)
-                    .WithMany()
-                    .HasForeignKey(ur => ur.RoleId),
-                j => j
-                    .HasOne(ur => ur.User)
-                    .WithMany()
-                    .HasForeignKey(ur => ur.UserId)
-            );
 
         base.OnModelCreating(modelBuilder);
     }

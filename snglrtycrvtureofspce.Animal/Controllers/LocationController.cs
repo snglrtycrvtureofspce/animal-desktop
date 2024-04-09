@@ -1,4 +1,6 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using snglrtycrvtureofspce.Animal.Handlers.LocationController.CreateLocation;
 using snglrtycrvtureofspce.Animal.Handlers.LocationController.DeleteLocation;
@@ -10,7 +12,7 @@ namespace snglrtycrvtureofspce.Animal.Controllers;
 
 [Route("[controller]")]
 [ApiController]
-// [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
 [Produces("application/json")]
 public class LocationController(ISender sender) : ControllerBase
 {
