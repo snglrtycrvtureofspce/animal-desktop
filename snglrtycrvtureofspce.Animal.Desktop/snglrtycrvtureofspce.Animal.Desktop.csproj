@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{EDDAB1A8-B6AF-4568-97B8-AC703B0CD932}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>snglrtycrvtureofspce.Animal.Desktop</RootNamespace>
-    <AssemblyName>snglrtycrvtureofspce.Animal.Desktop</AssemblyName>
+    <RootNamespace>snglrtycrvtureofspce.Api.Animal.Desktop</RootNamespace>
+    <AssemblyName>snglrtycrvtureofspce.Api.Animal.Desktop</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
